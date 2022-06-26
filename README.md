@@ -7,18 +7,19 @@
 [x] Robots.txt
 [x] Sitemap.xml
 [x] Make basic main page (HTML only)
-[] Accessability aria labels
+[x] Accessability aria labels
 [] Make basic CSS for main page
 [] Theme switcher
 [] Finalize designs
 [] Finalize main page content
-[] Skip navigation link (<https://webaim.org/techniques/skipnav/>)
+[x] Skip navigation link (<https://webaim.org/techniques/skipnav/>)
 [] Make main page responsive
 [] Basic projects page
 [] Projects page improvements
 [] Basic contact page
 [] Contacts page improvements
 [] favicon.ico
+[] Custom 404 Page
 [] Site audit with Lighthouse
 [] Lighthouse follow-up
 [] Wherever things happen from there

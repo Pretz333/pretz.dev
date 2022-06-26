@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="/imgs/favicon.ico">
     <title>Pretz | Home</title>
@@ -11,26 +12,34 @@
   <body>
 
     <!-- Navigation Sidebar -->
-    <!-- TODO: nav skip -->
+    <a class="screenreader-text" href="#main-content">Skip to content</a>
     <nav>
+      <h4>Pages</h4>
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/about.html">About</a></li>
         <li><a href="/projects.html">Projects</a></li>
         <li><a href="/contact.html">Contact</a></li>
       </ul>
+
+      <h4>On This Page</h4>
+      <ul>
+        <li><a href="#about-preview">Introduction</a></li>
+        <li><a href="#projects-preview">Some Projects</a></li> <!-- TODO: Better Name -->
+        <li><a href="#contact-preview">Contact Me</a></li> <!-- TODO: Better Name -->
+      </ul>
     </nav>
 
     <!-- Main Content -->
     <main id="main-content">
-      <section aria-labelledby="about-preview-label" class="about-preview">
+      <section aria-labelledby="about-preview-label" id="about-preview">
         <header>
           <h1 id="contact-preview-label">Hiya, I'm Pretz!</h1>
           <p>I enjoy making small software projects to solve real problems.</p>
         </header>
         <button>Learn More</button>
       </section>
-      <section aria-labelledby="projects-preview-label" class="projects-preview">
+      <section aria-labelledby="projects-preview-label" id="projects-preview">
         <header>
           <h2 id="projects-preview-label">Projects</h2>
           <p>Here are a few of my favorite projects I've worked on to date. See the <a href="/projects.html">projects page</a> for more information on these and other projects I've worked on.</p>
@@ -63,7 +72,7 @@
           <img src="imgs/techlogos/firebase.png" alt="Firebase Logo"><img src="imgs/techlogos/bootstrap.png" alt="Bootstrap Logo"><img src="imgs/techlogos/git.png" alt="Git Logo">
         </article>
       </section>
-      <section aria-labelledby="contact-preview-label" class="contact-preview">
+      <section aria-labelledby="contact-preview-label" id="contact-preview">
         <h2 id="contact-preview-label">Contact</h2>
         <p>If you'd like to get in touch, please do not hesitate to reach out at <a href="mailto:pretz333@gmail.com">pretz333@gmail.com</a></p>
       </section>
