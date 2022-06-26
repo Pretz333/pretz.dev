@@ -7,7 +7,7 @@
 [x] Robots.txt
 [x] Sitemap.xml
 [x] Make basic main page (HTML only)
-[x] Accessability aria labels
+[x] Accessibility aria labels
 [] Make basic CSS for main page
 [] Theme switcher
 [] Finalize designs
