@@ -13,33 +13,35 @@
 
     <!-- Navigation Sidebar -->
     <a class="screenreader-text" href="#main-content">Skip to content</a>
-    <nav>
-      <h4>Pages</h4>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/projects.html">Projects</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-      </ul>
+    <section class="sidebar" aria-label="Sidebar">
+      <nav>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
 
-      <h4>On This Page</h4>
-      <ul>
-        <li><a href="#about-preview">Introduction</a></li>
-        <li><a href="#projects-preview">Some Projects</a></li> <!-- TODO: Better Name -->
-        <li><a href="#contact-preview">Contact Me</a></li> <!-- TODO: Better Name -->
-      </ul>
-    </nav>
+        <h4>On This Page</h4>
+        <ul>
+          <li><a href="#about-preview">Introduction</a></li>
+          <li><a href="#projects-preview">Some Projects</a></li> <!-- TODO: Better Name -->
+          <li><a href="#contact-preview">Contact Me</a></li> <!-- TODO: Better Name -->
+        </ul>
+      </nav>
+    </section>
 
     <!-- Main Content -->
     <main id="main-content">
-      <section aria-labelledby="about-preview-label" id="about-preview">
+      <section class="post" aria-labelledby="about-preview-label" id="about-preview">
         <header>
           <h1 id="about-preview-label">Hiya, I'm Pretz!</h1>
           <p>I enjoy making small software projects to solve real problems.</p>
         </header>
         <button>Learn More About Me</button>
       </section>
-      <section aria-labelledby="projects-preview-label" id="projects-preview">
+      <section class="post" aria-labelledby="projects-preview-label" id="projects-preview">
         <header>
           <h2 id="projects-preview-label">Projects</h2>
           <p>Here are a few of my favorite projects I've worked on. See the <a href="/projects.html">projects page</a> for more information on these and other projects I've worked on.</p>
@@ -73,7 +75,7 @@
         </article>
         <button>See More Projects</button>
       </section>
-      <section aria-labelledby="contact-preview-label" id="contact-preview">
+      <section class="post" aria-labelledby="contact-preview-label" id="contact-preview">
         <h2 id="contact-preview-label">Contact</h2>
         <p>If you'd like to get in touch, please do not hesitate to reach out at <a href="mailto:pretz333@gmail.com">pretz333@gmail.com</a></p>
         <button>See Other Ways to Get In Contact</button>
@@ -82,9 +84,11 @@
 
     <!-- Footer -->
     <footer>
-      <!-- TODO: logo with link to top -->
-      <!-- TODO: replace github link with logo (and alt text) -->
-      <p>&copy; Pretz | <a href="https://github.com/pretz333">GitHub</a> | <a href="/contact.html">Contact</a></p>
+      <div class="post">
+        <!-- TODO: logo with link to top -->
+        <!-- TODO: replace github link with logo (and alt text) -->
+        <p>&copy; Pretz | <a href="https://github.com/pretz333">GitHub</a> | <a href="/contact.html">Contact</a></p>
+      </div>
     </footer>
 
   </body>

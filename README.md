@@ -7,13 +7,13 @@
 [x] Robots.txt
 [x] Sitemap.xml
 [x] Make basic main page (HTML only)
+[x] Skip navigation link (<https://webaim.org/techniques/skipnav/>)
 [x] Accessibility aria labels
-[] Make basic CSS for main page
+[x] Make basic CSS for main page
 [] Theme switcher
 [] Finalize designs
 [] Finalize main page content
-[x] Skip navigation link (<https://webaim.org/techniques/skipnav/>)
-[] Make main page responsive
+[] Make main page responsive below 667 px
 [] Basic projects page
 [] Projects page improvements
 [] Basic contact page

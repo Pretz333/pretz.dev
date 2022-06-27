@@ -1,0 +1,189 @@
+/* Setup */
+
+:focus {
+  border-style: dashed;
+  border-width: 2px;
+  border-color: var(--accent-item-color);
+  border-radius: 0.75vmax;
+  outline: none;
+}
+
+:root {
+  --primary-background-color: hsl(205, 50%, 10%); /* Dark */
+  --content-background-color: hsl(205, 75%, 20%); /* Brighter */
+  --focused-background-color: hsl(205, 85%, 35%); /* Brighter */
+  --text-color: hsl(0, 0%, 85%); /* Bright */
+  --text-color-secondary: hsl(200, 90%, 85%); /* Dimmed */
+  --accent-item-color: hsl(180, 100%, 40%); /* Accent */
+}
+
+/* @media(prefers-color-scheme: dark) {
+  :root {
+    --primary-background-color: #0a1c29;
+    --content-background-color: #072f4b;
+    --focused-background-color: #03497a;
+    --text-color: #dddddd;
+    --text-color-secondary: #bce7fb;
+    --accent-item-color: #00d1ce;
+  }
+} */
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Styling */
+
+/* Main Elements */
+
+body {
+  background-color: var(--primary-background-color);
+  margin: 0;
+}
+
+a, button, h1, h2, h3, h4, p {
+  font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h4, p {
+  color: var(--text-color);
+}
+
+a, button {
+  color: var(--text-color-secondary);
+}
+
+a:hover {
+  color: var(--accent-item-color)
+}
+
+button:hover {
+  background-color: var(--accent-item-color)
+}
+
+button {
+  background-color: var(--focused-background-color);
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding-top: 0.25em;
+}
+
+h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+/* Layout */
+
+.screenreader-text {
+  /* 
+    Basically, hide it off-screen. Actually making it invisible would either:
+      - Leave a blank line
+      - Make it invisible to the screen reader as well
+    There's probably a better way to do this.
+  */
+  
+  position: absolute;
+  top: auto;
+  left: -100%;
+  height: 1px;
+  width: 1px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 20%;
+  text-align: center;
+}
+
+nav { /* The text is a wee bit too close to the edge */
+  background-color: var(--content-background-color);
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+nav h4 {
+  margin-bottom: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0.25rem;
+}
+
+nav ul a {
+  text-decoration: none;
+  margin-top: 1em;
+}
+
+.post {
+  background-color: var(--content-background-color);
+  margin: 1.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+main, footer {
+  width: 80%;
+  margin-left: 20%;
+}
+
+footer {
+  /* background-color: var(--content-background-color); */
+  text-align: center;
+  height: 10%;
+}
+
+footer p {
+  color: var(--text-color-secondary);
+  position: relative;
+  top: 50%;
+}
+
+/* Homepage Styles */
+
+/* #projects-preview article {
+  
+} */
+
+.techlogo {
+  display: inline-block;
+  margin: 0.5rem;
+  height: 5em;
+}
+
+/* @media(min-width: 667px) {
+  .sidebar {
+
+  }
+  
+  nav {
+
+  }
+} */
