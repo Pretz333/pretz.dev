@@ -68,6 +68,7 @@ button {
   border-radius: 0.5em;
   padding: 0.5em;
   cursor: pointer;
+  width: 70vw;
 }
 
 h1 {
@@ -155,13 +156,11 @@ main, footer {
 }
 
 footer {
-  /* background-color: var(--content-background-color); */
   text-align: center;
   height: 10%;
 }
 
 footer p {
-  color: var(--text-color-secondary);
   position: relative;
   top: 50%;
 }
