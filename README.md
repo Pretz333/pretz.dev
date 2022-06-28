@@ -10,8 +10,9 @@
 - [x] Skip navigation link (<https://webaim.org/techniques/skipnav/>)
 - [x] Accessibility aria labels
 - [x] Make basic CSS for main page
+- [x] Set up Cloudflare Pages (see steps)
 - [ ] Theme switcher
-- [ ] Finalize designs
+- [ ] Finalize designs (see steps)
 - [ ] Finalize main page content
 - [ ] Make main page responsive below 667 px
 - [ ] Basic projects page
@@ -22,8 +23,13 @@
 - [ ] Custom 404 Page
 - [ ] Site audit with Lighthouse
 - [ ] Lighthouse follow-up
-- [ ] Code cleanup
+- [ ] Code cleanup (see steps)
 - [ ] Wherever things happen from there
+
+### Cloudflare Pages Steps
+- [x] Basic setup
+- [x] Set up custom domain
+- [x] DNSSEC Records
 
 ### Finalize Design Steps
 
