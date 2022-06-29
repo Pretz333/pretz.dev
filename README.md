@@ -34,6 +34,7 @@
 
 - [x] Fix button text contrast
 - [x] Fix button text size
+- [x] Set up light-mode colors
 - [ ] Change the sidebar to indicate what part of the page they are on
 - [ ] Make "On This Page" links scroll slightly less far down the page, ideally keeping the margin like nav does
 - [ ] Project-preview projects

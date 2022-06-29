@@ -20,24 +20,24 @@ Table of Contents:
 }
 
 :root {
-  --primary-background-color: hsl(205, 50%, 10%); /* Dark */
-  --content-background-color: hsl(205, 75%, 20%); /* Brighter */
+  --primary-background-color: hsl(205, 50%, 70%); /* Dark */
+  --content-background-color: hsl(205, 35%, 85%); /* Brighter */
   --highlight-background-color: hsl(205, 85%, 35%); /* Brighter */
-  --text-color: hsl(0, 0%, 85%); /* Bright */
-  --text-color-secondary: hsl(200, 90%, 85%); /* Dimmed */
-  --accent-item-color: hsl(180, 100%, 40%); /* Accent */
+  --text-color: hsl(205, 35%, 15%); /* Dark */
+  --text-color-secondary: hsl(205, 85%, 20%); /* Dimmed */
+  --accent-item-color: hsl(205, 90%, 40%); /* Accent */
 }
 
-/* @media(prefers-color-scheme: dark) {
+@media(prefers-color-scheme: dark) {
   :root {
   --primary-background-color: hsl(205, 50%, 10%);
   --content-background-color: hsl(205, 75%, 20%);
   --highlight-background-color: hsl(205, 85%, 35%);
-  --text-color: hsl(0, 0%, 85%); 
-  --text-color-secondary: hsl(200, 90%, 85%); 
+  --text-color: hsl(205, 20%, 85%); 
+  --text-color-secondary: hsl(200, 90%, 80%); 
   --accent-item-color: hsl(180, 100%, 40%); 
   }
-} */
+}
 
 
 html {
