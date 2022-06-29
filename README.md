@@ -29,6 +29,7 @@
 - [x] Basic setup
 - [x] Set up custom domain
 - [x] DNSSEC Records
+- [x] Fix Cloudflare hiding the email
 
 ### Finalize Design Steps
 

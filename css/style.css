@@ -30,12 +30,12 @@ Table of Contents:
 
 @media(prefers-color-scheme: dark) {
   :root {
-  --primary-background-color: hsl(205, 50%, 10%);
-  --content-background-color: hsl(205, 75%, 20%);
-  --highlight-background-color: hsl(205, 85%, 35%);
-  --text-color: hsl(205, 20%, 85%); 
-  --text-color-secondary: hsl(200, 90%, 80%); 
-  --accent-item-color: hsl(180, 100%, 40%); 
+    --primary-background-color: hsl(205, 50%, 10%);
+    --content-background-color: hsl(205, 75%, 20%);
+    --highlight-background-color: hsl(205, 85%, 35%);
+    --text-color: hsl(205, 20%, 85%); 
+    --text-color-secondary: hsl(200, 90%, 80%); 
+    --accent-item-color: hsl(180, 100%, 40%); 
   }
 }
 
