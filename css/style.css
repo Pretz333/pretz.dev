@@ -1,8 +1,19 @@
-/* Setup */
+/* 
+
+Table of Contents:
+  1.0 Setup
+  2.0 Global Styling
+    2.1 Elements
+    2.2 Layout
+  3.0 Homepage-specific Styles
+
+*/
+
+/* 1.0 Setup */
 
 :focus {
   border-style: dashed;
-  border-width: 2px;
+  border-width: 0.2rem;
   border-color: var(--accent-item-color);
   border-radius: 0.75vmax;
   outline: none;
@@ -11,7 +22,7 @@
 :root {
   --primary-background-color: hsl(205, 50%, 10%); /* Dark */
   --content-background-color: hsl(205, 75%, 20%); /* Brighter */
-  --focused-background-color: hsl(205, 85%, 35%); /* Brighter */
+  --highlight-background-color: hsl(205, 85%, 35%); /* Brighter */
   --text-color: hsl(0, 0%, 85%); /* Bright */
   --text-color-secondary: hsl(200, 90%, 85%); /* Dimmed */
   --accent-item-color: hsl(180, 100%, 40%); /* Accent */
@@ -19,12 +30,12 @@
 
 /* @media(prefers-color-scheme: dark) {
   :root {
-    --primary-background-color: #0a1c29;
-    --content-background-color: #072f4b;
-    --focused-background-color: #03497a;
-    --text-color: #dddddd;
-    --text-color-secondary: #bce7fb;
-    --accent-item-color: #00d1ce;
+  --primary-background-color: hsl(205, 50%, 10%);
+  --content-background-color: hsl(205, 75%, 20%);
+  --highlight-background-color: hsl(205, 85%, 35%);
+  --text-color: hsl(0, 0%, 85%); 
+  --text-color-secondary: hsl(200, 90%, 85%); 
+  --accent-item-color: hsl(180, 100%, 40%); 
   }
 } */
 
@@ -33,9 +44,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Global Styling */
+/* 2.0 Global Styling */
 
-/* Main Elements */
+/* 2.1 Main Elements */
 
 body {
   background-color: var(--primary-background-color);
@@ -54,21 +65,26 @@ a, button {
   color: var(--text-color-secondary);
 }
 
-a:hover {
-  color: var(--accent-item-color)
+a:hover, a:focus {
+  color: var(--accent-item-color);
 }
 
-button:hover {
-  background-color: var(--accent-item-color)
+button:hover, button:focus {
+  outline-style: dashed;
+  outline-width: 0.2rem;
+  outline-color: var(--accent-item-color);
+  color: var(--accent-item-color);
+  border: none; /* To override the default :focus border */
 }
 
 button {
-  background-color: var(--focused-background-color);
+  background-color: var(--primary-background-color);
   border: none;
   border-radius: 0.5em;
-  padding: 0.5em;
+  padding: 0.75em;
   cursor: pointer;
-  width: 70vw;
+  width: 100%;
+  font-size: 1rem;
 }
 
 h1 {
@@ -91,7 +107,7 @@ img {
   border-radius: 1rem;
 }
 
-/* Layout */
+/* 2.2 Layout */
 
 .screenreader-text {
   /* 
@@ -165,7 +181,17 @@ footer p {
   top: 50%;
 }
 
-/* Homepage Styles */
+/* @media(min-width: 667px) {
+  .sidebar {
+
+  }
+  
+  nav {
+
+  }
+} */
+
+/* 3.0 Homepage Styles */
 
 /* #projects-preview article {
   
@@ -176,13 +202,3 @@ footer p {
   margin: 0.5rem;
   height: 5em;
 }
-
-/* @media(min-width: 667px) {
-  .sidebar {
-
-  }
-  
-  nav {
-
-  }
-} */

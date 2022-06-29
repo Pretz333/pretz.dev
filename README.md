@@ -14,7 +14,6 @@
 - [ ] Theme switcher
 - [ ] Finalize designs (see steps)
 - [ ] Finalize main page content
-- [ ] Make main page responsive below 667 px
 - [ ] Basic projects page
 - [ ] Projects page improvements
 - [ ] Basic contact page
@@ -33,11 +32,12 @@
 
 ### Finalize Design Steps
 
-- [ ] Fix button text contrast
-- [ ] Fix button text size
+- [x] Fix button text contrast
+- [x] Fix button text size
 - [ ] Change the sidebar to indicate what part of the page they are on
 - [ ] Make "On This Page" links scroll slightly less far down the page, ideally keeping the margin like nav does
 - [ ] Project-preview projects
+- [ ] Make pages responsive below 667 px
 - [ ] Sidebar lower section
 - [ ] Make a logo
 - [ ] Logo on footer
