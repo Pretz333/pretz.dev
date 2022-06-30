@@ -26,6 +26,7 @@
 - [ ] Wherever things happen from there
 
 ### Cloudflare Pages Steps
+
 - [x] Basic setup
 - [x] Set up custom domain
 - [x] DNSSEC Records
@@ -38,7 +39,8 @@
 - [x] Set up light-mode colors
 - [ ] Change the sidebar to indicate what part of the page they are on
 - [ ] Make "On This Page" links scroll slightly less far down the page, ideally keeping the margin like nav does
-- [ ] Project-preview projects
+- [x] Project-preview projects initial design
+- [ ] Project-preview projects final design
 - [ ] Make pages responsive below 667 px
 - [ ] Sidebar lower section
 - [ ] Make a logo

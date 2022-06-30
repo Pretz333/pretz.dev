@@ -32,7 +32,7 @@ Table of Contents:
   :root {
     --primary-background-color: hsl(205, 50%, 10%);
     --content-background-color: hsl(205, 75%, 20%);
-    --highlight-background-color: hsl(205, 85%, 35%);
+    --highlight-background-color: hsl(205, 80%, 30%);
     --text-color: hsl(205, 20%, 85%); 
     --text-color-secondary: hsl(200, 90%, 80%); 
     --accent-item-color: hsl(180, 100%, 40%); 
@@ -199,12 +199,18 @@ footer p {
 
 /* 3.0 Homepage Styles */
 
-/* #projects-preview article {
-  
-} */
+#projects-preview article {
+  background-color: var(--highlight-background-color);
+  border-radius: 1rem;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+.project-image {
+  margin: 1em 0;
+}
 
 .techlogo {
   display: inline-block;
-  margin: 0.5rem;
   height: 5em;
 }
