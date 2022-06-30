@@ -20,12 +20,12 @@ Table of Contents:
 }
 
 :root {
-  --primary-background-color: hsl(205, 60%, 60%); /* Dark */
+  --primary-background-color: hsl(205, 60%, 65%); /* Dark */
   --content-background-color: hsl(205, 55%, 85%); /* Bright */
-  --highlight-background-color: hsl(205, 70%, 75%); /* Dark again */
+  --highlight-background-color: hsl(205, 80%, 75%); /* Dark again */
   --text-color: hsl(205, 35%, 15%); /* Dark */
-  --text-color-secondary: hsl(205, 85%, 20%); /* Dimmed */
-  --accent-item-color: hsl(205, 90%, 40%); /* Accent */
+  --text-color-secondary: hsl(205, 100%, 25%); /* Dimmed */
+  --accent-item-color: hsl(205, 100%, 40%); /* Accent */
 }
 
 @media(prefers-color-scheme: dark) {
@@ -74,7 +74,7 @@ button:hover, button:focus {
 }
 
 button {
-  background-color: var(--primary-background-color);
+  background-color: var(--highlight-background-color);
   border: none;
   border-radius: 0.5em;
   padding: 0.75em;
