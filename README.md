@@ -39,7 +39,7 @@
 - [x] Set up light-mode colors
 - [ ] Change the sidebar to indicate what part of the page they are on
 - [ ] Make nav headers and links bigger
-- [ ] Make "On This Page" links scroll slightly less far down the page, ideally keeping the margin like nav does
+- [x] Make "On This Page" links scroll slightly less far down the page, ideally keeping the margin like nav does
 - [x] Project-preview projects initial design
 - [ ] Project-preview projects final design
 - [ ] Make pages responsive below 667 px

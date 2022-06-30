@@ -41,6 +41,7 @@ Table of Contents:
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 1.5rem;
 }
 
 /* 2.0 Global Styling */
