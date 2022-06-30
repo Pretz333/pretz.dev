@@ -57,10 +57,6 @@ a, button, h1, h2, h3, h4, p {
   font-family: 'Nunito', sans-serif;
 }
 
-h1, h2, h3, h4, p {
-  color: var(--text-color);
-}
-
 a, button {
   color: var(--text-color-secondary);
 }
@@ -87,15 +83,20 @@ button {
   font-size: 1rem;
 }
 
+h1, h2, h3, h4, p {
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
 h1 {
   font-size: 4rem;
-  margin: 0;
-  padding-top: 0.25em;
 }
 
 h2 {
   font-size: 3rem;
-  margin: 0;
 }
 
 h3 {
