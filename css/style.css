@@ -15,7 +15,7 @@ Table of Contents:
   border-style: dashed;
   border-width: 0.2rem;
   border-color: var(--accent-item-color);
-  border-radius: 0.75vmax;
+  border-radius: 0.5em;
   outline: none;
 }
 
@@ -38,7 +38,6 @@ Table of Contents:
     --accent-item-color: hsl(180, 100%, 40%); 
   }
 }
-
 
 html {
   scroll-behavior: smooth;
