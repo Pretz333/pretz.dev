@@ -20,12 +20,12 @@ Table of Contents:
 }
 
 :root {
-  --primary-background-color: hsl(205, 60%, 65%); /* Dark */
-  --content-background-color: hsl(205, 55%, 85%); /* Bright */
-  --highlight-background-color: hsl(205, 80%, 75%); /* Dark again */
-  --text-color: hsl(205, 35%, 15%); /* Dark */
-  --text-color-secondary: hsl(205, 100%, 25%); /* Dimmed */
-  --accent-item-color: hsl(205, 100%, 40%); /* Accent */
+  --primary-background-color: hsl(205, 60%, 65%);
+  --content-background-color: hsl(205, 55%, 85%);
+  --highlight-background-color: hsl(205, 80%, 75%);
+  --text-color: hsl(205, 35%, 15%);
+  --text-color-secondary: hsl(205, 100%, 25%);
+  --accent-item-color: hsl(205, 100%, 40%);
 }
 
 @media(prefers-color-scheme: dark) {
