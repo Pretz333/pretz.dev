@@ -149,6 +149,7 @@ nav {
 
 .logo {
   max-width: 80%;
+  border-radius: 0;
 }
 
 nav h4 {
