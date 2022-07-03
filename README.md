@@ -15,15 +15,15 @@
 - [ ] Theme switcher
 - [ ] Finalize designs (see steps)
 - [ ] Finalize main page content
-- [ ] Basic about page
+- [x] About page basic format
 - [ ] About page content
 - [ ] About page improvements
-- [ ] Basic projects page
+- [x] Projects page basic format
 - [ ] Projects page content
 - [ ] Projects page improvements
-- [ ] Basic contact page
+- [x] Contact page basic format
 - [ ] Contact page content
-- [ ] Contacts page improvements
+- [ ] Contacts page improvements (icons, GitHub, other methods of contacting, PGP key)
 - [ ] Custom 404 Page
 - [ ] Site audit with Lighthouse
 - [ ] Lighthouse follow-up
