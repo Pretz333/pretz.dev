@@ -6,18 +6,23 @@
 - [x] Get ideas on layout and looks
 - [x] Robots.txt
 - [x] Sitemap.xml
+- [x] favicon.ico
 - [x] Make basic main page (HTML only)
 - [x] Skip navigation link (<https://webaim.org/techniques/skipnav/>)
 - [x] Accessibility aria labels
 - [x] Make basic CSS for main page
 - [x] Set up Cloudflare Pages (see steps)
-- [x] favicon.ico
 - [ ] Theme switcher
 - [ ] Finalize designs (see steps)
 - [ ] Finalize main page content
+- [ ] Basic about page
+- [ ] About page content
+- [ ] About page improvements
 - [ ] Basic projects page
+- [ ] Projects page content
 - [ ] Projects page improvements
 - [ ] Basic contact page
+- [ ] Contact page content
 - [ ] Contacts page improvements
 - [ ] Custom 404 Page
 - [ ] Site audit with Lighthouse
@@ -47,8 +52,10 @@
 - [ ] Make pages responsive below 667 px
 - [ ] Sidebar lower section
 - [x] Make a logo
+- [x] Turn logo into an actual favicon.ico
 - [ ] Logo on footer
-- [ ] techlogo images
+- [ ] techlogo images size consistency
+- [ ] techlogo images caption instead of image with words (and contrast issues)
 
 ### Code Cleanup Steps
 
