@@ -53,11 +53,11 @@ body {
   margin: 0;
 }
 
-a, button, h1, h2, h3, h4, p {
+a, h1, h2, h3, h4, p {
   font-family: 'Nunito', sans-serif;
 }
 
-a, button {
+a {
   color: var(--text-color-secondary);
 }
 
@@ -65,22 +65,25 @@ a:hover, a:focus {
   color: var(--accent-item-color);
 }
 
-button:hover, button:focus {
+.btn:hover, .btn:focus {
   outline-style: dashed;
   outline-width: 0.2rem;
   outline-color: var(--accent-item-color);
-  color: var(--accent-item-color);
   border: none; /* To override the default :focus border */
 }
 
-button {
+.btn {
   background-color: var(--highlight-background-color);
+  box-sizing: border-box;
+  display: inline-block;
   border: none;
   border-radius: 0.5em;
   padding: 0.75em;
   cursor: pointer;
   width: 100%;
   font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
 }
 
 h1, h2, h3, h4, p {
