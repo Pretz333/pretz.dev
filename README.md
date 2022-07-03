@@ -11,6 +11,7 @@
 - [x] Accessibility aria labels
 - [x] Make basic CSS for main page
 - [x] Set up Cloudflare Pages (see steps)
+- [x] favicon.ico
 - [ ] Theme switcher
 - [ ] Finalize designs (see steps)
 - [ ] Finalize main page content
@@ -18,7 +19,6 @@
 - [ ] Projects page improvements
 - [ ] Basic contact page
 - [ ] Contacts page improvements
-- [ ] favicon.ico
 - [ ] Custom 404 Page
 - [ ] Site audit with Lighthouse
 - [ ] Lighthouse follow-up
@@ -41,10 +41,12 @@
 - [ ] Make nav headers and links bigger
 - [x] Make "On This Page" links scroll slightly less far down the page, ideally keeping the margin like nav does
 - [x] Project-preview projects initial design
+- [ ] Above a certain width, move the image to the side (2-column layout)
+- [ ] Above a certain width, move the project blocks be all in one row (3-column layout)
 - [ ] Project-preview projects final design
 - [ ] Make pages responsive below 667 px
 - [ ] Sidebar lower section
-- [ ] Make a logo
+- [x] Make a logo
 - [ ] Logo on footer
 - [ ] techlogo images
 
