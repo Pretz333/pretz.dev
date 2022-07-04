@@ -17,7 +17,7 @@
 - [ ] Finalize main page content
 - [x] About page basic format
 - [x] About page content
-- [ ] About page improvements (.NET and DNN are breaking out of their box. White looks bad.)
+- [ ] About page improvements (.NET and DNN are breaking out of their box, white looks bad, Cloudflare refuses to be vertically centered)
 - [x] Projects page basic format
 - [ ] Projects page content
 - [ ] Projects page improvements
