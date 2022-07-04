@@ -5,7 +5,9 @@ Table of Contents:
   2.0 Global Styling
     2.1 Elements
     2.2 Layout
-  3.0 Homepage-specific Styles
+  3.0 Page-Specific Styles
+    3.1 Homepage
+    3.2 About Page
 
 */
 
@@ -110,7 +112,6 @@ h4 {
 
 img {
   max-width: 100%;
-  border-radius: 1rem;
 }
 
 /* 2.2 Layout */
@@ -149,7 +150,6 @@ nav {
 
 .logo {
   max-width: 80%;
-  border-radius: 0;
 }
 
 nav h4 {
@@ -200,7 +200,9 @@ footer p {
   }
 } */
 
-/* 3.0 Homepage Styles */
+/* 3.0 Page-Specific Styles */
+
+/* 3.1 Homepage */
 
 #projects-preview article {
   background-color: var(--highlight-background-color);
@@ -211,9 +213,24 @@ footer p {
 
 .project-image {
   margin: 1em 0;
+  border-radius: 1rem;
 }
 
 .techlogo {
   display: inline-block;
   height: 5em;
+}
+
+/* 3.2 About Page */
+
+.techlogo-holder {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
+}
+
+.techlogo-holder img {
+  background-color: #fff;
+  padding: 0.2em;
+  border-radius: 0.75em;
 }

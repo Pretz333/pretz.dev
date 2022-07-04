@@ -16,8 +16,8 @@
 - [ ] Finalize designs (see steps)
 - [ ] Finalize main page content
 - [x] About page basic format
-- [ ] About page content
-- [ ] About page improvements
+- [x] About page content
+- [ ] About page improvements (.NET and DNN are breaking out of their box. White looks bad.)
 - [x] Projects page basic format
 - [ ] Projects page content
 - [ ] Projects page improvements
