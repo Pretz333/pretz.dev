@@ -17,12 +17,19 @@
 - [ ] Finalize main page content
 - [x] About page basic format
 - [x] About page content
-- [ ] About page improvements (.NET and DNN are breaking out of their box, white looks bad, Cloudflare refuses to be vertically centered)
+- [ ] About page improvements (.NET and DNN are breaking out of their box, white looks bad (check on light mode as well), Cloudflare refuses to be vertically centered)
 - [x] Projects page basic format
 - [ ] Projects page content
 - [ ] Projects page improvements
 - [x] Contact page basic format
 - [ ] Contact page content
+
+- found an issue on this site? Head to GitHub.
+- resume available upon request
+- examples of my work are on the projects page
+- note about no social media
+- currently job hunting (open to recruiters))
+
 - [ ] Contacts page improvements (icons, GitHub, other methods of contacting, PGP key)
 - [ ] Custom 404 Page
 - [ ] Site audit with Lighthouse
@@ -42,20 +49,22 @@
 - [x] Fix button text contrast
 - [x] Fix button text size
 - [x] Set up light-mode colors
-- [ ] Change the sidebar to indicate what part of the page they are on
-- [ ] Make nav headers and links bigger
 - [x] Make "On This Page" links scroll slightly less far down the page, ideally keeping the margin like nav does
 - [x] Project-preview projects initial design
-- [ ] Above a certain width, move the image to the side (2-column layout)
-- [ ] Above a certain width, move the project blocks be all in one row (3-column layout)
 - [ ] Project-preview projects final design
-- [ ] Make pages responsive below 667 px
-- [ ] Sidebar lower section
 - [x] Make a logo
 - [x] Turn logo into an actual favicon.ico
+- [ ] Change the sidebar to indicate what part of the page they are on
+- [ ] Make nav headers and links bigger
+- [ ] Above a certain width, move the image to the side (2-column layout)
+- [ ] Above a certain width, move the project blocks be all in one row (3-column layout)
+- [ ] Make pages responsive below 667 px
+- [ ] Sidebar lower section
 - [ ] Logo on footer
 - [ ] techlogo images size consistency
 - [ ] techlogo images caption instead of image with words (and contrast issues)
+- [ ] techlogo images zoom in and display alt text in little popup bubble on hover
+- [ ] p text gets too long and looks bad. Max at 75ch? 100ch? Time to research typography
 
 ### Code Cleanup Steps
 
