@@ -8,6 +8,8 @@ Table of Contents:
   3.0 Page-Specific Styles
     3.1 Homepage
     3.2 About Page
+    3.3 Projects Page
+    3.4 Contact Page
 
 */
 
@@ -224,13 +226,14 @@ footer p {
 .footer-image {
   max-height: 30px;
   vertical-align: middle;
+}
 
-
+.footer-image, .contact-icon {
   /* See this article: https://css-tricks.com/change-color-of-svg-on-hover/ */
   filter: invert(var(--svg-invert)) sepia(var(--svg-sepia)) saturate(var(--svg-saturate)) hue-rotate(var(--svg-hue-rotate)) brightness(var(--svg-brightness)) contrast(var(--svg-contrast));
 }
 
-.footer-image:hover {
+.footer-image:hover, a:hover .contact-icon {
   filter: invert(var(--svg-hover-invert)) sepia(var(--svg-hover-sepia)) saturate(var(--svg-hover-saturate)) hue-rotate(var(--svg-hover-hue-rotate)) brightness(var(--svg-hover-brightness)) contrast(var(--svg-hover-contrast));
 }
 
@@ -277,4 +280,18 @@ footer p {
   background-color: #fff;
   padding: 0.2em;
   border-radius: 0.75em;
+}
+
+/* 3.3 Projects Page */
+
+
+/* 3.4 Contact Page */
+
+.contact-icon {
+  vertical-align: middle;
+  width: 2em;
+}
+
+.contact-link {
+  padding: 0.5em 0.2em;
 }
