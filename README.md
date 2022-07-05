@@ -31,6 +31,7 @@
 - currently job hunting (open to recruiters))
 
 - [ ] Contacts page improvements (icons, GitHub, other methods of contacting, PGP key)
+- [ ] Targets and rel attributes on links
 - [ ] Custom 404 Page
 - [ ] Site audit with Lighthouse
 - [ ] Lighthouse follow-up

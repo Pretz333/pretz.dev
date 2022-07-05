@@ -28,6 +28,21 @@ Table of Contents:
   --text-color: hsl(205, 35%, 15%);
   --text-color-secondary: hsl(205, 100%, 25%);
   --accent-item-color: hsl(205, 100%, 40%);
+
+  /* SVG Filters */
+  --svg-invert: 20%;
+  --svg-sepia: 88%;
+  --svg-saturate: 1419%;
+  --svg-hue-rotate: 183deg;
+  --svg-brightness: 90%;
+  --svg-contrast: 103%;
+
+  --svg-hover-invert: 36%;
+  --svg-hover-sepia: 88%;
+  --svg-hover-saturate: 3205%;
+  --svg-hover-hue-rotate: 186deg;
+  --svg-hover-brightness: 87%;
+  --svg-hover-contrast: 102%;
 }
 
 @media(prefers-color-scheme: dark) {
@@ -37,7 +52,22 @@ Table of Contents:
     --highlight-background-color: hsl(205, 80%, 30%);
     --text-color: hsl(205, 20%, 85%); 
     --text-color-secondary: hsl(200, 90%, 80%); 
-    --accent-item-color: hsl(180, 100%, 40%); 
+    --accent-item-color: hsl(180, 100%, 40%);
+
+    /* SVG Filters */
+    --svg-invert: 79%;
+    --svg-sepia: 41%;
+    --svg-saturate: 439%;
+    --svg-hue-rotate: 170deg;
+    --svg-brightness: 99%;
+    --svg-contrast: 99%;
+
+    --svg-hover-invert: 80%;
+    --svg-hover-sepia: 38%;
+    --svg-hover-saturate: 7414%;
+    --svg-hover-hue-rotate: 135deg;
+    --svg-hover-brightness: 97%;
+    --svg-hover-contrast: 101%;
   }
 }
 
@@ -188,6 +218,20 @@ footer {
 footer p {
   position: relative;
   top: 50%;
+  font-size: 1.2rem;
+}
+
+.footer-image {
+  max-height: 30px;
+  vertical-align: middle;
+
+
+  /* See this article: https://css-tricks.com/change-color-of-svg-on-hover/ */
+  filter: invert(var(--svg-invert)) sepia(var(--svg-sepia)) saturate(var(--svg-saturate)) hue-rotate(var(--svg-hue-rotate)) brightness(var(--svg-brightness)) contrast(var(--svg-contrast));
+}
+
+.footer-image:hover {
+  filter: invert(var(--svg-hover-invert)) sepia(var(--svg-hover-sepia)) saturate(var(--svg-hover-saturate)) hue-rotate(var(--svg-hover-hue-rotate)) brightness(var(--svg-hover-brightness)) contrast(var(--svg-hover-contrast));
 }
 
 /* @media(min-width: 667px) {
