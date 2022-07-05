@@ -294,4 +294,6 @@ footer p {
 
 .contact-link {
   padding: 0.5em 0.2em;
+  margin-right: 1em;
+  white-space: nowrap;
 }
