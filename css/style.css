@@ -87,7 +87,7 @@ body {
   margin: 0;
 }
 
-a, h1, h2, h3, h4, p {
+a, h1, h2, h3, h4, p, li {
   font-family: 'Nunito', sans-serif;
 }
 
@@ -118,7 +118,7 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, p, li {
   color: var(--text-color);
 }
 
@@ -263,9 +263,17 @@ footer p {
   border-radius: 1rem;
 }
 
+.project-techlogos {
+  display: flex;
+  gap: 1em;
+}
+
 .techlogo {
+  background: var(--accent-item-color);
+  border-radius: 0.75em;
   display: inline-block;
   height: 5em;
+  padding: 1em;
 }
 
 /* 3.2 About Page */

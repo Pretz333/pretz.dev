@@ -19,7 +19,7 @@
 - [x] About page content
 - [ ] About page improvements (.NET and DNN are breaking out of their box, white looks bad (check on light mode as well), Cloudflare refuses to be vertically centered)
 - [x] Projects page basic format
-- [ ] Projects page content
+- [x] Projects page content
 - [ ] Projects page improvements
 - [x] Contact page basic format
 - [x] Contact page content
