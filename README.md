@@ -8,13 +8,13 @@
 - [x] Sitemap.xml
 - [x] favicon.ico
 - [x] Make basic main page (HTML only)
-- [x] Skip navigation link (<https://webaim.org/techniques/skipnav/>)
+- [x] Skip navigation link
 - [x] Accessibility aria labels
 - [x] Make basic CSS for main page
 - [x] [Set up Cloudflare Pages](#cloudflare-pages-steps)
 - [ ] Theme switcher
 - [ ] [Finalize designs](#finalize-design-steps)
-- [ ] Finalize main page content
+- [x] Finalize main page content
 - [x] About page basic format
 - [x] About page content
 - [ ] [About page improvements](#about-page-improvements)
