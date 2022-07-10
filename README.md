@@ -46,6 +46,8 @@
 - [x] Make "On This Page" links scroll slightly less far down the page, ideally keeping the margin like nav does
 - [x] Project-preview projects initial design
 - [ ] Project-preview projects final design
+- [ ] Change text highlight color
+- [ ] Change strong tag color
 - [x] Make a logo
 - [x] Turn logo into an actual favicon.ico
 - [ ] Change the sidebar to indicate what part of the page they are on
