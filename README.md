@@ -78,7 +78,7 @@
 - [ ] Add other relevant links to the projects, such as the website link, ESOUI link, etc.
 - [ ] Add the rest of my projects.
 - [ ] Same issue as the homepage with the projects - looks bad on screens wider than taller.
-- [ ] Google Analytics is breaking out of its box
+- [x] Google Analytics is breaking out of its box
 - [ ] Visual Studio is smaller than the rest of the techlogos.
 - [ ] Techlogos are taking the focus away from the project. Are they too big? Wrong color?
 
