@@ -11,24 +11,25 @@
 - [x] Skip navigation link (<https://webaim.org/techniques/skipnav/>)
 - [x] Accessibility aria labels
 - [x] Make basic CSS for main page
-- [x] Set up Cloudflare Pages (see steps)
+- [x] [Set up Cloudflare Pages](#cloudflare-pages-steps)
 - [ ] Theme switcher
-- [ ] Finalize designs (see steps)
+- [ ] [Finalize designs](#finalize-design-steps)
 - [ ] Finalize main page content
 - [x] About page basic format
 - [x] About page content
-- [ ] About page improvements (.NET and DNN are breaking out of their box, white looks bad (check on light mode as well), Cloudflare refuses to be vertically centered)
+- [ ] [About page improvements](#about-page-improvements)
 - [x] Projects page basic format
 - [x] Projects page content
-- [ ] Projects page improvements
+- [ ] [Projects page improvements](#projects-page-improvements)
 - [x] Contact page basic format
 - [x] Contact page content
-- [ ] Contacts page improvements (links look bad in a straight list, other methods of contacting, PGP key)
+- [ ] [Contacts page improvements](#contacts-page-improvements)
 - [ ] Targets and rel attributes on links
+- [ ] Note about techlogos not being my trademark
 - [ ] Custom 404 Page
 - [ ] Site audit with Lighthouse
 - [ ] Lighthouse follow-up
-- [ ] Code cleanup (see steps)
+- [ ] [Code cleanup](#code-cleanup-steps)
 - [ ] Wherever things happen from there
 
 ### Cloudflare Pages Steps
@@ -61,6 +62,30 @@
 - [ ] techlogo images caption instead of image with words (and contrast issues)
 - [ ] techlogo images zoom in and display alt text in little popup bubble on hover
 - [ ] p text gets too long and looks bad. Max at 75ch? 100ch? Time to research typography
+
+### About Page Improvements
+
+- [ ] .NET and DNN are breaking out of their box
+- [ ] White looks bad (should also check on light mode)
+- [ ] Cloudflare refuses to be vertically centered
+- [ ] Hover over for an explanation of what it is/is used for
+- [ ] Click to go to that tech's website (such as click on the DNN logo to go to [DotNetNuke](https://www.dnnsoftware.com/))
+
+### Projects Page Improvements
+
+- [ ] Split the "on this page" section to websites, desktop apps, mobile apps, AddOns/mods, hardware, etc.
+- [ ] Add GitHub links to the projects' repos
+- [ ] Add other relevant links to the projects, such as the website link, ESOUI link, etc.
+- [ ] Add the rest of my projects.
+- [ ] Same issue as the homepage with the projects - looks bad on screens wider than taller.
+- [ ] Google Analytics is breaking out of its box
+- [ ] Visual Studio is smaller than the rest of the techlogos.
+- [ ] Techlogos are taking the focus away from the project. Are they too big? Wrong color?
+
+### Contact Page Improvements
+
+- [ ] Links look bad in a straight list
+- [ ] Other methods of contacting (PGP key?)
 
 ### Code Cleanup Steps
 
