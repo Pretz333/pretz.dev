@@ -67,7 +67,7 @@
 
 - [ ] .NET and DNN are breaking out of their box
 - [ ] White looks bad (should also check on light mode)
-- [ ] Cloudflare refuses to be vertically centered
+- [x] Cloudflare refuses to be vertically centered
 - [ ] Hover over for an explanation of what it is/is used for
 - [ ] Click to go to that tech's website (such as click on the DNN logo to go to [DotNetNuke](https://www.dnnsoftware.com/))
 
