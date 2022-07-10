@@ -58,7 +58,7 @@
 - [ ] Make pages responsive below 667 px
 - [ ] Sidebar lower section
 - [ ] Logo on footer
-- [ ] techlogo images size consistency
+- [x] techlogo images size consistency
 - [ ] techlogo images caption instead of image with words (and contrast issues)
 - [ ] techlogo images zoom in and display alt text in little popup bubble on hover
 - [ ] p text gets too long and looks bad. Max at 75ch? 100ch? Time to research typography
@@ -66,7 +66,8 @@
 ### About Page Improvements
 
 - [ ] .NET and DNN are breaking out of their box
-- [ ] White looks bad (should also check on light mode)
+- [x] White looks bad
+- [x] Fix colors in light mode
 - [x] Cloudflare refuses to be vertically centered
 - [ ] Hover over for an explanation of what it is/is used for
 - [ ] Click to go to that tech's website (such as click on the DNN logo to go to [DotNetNuke](https://www.dnnsoftware.com/))
