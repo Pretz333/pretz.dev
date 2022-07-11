@@ -65,7 +65,7 @@
 
 ### About Page Improvements
 
-- [ ] .NET and DNN are breaking out of their box
+- [x] .NET and DNN are breaking out of their box
 - [x] White looks bad
 - [x] Fix colors in light mode
 - [x] Cloudflare refuses to be vertically centered
