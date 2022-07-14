@@ -268,8 +268,8 @@ footer p {
 	position: absolute;
 	z-index: 2; /* Show it in front of the tooltip */
 	bottom: 110%; /* float slightly above the top of the element */
-	left: -0.75em;
-  width: 100%;
+	left: -110%;
+  width: 300%;
 }
 
 /* Override the "display: none;" when interacted with */
