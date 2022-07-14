@@ -69,8 +69,11 @@
 - [x] White looks bad
 - [x] Fix colors in light mode
 - [x] Cloudflare refuses to be vertically centered
-- [ ] Hover over for an explanation of what it is/is used for
-- [ ] Click to go to that tech's website (such as click on the DNN logo to go to [DotNetNuke](https://www.dnnsoftware.com/))
+- [x] Hover over for an explanation of what it is/is used for
+- [x] Click to go to that tech's website (such as click on the DNN logo to go to [DotNetNuke](https://www.dnnsoftware.com/))
+- [ ] Hover/Focus border has a gap at the bottom
+- [ ] Add an arrow to signal where the tooltip is coming from
+- [ ] Assess the accessability of tooltips
 
 ### Projects Page Improvements
 

@@ -5,6 +5,7 @@ Table of Contents:
   2.0 Global Styling
     2.1 Elements
     2.2 Layout
+    2.3 Other Site-Wide Styles
   3.0 Page-Specific Styles
     3.1 Homepage
     3.2 About Page
@@ -247,6 +248,47 @@ footer p {
   nav {
 
   }
+} */
+
+/* 2.3 Other Site-Wide Styles */
+
+.tooltip {
+	position: relative;
+	text-align: center;
+}
+
+.tooltip::after {
+  border-radius: 1em;
+  padding: 0.75em;
+  /* margin: 0.5em; */
+	background-color: #222;
+	content: attr(tooltip-label);
+  color: var(--text-color);
+	display: none;
+	position: absolute;
+	z-index: 2; /* Show it in front of the tooltip */
+	bottom: 110%; /* float slightly above the top of the element */
+	left: -110%;
+  width: 300%;
+}
+
+/* Override the "display: none;" when interacted with */
+.tooltip:hover::after,
+.tooltip:focus::after {
+	display: block;
+}
+
+/* .tooltip.top::after {
+	content: 'top';
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, calc(-100% - 10px));
+} */
+
+/* .tooltip.top::before {
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
 } */
 
 /* 3.0 Page-Specific Styles */
