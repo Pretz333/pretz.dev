@@ -260,16 +260,15 @@ footer p {
 .tooltip::after {
   border-radius: 1em;
   padding: 0.75em;
-  /* margin: 0.5em; */
 	background-color: #222;
 	content: attr(tooltip-label);
   color: var(--text-color);
 	display: none;
 	position: absolute;
-	z-index: 2; /* Show it in front of the tooltip */
+	z-index: 2; /* Show it in front of the image */
 	bottom: 110%; /* float slightly above the top of the element */
-	left: -110%;
-  width: 300%;
+	left: -1.75em; /* the padding + half the width over 100% of the tooltip */
+  width: calc(100% + 2em);
 }
 
 /* Override the "display: none;" when interacted with */
