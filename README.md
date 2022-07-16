@@ -57,8 +57,8 @@
 - [ ] Sidebar lower section
 - [ ] Logo on footer
 - [x] techlogo images size consistency
-- [ ] techlogo images caption instead of image with words (and contrast issues)
-- [ ] techlogo images zoom in and display alt text in little popup bubble on hover
+- [x] techlogo images caption instead of image with words (and contrast issues)
+- [x] techlogo images zoom in and display alt text in little popup bubble on hover
 - [ ] p text gets too long and looks bad. Max at 75ch? 100ch? Time to research typography
 
 ### Small Screen Size Improvements
