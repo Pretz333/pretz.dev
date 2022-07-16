@@ -52,16 +52,28 @@
 - [x] Make a logo
 - [x] Turn logo into an actual favicon.ico
 - [ ] Change the sidebar to indicate what part of the page they are on
-- [ ] Make nav headers and links bigger
-- [ ] Above a certain width, move the image to the side (2-column layout)
-- [ ] Above a certain width, move the project blocks be all in one row (3-column layout)
-- [ ] Make pages responsive below 667 px
+- [ ] [Large screen sizes](#large-screen-size-improvements)
+- [ ] [Small screen sizes](#small-screen-size-improvements)
 - [ ] Sidebar lower section
 - [ ] Logo on footer
 - [x] techlogo images size consistency
 - [ ] techlogo images caption instead of image with words (and contrast issues)
 - [ ] techlogo images zoom in and display alt text in little popup bubble on hover
 - [ ] p text gets too long and looks bad. Max at 75ch? 100ch? Time to research typography
+
+### Small Screen Size Improvements
+
+- [ ] Move the sidebar to an expandable menu at the top below 667 px width
+- [ ] Adjust techlogo image size to fill the space when in single-column layout
+- [ ] Images are very small at small sizes, consider adjusting margins?
+- [ ] Header sizes are too big at small sizes
+- [ ] Fix text run-on in small sizes
+
+### Large Screen Size Improvements
+
+- [ ] Make nav headers and links bigger
+- [ ] Above a certain width, move the image to the side (2-column layout)
+- [ ] Above a certain width, move the project blocks be all in one row (3-column layout)
 
 ### About Page Improvements
 
