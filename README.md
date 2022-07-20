@@ -52,6 +52,7 @@
 - [x] Make a logo
 - [x] Turn logo into an actual favicon.ico
 - [ ] Change the sidebar to indicate what part of the page they are on
+- [ ] Fix the skip to content link (and rename the class)
 - [ ] [Large screen sizes](#large-screen-size-improvements)
 - [ ] [Small screen sizes](#small-screen-size-improvements)
 - [ ] Sidebar lower section
@@ -60,6 +61,7 @@
 - [x] techlogo images caption instead of image with words (and contrast issues)
 - [x] techlogo images zoom in and display alt text in little popup bubble on hover
 - [ ] p text gets too long and looks bad. Max at 75ch? 100ch? Time to research typography
+- [ ] Bullet points have too large of margins
 
 ### Small Screen Size Improvements
 
@@ -86,6 +88,7 @@
 - [ ] Hover/Focus border has a gap at the bottom
 - [ ] Add an arrow to signal where the tooltip is coming from
 - [ ] Assess the accessability of tooltips
+- [ ] Wider tooltips that do not go off the screen
 
 ### Projects Page Improvements
 

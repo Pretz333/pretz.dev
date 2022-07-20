@@ -252,57 +252,8 @@ footer p {
 
 /* 2.3 Other Site-Wide Styles */
 
-.tooltip {
-	position: relative;
-	text-align: center;
-}
-
-.tooltip::after {
-  border-radius: 0.75rem;
-  padding: 0.75em;
-	background-color: #222;
-	content: attr(tooltip-label);
-  color: var(--text-color);
-	display: none;
-	position: absolute;
-	z-index: 2; /* Show it in front of the image */
-	bottom: 110%; /* float slightly above the top of the element */
-	left: -1.75em; /* the padding + half the width over 100% of the tooltip */
-  width: calc(100% + 2em);
-}
-
-/* Override the "display: none;" when interacted with */
-.tooltip:hover::after,
-.tooltip:focus::after {
-	display: block;
-}
-
-/* .tooltip.top::after {
-	content: 'top';
-	top: 0;
-	left: 50%;
-	transform: translate(-50%, calc(-100% - 10px));
-} */
-
-/* .tooltip.top::before {
-	top: 0;
-	left: 50%;
-	transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
-} */
-
-/* 3.0 Page-Specific Styles */
-
-/* 3.1 Homepage */
-
-#projects-preview article {
-  background-color: var(--highlight-background-color);
-  border-radius: 0.75rem;
-  margin: 1em 0;
-  padding: 1em;
-}
-
-.project-image {
-  margin-bottom: 1em;
+/* Override the default a border-radius. TThis is less round than the default to avoid colliding with text */
+.languages a:hover, .techlogos a:hover {
   border-radius: 0.75rem;
 }
 
@@ -321,9 +272,47 @@ footer p {
   aspect-ratio: 1;
 }
 
-/* Override the default a border-radius, since that is less round to not collide with text */
-.languages a:hover, .techlogos a:hover {
+.project-image {
+  margin-bottom: 1em;
   border-radius: 0.75rem;
+}
+
+.tooltip {
+	position: relative;
+	text-align: center;
+}
+
+.tooltip::after {
+  border-radius: 0.75rem;
+  padding: 0.75em;
+	background-color: #222;
+	content: attr(tooltip-label);
+  color: var(--text-color);
+	display: none;
+	position: absolute;
+	z-index: 2;
+	bottom: 110%; /* float slightly above the top of the element */
+	left: -1.75em; /* the padding + half the width over 100% of the tooltip */
+  /* The width is the width of the image + some of the minimum extra space around the image (.post margin + .post padding) */
+  /* wider looks better (particularily 300% of the image width), but can (and will) go off the screen. */
+  width: calc(100% + 2em);
+}
+
+/* Override the "display: none;" when interacted with */
+.tooltip:hover::after,
+.tooltip:focus::after {
+	display: block;
+}
+
+/* 3.0 Page-Specific Styles */
+
+/* 3.1 Homepage */
+
+#projects-preview article {
+  background-color: var(--highlight-background-color);
+  border-radius: 0.75rem;
+  margin: 1em 0;
+  padding: 1em;
 }
 
 /* 3.2 About Page */
