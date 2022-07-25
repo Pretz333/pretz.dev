@@ -240,15 +240,20 @@ footer p {
   filter: invert(var(--svg-hover-invert)) sepia(var(--svg-hover-sepia)) saturate(var(--svg-hover-saturate)) hue-rotate(var(--svg-hover-hue-rotate)) brightness(var(--svg-hover-brightness)) contrast(var(--svg-hover-contrast));
 }
 
-/* @media(min-width: 667px) {
+@media(max-width: 667px) {
   .sidebar {
+    display: none;
+  }
 
+  main, footer {
+    width: 100%;
+    margin-left: auto;
   }
   
-  nav {
+  /* nav {
 
-  }
-} */
+  } */
+}
 
 /* 2.3 Other Site-Wide Styles */
 
