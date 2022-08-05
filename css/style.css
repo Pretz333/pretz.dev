@@ -254,7 +254,12 @@ footer p {
     max-height: 2rem;
     margin: 0;
     padding: 0;
-    display: none;
+    vertical-align: middle;
+  }
+
+  .logo-label {
+    display: inline;
+    vertical-align: middle;
   }
 
   .navigation {
