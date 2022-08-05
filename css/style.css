@@ -175,6 +175,10 @@ img {
   text-align: center;
 }
 
+.small-screens {
+  display: none;
+}
+
 nav {
   background-color: var(--content-background-color);
   border-top-right-radius: 1rem;
@@ -241,18 +245,44 @@ footer p {
 }
 
 @media(max-width: 667px) {
-  .navigation {
+  /* Un-hide small screen's content */
+  .small-screens {
+    display: block;
+  }
+
+  .logo {
+    max-height: 2rem;
+    margin: 0;
+    padding: 0;
     display: none;
   }
 
+  .navigation {
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+
+  nav {
+    border-radius: 0;
+    margin: 0;
+  }
+
+  /* Hide the links until the box is checked */
+  .nav-content {
+    display: none;
+  }
+
+  /* Show the links when the box is checked */
+  #nav-toggle:checked ~ .nav-content {
+    display: block;
+  }
+
+  /* Reset main and footer to take the full width */
   main, footer {
     width: 100%;
     margin-left: auto;
   }
-  
-  /* nav {
-
-  } */
 }
 
 /* 2.3 Other Site-Wide Styles */
