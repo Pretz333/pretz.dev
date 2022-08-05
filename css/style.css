@@ -166,7 +166,7 @@ img {
   width: 1px;
 }
 
-.sidebar {
+.navigation {
   position: fixed;
   top: 0;
   left: 0;
@@ -241,7 +241,7 @@ footer p {
 }
 
 @media(max-width: 667px) {
-  .sidebar {
+  .navigation {
     display: none;
   }
 
