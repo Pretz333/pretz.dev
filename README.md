@@ -49,6 +49,7 @@
 - [ ] Project-preview projects final design
 - [ ] Change text highlight color
 - [ ] Change strong tag color
+- [ ] Stylize scrollbar
 - [x] Make a logo
 - [x] Turn logo into an actual favicon.ico
 - [ ] Change the sidebar to indicate what part of the page they are on
@@ -65,7 +66,12 @@
 
 ### Small Screen Size Improvements
 
-- [ ] Move the sidebar to an expandable menu at the top below 667 px width
+- [x] Move the sidebar to an expandable menu at the top below 667 px width
+- [ ] Close the menu when you click outside of it
+- [ ] Close the menu when you click on a link?
+- [ ] Adjust scrolling offset when clicking on a link in the menu
+- [ ] Add some sort of opening animation to the menu
+- [ ] Do something to make the list of a links feel more like a proper menu. Display as table? Make links take the full width?
 - [ ] Adjust techlogo image size to fill the space when in single-column layout
 - [ ] Images are very small at small sizes, consider adjusting margins?
 - [ ] Header sizes are too big at small sizes
