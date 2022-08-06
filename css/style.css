@@ -271,30 +271,28 @@ footer p {
   nav {
     border-radius: 0;
     margin: 0;
-  }
-
-  #nav-toggle {
-    display: none;
+    padding: 0.4rem;
   }
 
   /* Top and bottom lines */
-  #nav-toggle-label {
+  #nav-toggle {
+    border-radius: 0;
+    appearance: none;
     cursor: pointer;
     position: absolute;
-    vertical-align: middle;
     left: 1.5rem;
-    top: 1.25rem;
+    top: 0.75rem;
     height: 1.5rem;
     width: 2rem;
     border-top: 0.25rem solid var(--accent-item-color);
     border-bottom: 0.25rem solid var(--accent-item-color);
   }
 
-  #nav-toggle-label::before {
+  /* Middle line */
+  #nav-toggle::before {
     background-color: var(--accent-item-color);
     left: 0;
-    /* 0 is the bottom of the top bar, so we want (parent's height - top bar width) / 2  = 0.625rem*/
-    top: 0.625rem;
+    top: 0.375rem; /* (parent's height - bar width * number of bars) / 2  */
     width: 2rem;
     height: 0.25rem;
     position: absolute;
@@ -309,6 +307,10 @@ footer p {
   /* Show the links when the box is checked */
   #nav-toggle:checked ~ .nav-content {
     display: block;
+    transition-property: display;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.5s;
   }
 
   /* Reset main and footer to take the full width */
