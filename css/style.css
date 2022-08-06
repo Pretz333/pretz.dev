@@ -20,7 +20,6 @@ Table of Contents:
   border-style: dashed;
   border-width: 0.2rem;
   border-color: var(--accent-item-color);
-  border-radius: 0.75rem; /* Might not be doing anything? I believe this is getting overridden by the other border radii (on a, etc.) */
   outline: none;
 }
 
@@ -269,7 +268,6 @@ footer p {
   }
 
   nav {
-    border-radius: 0;
     margin: 0;
     padding: 0.4rem;
   }
@@ -297,6 +295,16 @@ footer p {
     height: 0.25rem;
     position: absolute;
     content: '';
+  }
+
+  #nav-toggle:hover, #nav-toggle:focus {
+    /* outline: 0.25rem dashed var(--accent-item-color); */
+    box-shadow: 0 0 0 0.25rem var(--content-background-color), 
+    0 0 0 0.5rem var(--accent-item-color);
+
+    /* Override the default focus border */
+    border-left: 0 solid transparent;
+    border-right: 0 solid transparent;
   }
 
   /* Hide the links until the box is checked */

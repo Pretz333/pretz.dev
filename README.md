@@ -65,6 +65,9 @@
 ### Small Screen Size Improvements
 
 - [x] Move the sidebar to an expandable menu at the top below 667 px width
+- [ ] Close the menu when you click outside of it
+- [ ] Close the menu when you click on a link?
+- [ ] Adjust scrolling offset when clicking on a link in the menu
 - [ ] Add some sort of opening animation to the menu
 - [ ] Do something to make the list of a links feel more like a proper menu. Display as table? Make links take the full width?
 - [ ] Adjust techlogo image size to fill the space when in single-column layout
