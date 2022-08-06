@@ -47,6 +47,7 @@
 - [x] Make "On This Page" links scroll slightly less far down the page, ideally keeping the margin like nav does
 - [x] Project-preview projects initial design
 - [ ] Project-preview projects final design
+- [ ] Make an image carousel so I can have multiple images on projects. This will also fix the gap on the side of the current single image.
 - [ ] Change text highlight color
 - [ ] Change strong tag color
 - [ ] Stylize scrollbar
@@ -99,13 +100,14 @@
 ### Projects Page Improvements
 
 - [ ] Split the "on this page" section to websites, desktop apps, mobile apps, AddOns/mods, hardware, etc.
-- [ ] Add GitHub links to the projects' repos
-- [ ] Add other relevant links to the projects, such as the website link, ESOUI link, etc.
+- [x] Add GitHub links to the projects' repos
+- [x] Add other relevant links to the projects, such as the website link, ESOUI link, etc.
 - [ ] Add the rest of my projects.
 - [ ] Same issue as the homepage with the projects - looks bad on screens wider than taller.
 - [x] Google Analytics is breaking out of its box
 - [ ] Visual Studio is smaller than the rest of the techlogos.
 - [ ] Techlogos are taking the focus away from the project. Are they too big? Wrong color?
+- [ ] What about if we made the post color for projects the same as projects are on the front page? That would simplify the color for the problem above.
 
 ### Contact Page Improvements
 
