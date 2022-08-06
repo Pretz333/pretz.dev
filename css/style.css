@@ -3,6 +3,7 @@
 Table of Contents:
   1.0 Setup
     1.1 Fonts
+    1.2 Scrollbar
   2.0 Global Styling
     2.1 Elements
     2.2 Layout
@@ -103,6 +104,35 @@ html {
   font-display: swap;
   src: url(css/nunito-latin.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* 1.2 Scrollbar */
+
+/* TLDR: hide the buttons, make the colors match normal content */
+
+/* Firefox */
+* {
+  scrollbar-color: var(--content-background-color) var(--primary-background-color);
+  scrollbar-width: thin; /* I like regular more, but this is the only current way to hide the buttons */
+}
+
+/* Chrome / Edge */
+::-webkit-scrollbar {
+  /* I don't care about the width, but if it's not set, it won't apply any other styles */
+  width: 1rem;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--content-background-color);
+  border-radius: 0.75rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-background-color);
 }
 
 /* 2.0 Global Styling */

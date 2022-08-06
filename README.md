@@ -24,7 +24,7 @@
 - [x] Contact page basic format
 - [x] Contact page content
 - [ ] [Contacts page improvements](#contacts-page-improvements)
-- [ ] Targets and rel attributes on links
+- [x] Targets and rel attributes on links
 - [ ] Note about techlogos not being my trademark
 - [ ] Custom 404 Page
 - [ ] Site audit with Lighthouse
@@ -50,7 +50,7 @@
 - [ ] Make an image carousel so I can have multiple images on projects. This will also fix the gap on the side of the current single image.
 - [ ] Change text highlight color
 - [ ] Change strong tag color
-- [ ] Stylize scrollbar
+- [x] Stylize scrollbar
 - [x] Make a logo
 - [x] Turn logo into an actual favicon.ico
 - [ ] Change the sidebar to indicate what part of the page they are on
