@@ -48,8 +48,9 @@
 - [x] Project-preview projects initial design
 - [ ] Project-preview projects final design
 - [ ] Make an image carousel so I can have multiple images on projects. This will also fix the gap on the side of the current single image.
-- [ ] Change text highlight color
-- [ ] Change strong tag color
+- [x] Change text highlight color
+- [x] Change strong tag color
+- [ ] h4 and strong look bad in Firefox's render of Nunito
 - [x] Stylize scrollbar
 - [x] Make a logo
 - [x] Turn logo into an actual favicon.ico

@@ -25,6 +25,11 @@ Table of Contents:
   outline: none;
 }
 
+::selection {
+  background: var(--primary-background-color);
+  color: var(--accent-item-color);
+}
+
 :root {
   --primary-background-color: hsl(205, 60%, 65%);
   --content-background-color: hsl(205, 55%, 85%);
@@ -201,6 +206,10 @@ h4 {
 
 img {
   max-width: 100%;
+}
+
+strong {
+  color: var(--accent-item-color);
 }
 
 /* 2.2 Layout */
