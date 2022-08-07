@@ -18,18 +18,6 @@ Table of Contents:
 
 /* 1.0 Setup */
 
-:focus {
-  border-style: dashed;
-  border-width: 0.2rem;
-  border-color: var(--accent-item-color);
-  outline: none;
-}
-
-::selection {
-  background: var(--primary-background-color);
-  color: var(--accent-item-color);
-}
-
 :root {
   --primary-background-color: hsl(205, 60%, 65%);
   --content-background-color: hsl(205, 55%, 85%);
@@ -80,6 +68,18 @@ Table of Contents:
     --svg-hover-brightness: 97%;
     --svg-hover-contrast: 101%;
   }
+}
+
+:focus {
+  border-style: dashed;
+  border-width: 0.2rem;
+  border-color: var(--accent-item-color);
+  outline: none;
+}
+
+::selection {
+  background: var(--primary-background-color);
+  color: var(--accent-item-color);
 }
 
 html {
