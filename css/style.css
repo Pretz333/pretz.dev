@@ -118,7 +118,7 @@ html {
 /* Firefox */
 * {
   scrollbar-color: var(--content-background-color) var(--primary-background-color);
-  scrollbar-width: thin; /* I like regular more, but this is the only current way to hide the buttons */
+  scrollbar-width: thin; /* I prefer regular, but this is currently the only way to hide the buttons */
 }
 
 /* Chrome / Edge */
@@ -308,7 +308,7 @@ footer p {
 }
 
 @media(max-width: 667px) {
-  /* Un-hide small screen's content */
+  /* Un-hide small-screen's content */
   .small-screens {
     display: block;
   }
@@ -398,11 +398,6 @@ footer p {
 
 /* 2.3 Other Site-Wide Styles */
 
-/* Override the default a border-radius. TThis is less round than the default to avoid colliding with text */
-.languages a:hover, .techlogos a:hover {
-  border-radius: 0.75rem;
-}
-
 .techlogos {
   display: flex;
   flex-wrap: wrap;
@@ -432,7 +427,7 @@ footer p {
   border-radius: 0.75rem;
   padding: 0.75em;
 	background-color: #222;
-	content: attr(tooltip-label);
+	content: attr(tooltip-text);
   color: var(--text-color);
 	display: none;
 	position: absolute;
@@ -445,8 +440,7 @@ footer p {
 }
 
 /* Override the "display: none;" when interacted with */
-.tooltip:hover::after,
-.tooltip:focus::after {
+.tooltip:hover::after, .tooltip:focus::after {
 	display: block;
 }
 
@@ -462,6 +456,11 @@ footer p {
 }
 
 /* 3.2 About Page */
+
+/* Override the default a border-radius. The default a:hover/:focus border is less round than everything else to avoid colliding with text */
+.languages a:hover, .techlogos a:hover {
+  border-radius: 0.75rem;
+}
 
 .languages {
   display: grid;
