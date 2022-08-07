@@ -67,7 +67,7 @@
 ### Small Screen Size Improvements
 
 - [x] Move the sidebar to an expandable menu at the top below 667 px width
-- [ ] Add a border to the navbar?
+- [x] Add a border to the navbar?
 - [ ] Close the menu when you click outside of it
 - [ ] Close the menu when you click on a "On This Page" link?
 - [ ] Adjust scrolling offset when clicking on a link in the menu
