@@ -69,6 +69,8 @@
 ### Small Screen Size Improvements
 
 - [x] Move the sidebar to an expandable menu at the top below 667 px width
+- [ ] tooltip's position:relative is somehow covering up the navbar's content
+- [ ] Add a border to the navbar?
 - [ ] Close the menu when you click outside of it
 - [ ] Close the menu when you click on a link?
 - [ ] Adjust scrolling offset when clicking on a link in the menu
@@ -97,6 +99,7 @@
 - [ ] Add an arrow to signal where the tooltip is coming from
 - [ ] Assess the accessability of tooltips
 - [ ] Wider tooltips that do not go off the screen
+- [ ] tooltips can go off-screen
 
 ### Projects Page Improvements
 

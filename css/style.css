@@ -332,7 +332,9 @@ footer p {
   }
 
   nav {
-    margin: 0;
+    z-index: 10;
+    border-radius: 0 0 0.75em 0.75em;
+    margin: 0 1.5rem;
     padding: 0.4rem;
   }
 
@@ -342,7 +344,7 @@ footer p {
     appearance: none;
     cursor: pointer;
     position: absolute;
-    left: 1.5rem;
+    left: 2.5rem;
     top: 0.75rem;
     height: 1.5rem;
     width: 2rem;
