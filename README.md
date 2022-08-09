@@ -56,7 +56,7 @@
 - [x] Stylize scrollbar
 - [x] Change text highlight color
 - [x] Change strong tag color
-- [ ] Fix the skip to content link (and rename the class)
+- [x] Fix the skip to content link (and rename the class)
 - [ ] Make an image carousel so I can have multiple images on projects. This will also fix the gap on the side of the current single image.
 - [ ] h4 and strong look bad in Firefox's render of Nunito
 - [ ] Logo on footer
