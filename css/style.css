@@ -133,7 +133,8 @@ html {
 
 ::-webkit-scrollbar-thumb {
   background: var(--content-background-color);
-  border-radius: 0.75rem;
+  border-top-left-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
 }
 
 ::-webkit-scrollbar-track {
