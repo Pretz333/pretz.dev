@@ -118,7 +118,6 @@ html {
 /* Firefox */
 * {
   scrollbar-color: var(--content-background-color) var(--primary-background-color);
-  scrollbar-width: thin; /* I prefer regular, but this is currently the only way to hide the buttons */
 }
 
 /* Chrome / Edge */
