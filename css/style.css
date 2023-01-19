@@ -19,6 +19,8 @@ Table of Contents:
 /* 1.0 Setup */
 
 :root {
+  color-scheme: light;
+
   --primary-background-color: hsl(205, 60%, 65%);
   --content-background-color: hsl(205, 55%, 85%);
   --highlight-background-color: hsl(205, 80%, 75%);
@@ -45,6 +47,8 @@ Table of Contents:
 
 @media(prefers-color-scheme: dark) {
   :root {
+    color-scheme: dark;
+
     --primary-background-color: hsl(205, 50%, 10%);
     --content-background-color: hsl(205, 75%, 20%);
     --highlight-background-color: hsl(205, 80%, 30%);
