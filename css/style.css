@@ -296,6 +296,10 @@ footer p {
   font-size: 1.2rem;
 }
 
+footer .only-image {
+  text-decoration: none;
+}
+
 .footer-icon {
   max-height: 30px;
   vertical-align: middle;
