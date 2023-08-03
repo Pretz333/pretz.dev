@@ -120,4 +120,5 @@
 - [ ] Simplify the classes and class selections
 - [ ] Make HTML and general layout consistent between pages
 - [ ] Clean up and organize CSS
+- [ ] Split page-specific CSS into their own stylesheets 
 - [ ] Combine duplicate code (CSS, primarily)
