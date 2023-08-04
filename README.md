@@ -20,6 +20,7 @@
 - [x] Contact page basic format
 - [x] Contact page content
 - [x] Targets and rel attributes on links
+- [ ] Re-add the Content-Security-Policy to index and projects now that we're using some JS
 - [ ] [Finalize designs](#finalize-design-steps)
 - [ ] [Large screen sizes](#large-screen-size-improvements)
 - [ ] [Small screen sizes](#small-screen-size-improvements)
@@ -60,6 +61,7 @@
 - [x] Change strong tag color
 - [x] Fix the skip to content link (and rename the class)
 - [x] Make an image carousel so I can have multiple images on projects. This will also fix the gap on the side of the current single image.
+- [x] Add buttons to navigate between the slides of the carousel
 - [ ] Fix carousel's bottom line not having the round corners (due to the scrollbar being beneath it)
 - [ ] h4 and strong look bad in Firefox's render of Nunito
 - [ ] Logo on footer
@@ -87,6 +89,7 @@
 - [ ] Above a certain width, move the image to the side (2-column layout)
 - [ ] Above a certain width, move the project blocks be all in one row (3-column layout)
 - [ ] Make nav headers and links bigger
+- [ ] Carousel buttons will scroll until the image is 1.5 rem from the top of the screen. On larger screens, this may scroll the buttons off of the screen, resulting in a jittery process
 
 ### About Page Improvements
 
@@ -125,3 +128,7 @@
 - [ ] Clean up and organize CSS
 - [ ] Split page-specific CSS into their own stylesheets 
 - [ ] Combine duplicate code (CSS, primarily)
+
+### Long-Term Enchancements
+
+- [ ] It could be a fun project to execute the carousel button script before shipping the HTML to them, eliminating the need for the script entirely

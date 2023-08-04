@@ -170,18 +170,21 @@ a:hover, a:focus {
   outline-color: var(--accent-item-color);
 }
 
-.btn {
-  background-color: var(--highlight-background-color);
+.btn, .carousel-button {
   box-sizing: border-box;
   display: inline-block;
   border: none;
   border-radius: 0.75rem;
-  padding: 0.75em;
   cursor: pointer;
-  width: 100%;
   font-size: 1rem;
   text-align: center;
   text-decoration: none;
+}
+
+.btn {
+  background-color: var(--highlight-background-color);
+  padding: 0.75em;
+  width: 100%;
 }
 
 h1, h2, h3, h4, p, li {
@@ -415,7 +418,6 @@ footer .only-image {
   border-radius: 0.75rem;
   display: flex;
   gap: 1em;
-  margin-bottom: 1em;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scrollbar-color: var(--primary-background-color) transparent; /* Firefox scrollbar styling - Chrome is below */
@@ -426,6 +428,22 @@ footer .only-image {
   flex-basis: 100%;
   flex-shrink: 0;
   scroll-snap-align: center;
+}
+
+.carousel-button-holder {
+  margin: 1em auto;
+  text-align: center;
+}
+
+.carousel-button {
+  background-color: var(--primary-background-color);
+  width: 2.75em;
+  height: 2.75em;
+  margin-left: 1em;
+}
+
+.carousel-button:first-of-type {
+  margin-left: 0;
 }
 
 .carousel::-webkit-scrollbar {
