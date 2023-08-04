@@ -29,6 +29,8 @@
 - [ ] Note about techlogos not being my trademark (footer? They're on every page but contact. Ignoring that, contact makes the most sense to put this note on.)
 - [ ] Theme switcher
 - [ ] Custom 404 Page
+- [ ] Add modern formats (webp/avif) to images with more-standard fallbacks (jpg/png)
+- [ ] Assess how big the carousel images really need to be
 - [ ] Site audit with Lighthouse
 - [ ] Lighthouse follow-up
 - [ ] [Code cleanup](#code-cleanup-steps)
@@ -57,7 +59,8 @@
 - [x] Change text highlight color
 - [x] Change strong tag color
 - [x] Fix the skip to content link (and rename the class)
-- [ ] Make an image carousel so I can have multiple images on projects. This will also fix the gap on the side of the current single image.
+- [x] Make an image carousel so I can have multiple images on projects. This will also fix the gap on the side of the current single image.
+- [ ] Fix carousel's bottom line not having the round corners (due to the scrollbar being beneath it)
 - [ ] h4 and strong look bad in Firefox's render of Nunito
 - [ ] Logo on footer
 - [ ] p text gets too long and looks bad. Max at 75ch? 100ch? Time to research typography
@@ -95,7 +98,7 @@
 - [x] Click to go to that tech's website (such as click on the DNN logo to go to [DotNetNuke](https://www.dnnsoftware.com/))
 - [ ] Hover/Focus border has a gap at the bottom
 - [ ] Add an arrow to signal where the tooltip is coming from
-- [ ] Assess the accessability of tooltips
+- [ ] Assess the accessibility of tooltips
 - [ ] tooltips can go off-screen when content is high on the screen
 - [ ] Wider tooltips that do not go off the screen
 
@@ -108,7 +111,7 @@
 - [ ] Add the rest of my projects.
 - [ ] Visual Studio is smaller than the rest of the techlogos.
 - [ ] Techlogos are taking the focus away from the project. Are they too big? Wrong color?
-- [ ] What about if we made the post color for projects the same as projects are on the front page? That would simplify the color for the problem above.
+- [ ] What about if we made the post color for projects the same as projects are on the front page? That would simplify the color for the problem above. Perhaps splitting the projects into the buckets from above could be the "base", then the projects would stack on top like on the homepage
 
 ### Contact Page Improvements
 

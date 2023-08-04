@@ -410,6 +410,47 @@ footer .only-image {
 
 /* 2.3 Other Site-Wide Styles */
 
+/* Basically, line everything up in a row and set up a scrollbar for if (when) it goes off-screen */
+.carousel {
+  border-radius: 0.75rem;
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: var(--primary-background-color) transparent; /* Firefox scrollbar styling - Chrome is below */
+}
+
+/* Basically, have each item take up the full available space and have the scroll lock onto on each item as it goes by */
+.carousel > * {
+  flex-basis: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+}
+
+.carousel::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  border-radius: 0.75rem;
+  background-color: var(--primary-background-color);
+}
+
+.carousel::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+@media screen and (orientation:portrait) {
+  /* The scrollbar is really not for mobile */
+  /* I'd rather just have them swipe the images or tap the buttons to the other image */
+  /* Plus, mobile users are much less likely to be blocking the JS which adds the buttons, so less navigation options is a nicety */
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .techlogos {
   display: flex;
   flex-wrap: wrap;
@@ -423,11 +464,6 @@ footer .only-image {
   height: 6em;
   padding: 0.5em;
   aspect-ratio: 1;
-}
-
-.project-image {
-  margin-bottom: 1em;
-  border-radius: 0.75rem;
 }
 
 .tooltip {
