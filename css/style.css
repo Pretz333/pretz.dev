@@ -430,6 +430,10 @@ footer .only-image {
   scroll-snap-align: center;
 }
 
+.carousel img {
+  width: 100%;
+}
+
 .carousel-button-holder {
   margin: 1em auto;
   text-align: center;

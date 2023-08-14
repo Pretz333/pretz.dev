@@ -64,6 +64,7 @@
 - [x] Add buttons to navigate between the slides of the carousel
 - [ ] Fix carousel's bottom line not having the round corners (due to the scrollbar being beneath it)
 - [ ] h4 and strong look bad in Firefox's render of Nunito
+- [ ] Use overflow-clip-margin to fix the corners not matching
 - [ ] Logo on footer
 - [ ] p text gets too long and looks bad. Max at 75ch? 100ch? Time to research typography
 - [ ] Bullet points have too large of margins
