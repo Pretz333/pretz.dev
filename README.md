@@ -20,7 +20,7 @@
 - [x] Contact page basic format
 - [x] Contact page content
 - [x] Targets and rel attributes on links
-- [ ] Re-add the Content-Security-Policy to index and projects now that we're using some JS
+- [x] Re-add the Content-Security-Policy to index and projects now that we're using some JS
 - [ ] [Finalize designs](#finalize-design-steps)
 - [ ] [Large screen sizes](#large-screen-size-improvements)
 - [ ] [Small screen sizes](#small-screen-size-improvements)
@@ -119,6 +119,8 @@
 ### Contact Page Improvements
 
 - [ ] Links look bad in a straight list. Box them up into a grid?
+- [ ] Add a form to contact
+- [ ] Clarify that I am available for contract work
 
 ### Code Cleanup Steps
 
@@ -131,4 +133,4 @@
 
 ### Long-Term Enchancements
 
-- [ ] It could be a fun project to execute the carousel button script before shipping the HTML to them, eliminating the need for the script entirely
+- [ ] It could be a fun project to execute the carousel button script before shipping the HTML to visitors, eliminating the need for the script entirely
