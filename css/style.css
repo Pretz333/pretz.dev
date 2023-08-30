@@ -507,10 +507,11 @@ footer .only-image {
 }
 
 .about-image-grid img {
-  background-color: var(--logo-background-color);
-  padding: 0.2em;
-  border-radius: 0.75rem;
   aspect-ratio: 1;
+  border-radius: 0.75rem;
+  background-color: var(--logo-background-color);
+  box-sizing: border-box;
+  padding: 0.4em;
 }
 
 /* Override the default a border-radius. The default a:hover/:focus border is less round than everything else to avoid colliding with text */
