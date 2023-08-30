@@ -485,33 +485,6 @@ footer .only-image {
   display: inline-block;
   height: 6em;
   padding: 0.5em;
-  aspect-ratio: 1;
-}
-
-.tooltip {
-	position: relative;
-	text-align: center;
-}
-
-.tooltip::after {
-  border-radius: 0.75rem;
-  padding: 0.75em;
-	background-color: #222;
-	content: attr(tooltip-text);
-  color: var(--text-color);
-	display: none;
-	position: absolute;
-	z-index: 2;
-	bottom: 110%; /* float slightly above the top of the element */
-	left: -1.75em; /* the padding + half the width over 100% of the tooltip */
-  /* The width is the width of the image + some of the minimum extra space around the image (.post margin + .post padding) */
-  /* wider looks better (particularily 300% of the image width), but can (and will) go off the screen. */
-  width: calc(100% + 2em);
-}
-
-/* Override the "display: none;" when interacted with */
-.tooltip:hover::after, .tooltip:focus::after {
-	display: block;
 }
 
 /* 3.0 Page-Specific Styles */
@@ -543,6 +516,32 @@ footer .only-image {
 /* Override the default a border-radius. The default a:hover/:focus border is less round than everything else to avoid colliding with text */
 .about-image-grid a:hover {
   border-radius: 0.75rem;
+}
+
+.tooltip {
+	position: relative;
+	text-align: center;
+}
+
+.tooltip::after {
+  border-radius: 0.75rem;
+  padding: 0.75em;
+	background-color: #222;
+	content: attr(tooltip-text);
+  color: var(--text-color);
+	display: none;
+	position: absolute;
+	z-index: 2;
+	bottom: 110%; /* float slightly above the top of the element */
+	left: -1.75em; /* the padding + half the width over 100% of the tooltip */
+  /* The width is the width of the image + some of the minimum extra space around the image (.post margin + .post padding) */
+  /* wider looks better (particularily 300% of the image width), but can (and will) go off the screen. */
+  width: calc(100% + 2em);
+}
+
+/* Override the "display: none;" when interacted with */
+.tooltip:hover::after, .tooltip:focus::after {
+	display: block;
 }
 
 /* 3.3 Projects Page */
