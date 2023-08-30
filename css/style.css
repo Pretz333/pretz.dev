@@ -18,19 +18,19 @@ Table of Contents:
 
 /* 1.0 Setup */
 
-:root {
-  color-scheme: light;
+/* :root {
+  color-scheme: light; */
 
-  --primary-background-color: hsl(205, 60%, 65%);
+  /* --primary-background-color: hsl(205, 60%, 65%);
   --content-background-color: hsl(205, 55%, 85%);
   --highlight-background-color: hsl(205, 80%, 75%);
   --text-color: hsl(205, 35%, 15%);
   --text-color-secondary: hsl(205, 100%, 25%);
   --logo-background-color: hsl(180, 55%, 70%);
-  --accent-item-color: hsl(205, 100%, 40%);
+  --accent-item-color: hsl(205, 100%, 40%); */
 
   /* SVG Filters */
-  --svg-invert: 20%;
+  /* --svg-invert: 20%;
   --svg-sepia: 88%;
   --svg-saturate: 1419%;
   --svg-hue-rotate: 183deg;
@@ -42,10 +42,10 @@ Table of Contents:
   --svg-hover-saturate: 3205%;
   --svg-hover-hue-rotate: 186deg;
   --svg-hover-brightness: 87%;
-  --svg-hover-contrast: 102%;
-}
+  --svg-hover-contrast: 102%; */
+/* } */
 
-@media(prefers-color-scheme: dark) {
+/* @media(prefers-color-scheme: dark) { */
   :root {
     color-scheme: dark;
 
@@ -72,7 +72,7 @@ Table of Contents:
     --svg-hover-brightness: 97%;
     --svg-hover-contrast: 101%;
   }
-}
+/* } */
 
 :focus {
   border-style: dashed;
@@ -413,7 +413,7 @@ footer .only-image {
 
 /* 2.3 Other Site-Wide Styles */
 
-/* Basically, line everything up in a row and set up a scrollbar for if (when) it goes off-screen */
+/* Line everything up in a row and set up a scrollbar for if (when) it goes off-screen */
 .carousel {
   border-radius: 0.75rem;
   display: flex;
@@ -423,7 +423,7 @@ footer .only-image {
   scrollbar-color: var(--primary-background-color) transparent; /* Firefox scrollbar styling - Chrome is below */
 }
 
-/* Basically, have each item take up the full available space and have the scroll lock onto on each item as it goes by */
+/* Have each item take up the full available space and have the scroll lock onto on each item as it goes by */
 .carousel > * {
   flex-basis: 100%;
   flex-shrink: 0;
