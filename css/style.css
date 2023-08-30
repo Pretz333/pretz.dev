@@ -527,22 +527,22 @@ footer .only-image {
 
 /* 3.2 About Page */
 
-/* Override the default a border-radius. The default a:hover/:focus border is less round than everything else to avoid colliding with text */
-.languages a:hover, .techlogos a:hover {
-  border-radius: 0.75rem;
-}
-
-.languages {
+.about-image-grid {
   display: grid;
   gap: 1em;
   grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
 }
 
-.languages img {
+.about-image-grid img {
   background-color: var(--logo-background-color);
   padding: 0.2em;
   border-radius: 0.75rem;
   aspect-ratio: 1;
+}
+
+/* Override the default a border-radius. The default a:hover/:focus border is less round than everything else to avoid colliding with text */
+.about-image-grid a:hover {
+  border-radius: 0.75rem;
 }
 
 /* 3.3 Projects Page */
