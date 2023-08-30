@@ -477,11 +477,14 @@ footer .only-image {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
+  justify-content: center;
 }
 
 .techlogos img {
+  aspect-ratio: 1;
   background-color: var(--logo-background-color);
   border-radius: 0.75rem;
+  box-sizing: border-box;
   display: inline-block;
   height: 6em;
   padding: 0.5em;
