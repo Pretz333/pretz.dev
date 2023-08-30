@@ -78,7 +78,7 @@
 - [ ] Close the menu when you click outside of it
 - [ ] Close the menu when you click on a "On This Page" link?
 - [ ] Adjust scrolling offset when clicking on a link in the menu
-- [ ] tooltip's position:relative is somehow covering up the navbar's content
+- [x] tooltip's position:relative is somehow covering up the navbar's content
 - [ ] Do something to make the list of a links feel more like a proper menu. Display as table? Make links take the full width?
 - [ ] Add some sort of opening animation to the menu
 - [ ] Adjust techlogo image size to fill the space when in single-column layout
