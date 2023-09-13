@@ -112,11 +112,11 @@
 - [x] Google Analytics is breaking out of its box
 - [x] Add GitHub links to the projects' repos
 - [x] Add other relevant links to the projects, such as the website link, ESOUI link, etc.
-- [ ] Split the "on this page" section to websites, desktop apps, mobile apps, AddOns/mods, hardware, etc.
+- [x] Split the "on this page" section to websites, desktop apps, mobile apps, AddOns/mods, hardware, etc.
 - [ ] Add the rest of my projects.
 - [ ] Visual Studio is smaller than the rest of the techlogos.
 - [ ] Techlogos are taking the focus away from the project. Are they too big? Wrong color?
-- [ ] What about if we made the post color for projects the same as projects are on the front page? That would simplify the color for the problem above. Perhaps splitting the projects into the buckets from above could be the "base", then the projects would stack on top like on the homepage
+- [x] What about if we made the post color for projects the same as projects are on the front page? That would simplify the color for the problem above. Perhaps splitting the projects into the buckets from above could be the "base", then the projects would stack on top like on the homepage
 
 ### Contact Page Improvements
 
