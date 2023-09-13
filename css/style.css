@@ -283,6 +283,13 @@ nav ul a {
   border-radius: 0.75rem;
 }
 
+.subpost {
+  background-color: var(--highlight-background-color);
+  border-radius: 0.75rem;
+  margin: 1em 0;
+  padding: 1em;
+}
+
 main, footer {
   width: 80%;
   margin-left: 20%;
@@ -493,13 +500,6 @@ footer .only-image {
 /* 3.0 Page-Specific Styles */
 
 /* 3.1 Homepage */
-
-#projects-preview article {
-  background-color: var(--highlight-background-color);
-  border-radius: 0.75rem;
-  margin: 1em 0;
-  padding: 1em;
-}
 
 /* 3.2 About Page */
 
