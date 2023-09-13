@@ -19,6 +19,7 @@
 - [x] Projects page content
 - [x] Contact page basic format
 - [x] Contact page content
+- [x] Add the missing page header (with an h1) to the projects page
 - [x] Targets and rel attributes on links
 - [x] Re-add the Content-Security-Policy to index and projects now that we're using some JS
 - [ ] [Finalize designs](#finalize-design-steps)
@@ -30,8 +31,8 @@
 - [ ] Note about techlogos not being my trademark (footer? They're on every page but contact. Ignoring that, contact makes the most sense to put this note on.)
 - [ ] Theme switcher
 - [ ] Custom 404 Page
-- [ ] Add modern formats (webp/avif) to images with more-standard fallbacks (jpg/png)
 - [ ] Assess how big the carousel images really need to be
+- [ ] Add modern formats (webp/avif) to images with more-standard fallbacks (jpg/png)
 - [ ] Site audit with Lighthouse
 - [ ] Lighthouse follow-up
 - [ ] [Code cleanup](#code-cleanup-steps)
