@@ -71,12 +71,19 @@ Table of Contents:
     --svg-hover-hue-rotate: 135deg;
     --svg-hover-brightness: 97%;
     --svg-hover-contrast: 101%;
+
+    /* Shared Values / magic numbers that multiple elements use */
+    --border-radius: 0.75rem;
+    --border-width: 0.2rem;
+    --post-margin: 1.5rem;
+    --scrollbar-width: 1rem;
+    --post-padding-width: 1rem;
   }
 /* } */
 
 :focus {
   border-style: dashed;
-  border-width: 0.2rem;
+  border-width: var(--border-width);;
   border-color: var(--accent-item-color);
   outline: none;
 }
@@ -88,7 +95,7 @@ Table of Contents:
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 1.5rem;
+  scroll-padding-top: var(--post-margin);
 }
 
 /* 1.1 Fonts */
@@ -127,7 +134,7 @@ html {
 /* Chrome / Edge */
 ::-webkit-scrollbar {
   /* I don't care about the width, but if it's not set, it won't apply any other styles */
-  width: 1rem;
+  width: var(--scrollbar-width);
 }
 
 ::-webkit-scrollbar-button {
@@ -136,8 +143,8 @@ html {
 
 ::-webkit-scrollbar-thumb {
   background: var(--content-background-color);
-  border-top-left-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
 }
 
 ::-webkit-scrollbar-track {
@@ -166,7 +173,7 @@ a:hover, a:focus {
   border: none; /* To override the default :focus border */
   border-radius: 0.5rem; /* Stay wider so it doesn't collide with the text */
   outline-style: dashed;
-  outline-width: 0.2rem;
+  outline-width: var(--border-width);;
   outline-color: var(--accent-item-color);
 }
 
@@ -174,9 +181,8 @@ a:hover, a:focus {
   box-sizing: border-box;
   display: inline-block;
   border: none;
-  border-radius: 0.75rem;
+  border-radius: var(--border-radius);
   cursor: pointer;
-  font-size: 1rem;
   padding: 0.75em;
   text-align: center;
   text-decoration: none;
@@ -207,7 +213,7 @@ h3 {
   font-size: 2rem;
 }
 
-h4 {
+h4, .btn, .carousel-button {
   font-size: 1rem;
 }
 
@@ -235,6 +241,10 @@ strong {
   display: block;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .navigation {
   position: fixed;
   top: 0;
@@ -250,8 +260,8 @@ strong {
 
 nav {
   background-color: var(--content-background-color);
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
   margin: 1.5rem 0;
   padding: 1rem 0;
 }
@@ -278,14 +288,14 @@ nav ul a {
 
 .post {
   background-color: var(--content-background-color);
-  margin: 1.5rem;
-  padding: 1rem;
-  border-radius: 0.75rem;
+  margin: var(--post-margin);
+  padding: var(--post-padding-width);
+  border-radius: var(--border-radius);
 }
 
 .subpost {
   background-color: var(--highlight-background-color);
-  border-radius: 0.75rem;
+  border-radius: var(--border-radius);
   margin: 1em 0;
   padding: 1em;
 }
@@ -355,11 +365,11 @@ footer .only-image {
   }
 
   nav {
-    border-radius: 0 0 0.75em 0.75em;
-    border-top: 0px;
-    margin: 0 1.5rem;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
     outline: 0.25rem solid var(--primary-background-color);
-    padding: 0.4rem 1rem;
+    border-top: 0;
+    margin: 0 var(--post-margin);
+    padding: 0.4rem var(--post-padding-width);
     display: grid;
     grid-template-columns: 2fr 5fr;
     gap: 0.5em;
@@ -369,10 +379,6 @@ footer .only-image {
     justify-items: center;
     position: inherit;
     z-index: 1;
-  }
-
-  .logo-block {
-    white-space: nowrap;
   }
 
   .site-nav h4 {
@@ -426,7 +432,7 @@ footer .only-image {
 
 /* Line everything up in a row and set up a scrollbar for if (when) it goes off-screen */
 .carousel {
-  border-radius: 0.75rem;
+  border-radius: var(--border-radius);
   display: flex;
   gap: 1em;
   overflow-x: scroll;
@@ -463,12 +469,12 @@ footer .only-image {
 }
 
 .carousel::-webkit-scrollbar {
-  width: 1rem;
-  height: 1rem;
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-width);
 }
 
 .carousel::-webkit-scrollbar-thumb {
-  border-radius: 0.75rem;
+  border-radius: var(--border-radius);
   background-color: var(--primary-background-color);
 }
 
@@ -495,7 +501,7 @@ footer .only-image {
 .techlogos img {
   aspect-ratio: 1;
   background-color: var(--logo-background-color);
-  border-radius: 0.75rem;
+  border-radius: var(--border-radius);
   box-sizing: border-box;
   display: inline-block;
   height: 6em;
@@ -516,7 +522,7 @@ footer .only-image {
 
 .about-image-grid img {
   aspect-ratio: 1;
-  border-radius: 0.75rem;
+  border-radius: var(--border-radius);
   background-color: var(--logo-background-color);
   box-sizing: border-box;
   padding: 0.4em;
@@ -524,7 +530,7 @@ footer .only-image {
 
 /* Override the default a border-radius. The default a:hover/:focus border is less round than everything else to avoid colliding with text */
 .about-image-grid a:hover {
-  border-radius: 0.75rem;
+  border-radius: var(--border-radius);
 }
 
 .tooltip {
@@ -533,8 +539,8 @@ footer .only-image {
 }
 
 .tooltip::after {
-  border-radius: 0.75rem;
-  padding: 0.75em;
+  border-radius: var(--border-radius);
+  padding: var(--border-radius);
 	background-color: #222;
 	content: attr(tooltip-text);
   color: var(--text-color);
@@ -566,5 +572,4 @@ footer .only-image {
 .contact-link {
   padding: 0.5em 0.2em;
   margin-right: 1em;
-  white-space: nowrap;
 }
