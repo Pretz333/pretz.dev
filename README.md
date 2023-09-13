@@ -63,8 +63,8 @@
 - [x] Fix gap to the right-side of the techlogos
 - [x] Make an image carousel so I can have multiple images on projects. This will also fix the gap on the side of the current single image.
 - [x] Add buttons to navigate between the slides of the carousel
+- [x] I feel like the project images are too distracting, possibly due to how bright and colorful they are. Desaturate and/or darken the carousel images slightly?
 - [ ] Fix carousel's bottom line not having the round corners (due to the scrollbar being beneath it)
-- [ ] I feel like the project images are too distracting, possibly due to how bright and colorful they are. Desaturate and/or darken the carousel images slightly?
 - [ ] h4 and strong look bad in Firefox's render of Nunito
 - [ ] Use overflow-clip-margin to fix the corners not matching
 - [ ] Logo on footer

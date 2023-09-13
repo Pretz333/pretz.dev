@@ -439,6 +439,7 @@ footer .only-image {
 
 .carousel img {
   width: 100%;
+  filter: brightness(85%);
 }
 
 .carousel-button-holder {
