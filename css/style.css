@@ -362,9 +362,9 @@ footer .only-image {
 
   nav {
     border-radius: 0 0 0.75em 0.75em;
-    border: 0.25rem solid var(--primary-background-color);
     border-top: 0px;
     margin: 0 1.5rem;
+    outline: 0.25rem solid var(--primary-background-color);
     padding: 0.4rem 1rem;
     display: grid;
     grid-template-columns: 2fr 5fr;
