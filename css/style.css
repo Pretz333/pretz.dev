@@ -324,6 +324,12 @@ footer .only-image {
   filter: invert(var(--svg-hover-invert)) sepia(var(--svg-hover-sepia)) saturate(var(--svg-hover-saturate)) hue-rotate(var(--svg-hover-hue-rotate)) brightness(var(--svg-hover-brightness)) contrast(var(--svg-hover-contrast));
 }
 
+@keyframes fly-away {
+  0% { transform: translateY(0); }
+  5% { transform: translateY(-200%); }
+  100% { transform: translateY(-200%); }
+}
+
 @media(max-width: 667px) {
   .small-screens {
     display: block;
@@ -367,6 +373,8 @@ footer .only-image {
     align-items: center;
     justify-content: center;
     justify-items: center;
+    position: inherit;
+    z-index: 1;
   }
 
   .logo-block {
@@ -389,9 +397,27 @@ footer .only-image {
     font-weight: bold;
   }
 
-  .page-nav {
-    text-align: center;
-    grid-column: span 2;
+  /* If the Browser doesn't support scroll-based animations */
+  /* Hide the "On This Page" section as it will take up a significate amount of space */
+  .page-nav-container{
+    display: none;
+  }
+
+  @supports (animation-timeline: scroll()) {
+    .page-nav-container {
+      animation: fly-away linear;
+      animation-timeline: scroll(root Y);
+      border-radius: 0.75rem;
+      display: block;
+      margin-top: 1rem;
+      position: inherit;
+      z-index: 0;
+    }
+
+    .page-nav {
+      text-align: center;
+      grid-column: span 2;
+    }
   }
 
   /* Reset main and footer to take the full width */
@@ -414,6 +440,7 @@ footer .only-image {
 @media(max-width: 350px) {
   .site-nav ul {
     grid-template-columns: 1fr 1fr;
+    grid-auto-flow: unset;
   }
 }
 
