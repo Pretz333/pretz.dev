@@ -81,7 +81,8 @@
 - [ ] Close the menu when you click on a "On This Page" link?
 - [ ] Adjust scrolling offset when clicking on a link in the menu
 - [x] tooltip's position:relative is somehow covering up the navbar's content
-- [ ] Do something to make the list of a links feel more like a proper menu. Display as table? Make links take the full width?
+- [x] Do something to make the list of a links feel more like a proper menu. Display as table? Make links take the full width?
+- [ ] While the changes made to fix the above issue look and feel better, they also cause overflow at 550-ish px in width
 - [ ] Add some sort of opening animation to the menu
 - [ ] Adjust techlogo image size to fill the space when in single-column layout
 - [ ] Images are very small at small sizes, consider adjusting margins?

@@ -325,14 +325,13 @@ footer .only-image {
 }
 
 @media(max-width: 667px) {
-  /* Un-hide small-screen's content */
   .small-screens {
     display: block;
   }
 
   .skip-to-contact-focusable:focus .skip-to-contact-text, 
   .skip-to-contact-focusable:hover .skip-to-contact-text {
-    display: inline;
+    display: none;
   }
 
   .logo {
@@ -349,6 +348,7 @@ footer .only-image {
 
   .navigation {
     position: sticky;
+    text-align: left;
     top: 0;
     width: 100%;
     z-index: 10;
@@ -360,6 +360,41 @@ footer .only-image {
     border-top: 0px;
     margin: 0 1.5rem;
     padding: 0.4rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 5fr;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .logo-block {
+    white-space: nowrap;
+  }
+
+  .site-nav h4 {
+    display: none;
+  }
+
+  .site-nav ul {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  .site-nav ul li {
+    font-weight: bold;
+  }
+
+  .page-nav {
+    text-align: center;
+    grid-column: span 3;
+  }
+
+  /* Hide the links until the box is checked */
+  .page-nav {
+    display: none;
   }
 
   /* Top and bottom lines */
@@ -397,13 +432,8 @@ footer .only-image {
     border-right: 0 solid transparent;
   }
 
-  /* Hide the links until the box is checked */
-  .nav-content {
-    display: none;
-  }
-
   /* Show the links when the box is checked */
-  #nav-toggle:checked ~ .nav-content {
+  #nav-toggle:checked ~ .page-nav {
     display: block;
     transition-property: display;
     transition-duration: 3s;
