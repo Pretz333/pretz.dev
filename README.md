@@ -64,11 +64,12 @@
 - [x] Make an image carousel so I can have multiple images on projects. This will also fix the gap on the side of the current single image.
 - [x] Add buttons to navigate between the slides of the carousel
 - [ ] Fix carousel's bottom line not having the round corners (due to the scrollbar being beneath it)
+- [ ] I feel like the project images are too distracting, possibly due to how bright and colorful they are. Desaturate and/or darken the carousel images slightly?
 - [ ] h4 and strong look bad in Firefox's render of Nunito
 - [ ] Use overflow-clip-margin to fix the corners not matching
 - [ ] Logo on footer
+- [ ] Center the h1 and h2? It definitely looks better on mobile
 - [ ] p text gets too long and looks bad. Max at 75ch? 100ch? Time to research typography
-- [ ] Bullet points have too large of margins
 - [ ] Change the sidebar to indicate what part of the page they are on
 
 ### Small Screen Size Improvements
