@@ -81,7 +81,7 @@ Table of Contents:
   }
 /* } */
 
-:focus {
+:focus, :focus-visible {
   border-style: dashed;
   border-width: var(--border-width);;
   border-color: var(--accent-item-color);
@@ -231,13 +231,16 @@ strong {
   text-decoration: none;
 }
 
+.skip-to-contact-focusable:hover {
+  outline: none;
+}
+
 .skip-to-contact-text {
   /* Basically, hide it until it is focused (via a screenreader or tabbing to it) */
   display: none;
 }
 
-.skip-to-contact-focusable:focus .skip-to-contact-text, 
-.skip-to-contact-focusable:hover .skip-to-contact-text {
+.skip-to-contact-focusable:focus-visible .skip-to-contact-text {
   display: block;
 }
 
@@ -337,11 +340,6 @@ footer .only-image {
 @media(max-width: 667px) {
   .small-screens {
     display: block;
-  }
-
-  .skip-to-contact-focusable:focus .skip-to-contact-text, 
-  .skip-to-contact-focusable:hover .skip-to-contact-text {
-    display: none;
   }
 
   .logo {
