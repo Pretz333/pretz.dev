@@ -66,7 +66,7 @@
 - [x] Make an image carousel so I can have multiple images on projects. This will also fix the gap on the side of the current single image.
 - [x] Add buttons to navigate between the slides of the carousel
 - [x] I feel like the project images are too distracting, possibly due to how bright and colorful they are. Desaturate and/or darken the carousel images slightly?
-- [ ] Preload font to fix the brief flash of default sans-serif
+- [x] Preload font to fix the brief flash of default sans-serif
 - [ ] Fix carousel's bottom line not having the round corners (due to the scrollbar being beneath it)
 - [ ] h4 and strong look bad in Firefox's render of Nunito
 - [ ] h1s of Nunito are also not looking too good with the new font size changes
