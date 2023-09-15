@@ -78,6 +78,15 @@ Table of Contents:
     --post-margin: 1.5rem;
     --scrollbar-width: 1rem;
     --post-padding-width: 1rem;
+
+    /* Font sizes that scale on screen width */
+    /* @link https://utopia.fyi/type/calculator?c=270,14,1.2,1240,18,1.333,5,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    --step-0: clamp(0.88rem, calc(0.81rem + 0.41vw), 1.13rem); /* 14.00px to 18.00px */
+    --step-1: clamp(1.05rem, calc(0.92rem + 0.74vw), 1.50rem); /* 16.80px to 23.99px */
+    --step-2: clamp(1.26rem, calc(1.05rem + 1.22vw), 2.00rem); /* 20.16px to 31.98px */
+    --step-3: clamp(1.51rem, calc(1.19rem + 1.90vw), 2.66rem); /* 24.19px to 42.63px */
+    --step-4: clamp(1.81rem, calc(1.33rem + 2.87vw), 3.55rem); /* 29.03px to 56.83px */
+    --step-5: clamp(2.18rem, calc(1.47rem + 4.22vw), 4.74rem); /* 34.84px to 75.76px */
   }
 /* } */
 
@@ -160,10 +169,6 @@ body {
   margin: 0;
 }
 
-a, h1, h2, h3, h4, p, li {
-  font-family: 'Nunito', sans-serif;
-}
-
 a {
   color: var(--text-color-secondary);
 }
@@ -193,6 +198,10 @@ a:hover, a:focus {
   width: 100%;
 }
 
+a, h1, h2, h3, h4, p, li {
+  font-family: 'Nunito', sans-serif;
+}
+
 h1, h2, h3, h4, p, li {
   color: var(--text-color);
 }
@@ -201,20 +210,29 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
+footer p {
+  text-wrap: balance;
+  text-align: center;
+}
+
 h1 {
-  font-size: 4rem;
+  font-size: var(--step-5);
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: var(--step-4);
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: var(--step-2);
 }
 
-h4, .btn, .carousel-button {
-  font-size: 1rem;
+h4, .btn, .carousel-button, footer p {
+  font-size: var(--step-1);
+}
+
+p, li {
+  font-size: var(--step-0);
 }
 
 img {
@@ -316,7 +334,6 @@ footer {
 footer p {
   position: relative;
   top: 50%;
-  font-size: 1.2rem;
 }
 
 footer .only-image {
@@ -338,6 +355,11 @@ footer .only-image {
 }
 
 @media(max-width: 667px) {
+  h1, h2 {
+    text-wrap: balance;
+    text-align: center;
+  }
+
   .small-screens {
     display: block;
   }
@@ -512,6 +534,10 @@ footer .only-image {
 
 /* 3.2 About Page */
 
+#languages-label, #tools-label {
+  margin-block-end: 0.5rem;
+}
+
 .about-image-grid {
   display: grid;
   gap: 1em;
@@ -558,7 +584,6 @@ footer .only-image {
 }
 
 /* 3.3 Projects Page */
-
 
 /* 3.4 Contact Page */
 

@@ -22,6 +22,7 @@
 - [x] Add the missing page header (with an h1) to the projects page
 - [x] Targets and rel attributes on links
 - [x] Re-add the Content-Security-Policy to index and projects now that we're using some JS
+- [ ] Add little chain links for after each header. The links already exist (and are on the sidebar), but this may be a more obvious way of making it clear that it's a link
 - [ ] [Finalize designs](#finalize-design-steps)
 - [ ] [Large screen sizes](#large-screen-size-improvements)
 - [ ] [Small screen sizes](#small-screen-size-improvements)
@@ -65,11 +66,13 @@
 - [x] Make an image carousel so I can have multiple images on projects. This will also fix the gap on the side of the current single image.
 - [x] Add buttons to navigate between the slides of the carousel
 - [x] I feel like the project images are too distracting, possibly due to how bright and colorful they are. Desaturate and/or darken the carousel images slightly?
+- [ ] Preload font to fix the brief flash of default sans-serif
 - [ ] Fix carousel's bottom line not having the round corners (due to the scrollbar being beneath it)
 - [ ] h4 and strong look bad in Firefox's render of Nunito
+- [ ] h1s of Nunito are also not looking too good with the new font size changes
 - [ ] Use overflow-clip-margin to fix the corners not matching
 - [ ] Logo on footer
-- [ ] Center the h1 and h2? It definitely looks better on mobile
+- [x] Center the h1 and h2? It definitely looks better on mobile
 - [ ] p text gets too long and looks bad. Max at 75ch? 100ch? Time to research typography
 - [ ] Change the sidebar to indicate what part of the page they are on
 
@@ -83,14 +86,14 @@
 - [x] On this page section takes up too much space.
 - [ ] Adjust techlogo image size to fill the space when in single-column layout
 - [ ] Images are very small at small sizes, consider adjusting margins?
-- [ ] Header sizes are too big at small sizes
+- [x] Header sizes are too big at small sizes
 - [ ] Fix text run-on in small sizes
 
 ### Large Screen Size Improvements
 
 - [ ] Above a certain width, move the image to the side (2-column layout)
 - [ ] Above a certain width, move the project blocks be all in one row (3-column layout)
-- [ ] Make nav headers and links bigger
+- [x] Make nav headers and links bigger
 - [ ] Carousel buttons will scroll until the image is 1.5 rem from the top of the screen. On larger screens, this may scroll the buttons off of the screen, resulting in a jittery process
 
 ### About Page Improvements
@@ -115,6 +118,7 @@
 - [x] Split the "on this page" section to websites, desktop apps, mobile apps, AddOns/mods, hardware, etc.
 - [ ] Add the rest of my projects.
 - [x] Visual Studio is smaller than the rest of the techlogos.
+- [ ] Google Analytics is deciding not to be a square with round corners again
 - [ ] Techlogos are taking the focus away from the project. Are they too big? Wrong color?
 - [x] What about if we made the post color for projects the same as projects are on the front page? That would simplify the color for the problem above. Perhaps splitting the projects into the buckets from above could be the "base", then the projects would stack on top like on the homepage
 
