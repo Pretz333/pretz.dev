@@ -77,14 +77,10 @@
 
 - [x] Move the sidebar to an expandable menu at the top below 667 px width
 - [x] Add a border to the navbar?
-- [ ] Close the menu when you click outside of it
-- [ ] Close the menu when you click on a "On This Page" link?
-- [ ] Adjust scrolling offset when clicking on a link in the menu
 - [x] tooltip's position:relative is somehow covering up the navbar's content
 - [x] Do something to make the list of a links feel more like a proper menu. Display as table? Make links take the full width?
 - [x] While the changes made to fix the above issue look and feel better, they also cause overflow at 550-ish px in width
 - [x] On this page section takes up too much space.
-- [ ] Add some sort of opening animation to the menu
 - [ ] Adjust techlogo image size to fill the space when in single-column layout
 - [ ] Images are very small at small sizes, consider adjusting margins?
 - [ ] Header sizes are too big at small sizes
@@ -118,7 +114,7 @@
 - [x] Add other relevant links to the projects, such as the website link, ESOUI link, etc.
 - [x] Split the "on this page" section to websites, desktop apps, mobile apps, AddOns/mods, hardware, etc.
 - [ ] Add the rest of my projects.
-- [ ] Visual Studio is smaller than the rest of the techlogos.
+- [x] Visual Studio is smaller than the rest of the techlogos.
 - [ ] Techlogos are taking the focus away from the project. Are they too big? Wrong color?
 - [x] What about if we made the post color for projects the same as projects are on the front page? That would simplify the color for the problem above. Perhaps splitting the projects into the buckets from above could be the "base", then the projects would stack on top like on the homepage
 
