@@ -22,22 +22,20 @@
 - [x] Add the missing page header (with an h1) to the projects page
 - [x] Targets and rel attributes on links
 - [x] Re-add the Content-Security-Policy to index and projects now that we're using some JS
-- [ ] Add little chain links for after each header. The links already exist (and are on the sidebar), but this may be a more obvious way of making it clear that it's a link
 - [ ] [Finalize designs](#finalize-design-steps)
 - [ ] [Large screen sizes](#large-screen-size-improvements)
 - [ ] [Small screen sizes](#small-screen-size-improvements)
 - [ ] [About page improvements](#about-page-improvements)
 - [ ] [Projects page improvements](#projects-page-improvements)
 - [ ] [Contacts page improvements](#contacts-page-improvements)
+- [ ] [JS site enhancements](#js-site-enhancements)
 - [ ] Note about techlogos not being my trademark (footer? They're on every page but contact. Ignoring that, contact makes the most sense to put this note on.)
-- [ ] Theme switcher
 - [ ] Custom 404 Page
 - [ ] Assess how big the carousel images really need to be
 - [ ] Add modern formats (webp/avif) to images with more-standard fallbacks (jpg/png)
 - [ ] Site audit with Lighthouse
 - [ ] Lighthouse follow-up
 - [ ] [Code cleanup](#code-cleanup-steps)
-- [ ] Wherever things happen from there
 
 ### Cloudflare Pages Steps
 
@@ -64,7 +62,6 @@
 - [x] Fix the skip to content link (and rename the class)
 - [x] Fix gap to the right-side of the techlogos
 - [x] Make an image carousel so I can have multiple images on projects. This will also fix the gap on the side of the current single image.
-- [x] Add buttons to navigate between the slides of the carousel
 - [x] I feel like the project images are too distracting, possibly due to how bright and colorful they are. Desaturate and/or darken the carousel images slightly?
 - [x] Preload font to fix the brief flash of default sans-serif
 - [ ] Fix carousel's bottom line not having the round corners (due to the scrollbar being beneath it)
@@ -74,7 +71,6 @@
 - [ ] Logo on footer
 - [x] Center the h1 and h2? It definitely looks better on mobile
 - [ ] p text gets too long and looks bad. Max at 75ch? 100ch? Time to research typography
-- [ ] Change the sidebar to indicate what part of the page they are on
 
 ### Small Screen Size Improvements
 
@@ -128,6 +124,15 @@
 - [ ] Add a form to contact
 - [ ] Clarify that I am available for contract work
 
+### JS Site Enhancements
+
+Note: *enhancements*. Someone with JavaScript disabled should still get a perfectly functioning site, just missing a few niceties that are either not possible or not worth making in plain HTML + CSS.
+
+- [x] Add buttons to navigate between the slides of the carousel
+- [ ] Add little chain links for after each header. The links already exist (and are on the sidebar), but this may be a more obvious way of making it clear that it's a link
+- [ ] Change the sidebar to indicate what part of the page they are on
+- [ ] Theme switcher
+
 ### Code Cleanup Steps
 
 - [ ] Remove ununsed classes
@@ -137,6 +142,6 @@
 - [ ] Split page-specific CSS into their own stylesheets 
 - [ ] Combine duplicate code (CSS, primarily)
 
-### Long-Term Enchancements
+### Long-Term Enhancements
 
 - [ ] It could be a fun project to execute the carousel button script before shipping the HTML to visitors, eliminating the need for the script entirely
