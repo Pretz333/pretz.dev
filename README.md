@@ -100,6 +100,7 @@
 - [x] Cloudflare refuses to be vertically centered
 - [x] Hover over for an explanation of what it is/is used for
 - [x] Click to go to that tech's website (such as click on the DNN logo to go to [DotNetNuke](https://www.dnnsoftware.com/))
+- [x] Google Analytics is deciding not to be a square with round corners again
 - [ ] Hover/Focus border has a gap at the bottom
 - [ ] Add an arrow to signal where the tooltip is coming from
 - [ ] Assess the accessibility of tooltips
@@ -114,7 +115,6 @@
 - [x] Split the "on this page" section to websites, desktop apps, mobile apps, AddOns/mods, hardware, etc.
 - [ ] Add the rest of my projects.
 - [x] Visual Studio is smaller than the rest of the techlogos.
-- [ ] Google Analytics is deciding not to be a square with round corners again
 - [ ] Techlogos are taking the focus away from the project. Are they too big? Wrong color?
 - [x] What about if we made the post color for projects the same as projects are on the front page? That would simplify the color for the problem above. Perhaps splitting the projects into the buckets from above could be the "base", then the projects would stack on top like on the homepage
 

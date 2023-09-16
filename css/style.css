@@ -550,6 +550,7 @@ footer .only-image {
   background-color: var(--logo-background-color);
   box-sizing: border-box;
   padding: 0.4em;
+  width: 100%; /* of their column in the grid */
 }
 
 /* Override the default a border-radius. The default a:hover/:focus border is less round than everything else to avoid colliding with text */
