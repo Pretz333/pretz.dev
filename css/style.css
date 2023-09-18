@@ -548,11 +548,24 @@ footer .only-image {
 	position: absolute;
 	z-index: 2;
 	bottom: 110%; /* float slightly above the top of the element */
-	left: -1.75em; /* the padding + half the width over 100% of the tooltip */
+	left: calc(-0.75em - 1em); /* half the width over 100% of the tooltip (currently 2em, see below) - the padding-left */
   /* The width is the width of the image + some of the minimum extra space around the image (.post margin + .post padding) */
-  /* wider looks better (particularily 300% of the image width), but can (and will) go off the screen. */
+  /* wider looks better (such as 250% of the image width), but will go off the screen for items in the first and last columns. */
   width: calc(100% + 2em);
 }
+
+/* :nth-col is still part a draft (as part of selectors 4), so it has zero support in browers at this moment */
+/* However, it would solve the above-mentioned width issue in a pure-CSS way. */
+/*
+.about-image-grid:nth-col(1) .tooltip::after {
+  left: -1em;
+}
+
+.about-image-grid:nth-last-col() .tooltip::after {
+  left: unset;
+  right: -1em;
+}
+*/
 
 /* Override the "display: none;" when interacted with */
 .tooltip:hover::after, .tooltip:focus::after {
