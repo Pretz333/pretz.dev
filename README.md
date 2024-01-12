@@ -43,6 +43,9 @@
 - [x] Set up custom domain
 - [x] DNSSEC Records
 - [x] Fix Cloudflare hiding the email
+- [x] Set up www subdomain (for those that type that in out of habit)
+- [x] Set up build caching
+- [x] Update build system version to 2
 
 ### Finalize Design Steps
 
