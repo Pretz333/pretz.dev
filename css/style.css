@@ -247,7 +247,6 @@ strong {
   left: 0;
   height: 100%;
   width: 20%;
-  text-align: center;
 }
 
 .small-screens {
@@ -260,6 +259,10 @@ nav {
   border-bottom-right-radius: var(--border-radius);
   margin: 1.5rem 0;
   padding: 1rem 0;
+}
+
+#logo-holder, .navigation h4 {
+  text-align: center;
 }
 
 .logo {
@@ -277,9 +280,45 @@ nav ul {
   margin: 0;
 }
 
+@media (min-width: 668px) {
+  nav ul li {
+    padding: 0.5em 1em;
+    margin-inline-start: 1em;
+  }
+
+  nav ul li.active-tab {
+    background-color: var(--primary-background-color);
+    border-start-start-radius: var(--border-radius);
+    border-end-start-radius: var(--border-radius);
+    position: relative;
+    
+    --inverse-border-radii: 5px;
+  }
+
+  nav ul li.active-tab::before, nav ul li.active-tab::after {
+    background-color: var(--content-background-color);
+    content:'';
+    position: absolute;
+    width: var(--border-radius);
+    height: var(--border-radius);
+    right: 0;
+  }
+
+  nav ul li.active-tab::before {
+    border-end-end-radius: var(--border-radius);
+    top: calc(-1 * var(--border-radius));
+    box-shadow: var(--inverse-border-radii) var(--inverse-border-radii) 0 var(--inverse-border-radii) var(--primary-background-color);
+  }
+
+  nav ul li.active-tab::after {
+    border-start-end-radius: var(--border-radius);
+    bottom: calc(-1 * var(--border-radius));
+    box-shadow: var(--inverse-border-radii) calc(-1 * var(--inverse-border-radii)) 0 var(--inverse-border-radii) var(--primary-background-color);
+  }
+}
+
 nav ul a {
   text-decoration: none;
-  margin-top: 1em;
 }
 
 .post {

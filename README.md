@@ -135,6 +135,7 @@ Note: *enhancements*. Someone with JavaScript disabled should still get a perfec
 - [ ] Add little chain links for after each header. The links already exist (and are on the sidebar), but this may be a more obvious way of making it clear that it's a link
 - [ ] Change the sidebar to indicate what part of the page they are on
 - [ ] Theme switcher
+- [ ] Add the "active-tab" class on the li's in the "On this page" section
 
 ### Code Cleanup Steps
 
