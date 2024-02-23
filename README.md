@@ -27,7 +27,7 @@
 - [ ] [Small screen sizes](#small-screen-size-improvements)
 - [ ] [About page improvements](#about-page-improvements)
 - [ ] [Projects page improvements](#projects-page-improvements)
-- [ ] [Contacts page improvements](#contacts-page-improvements)
+- [ ] [Contact page improvements](#contact-page-improvements)
 - [ ] [JS site enhancements](#js-site-enhancements)
 - [ ] Note about techlogos not being my trademark (footer? They're on every page but contact. Ignoring that, contact makes the most sense to put this note on.)
 - [ ] Custom 404 Page
@@ -142,7 +142,7 @@ Note: *enhancements*. Someone with JavaScript disabled should still get a perfec
 - [ ] Simplify the classes and class selections
 - [ ] Make HTML and general layout consistent between pages
 - [ ] Clean up and organize CSS
-- [ ] Split page-specific CSS into their own stylesheets 
+- [ ] Split page-specific CSS into their own stylesheets
 - [ ] Combine duplicate code (CSS, primarily)
 
 ### Long-Term Enhancements
