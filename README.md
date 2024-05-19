@@ -74,6 +74,7 @@
 - [ ] Logo on footer
 - [x] Center the h1 and h2? It definitely looks better on mobile
 - [ ] p text gets too long and looks bad. Max at 75ch? 100ch? Time to research typography
+  - [ ] p line height
 
 ### Small Screen Size Improvements
 
@@ -87,11 +88,13 @@
 - [ ] Images are very small at small sizes, consider adjusting margins?
 - [x] Header sizes are too big at small sizes
 - [ ] Fix text run-on in small sizes
+  - [ ] decrease header size?
 
 ### Large Screen Size Improvements
 
 - [ ] Above a certain width, move the image to the side (2-column layout)
 - [ ] Above a certain width, move the project blocks be all in one row (3-column layout)
+- [ ] Add max-width to the sidebar?
 - [x] Make nav headers and links bigger
 - [ ] Carousel buttons will scroll until the image is 1.5 rem from the top of the screen. On larger screens, this may scroll the buttons off of the screen, resulting in a jittery process
 
