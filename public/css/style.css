@@ -181,7 +181,7 @@ h1, h2, h3, h4, p, li {
   color: var(--text-color);
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, .navigation p {
   margin: 0;
 }
 
@@ -202,7 +202,7 @@ h3 {
   font-size: var(--step-2);
 }
 
-h4, footer p {
+h4, .navigation p, footer p {
   font-size: var(--step-1);
 }
 
@@ -210,12 +210,22 @@ a, p, li {
   font-size: var(--step-0);
 }
 
-img {
-  max-width: 100%;
+img, picture, svg, iframe, video {
+	max-width: 100%;
+	margin: 0;
+	border: none;
+	padding: 0;
+	height: fit-content;
+	width: fit-content;
 }
 
 strong {
   color: var(--accent-item-color);
+}
+
+.icon-svg {
+  aspect-ratio: 1;
+  max-width: 1.5rem;
 }
 
 /* 2.2 Layout */
@@ -228,7 +238,7 @@ strong {
   outline: none;
 }
 
-.skip-to-contact-text {
+.skip-to-contact-text, .actually-hidden {
   /* Basically, hide it until it is focused (via a screenreader or tabbing to it) */
   display: none;
 }
@@ -261,7 +271,7 @@ nav {
   padding: 1rem 0;
 }
 
-#logo-holder, .navigation h4 {
+#logo-holder, .navigation p {
   text-align: center;
 }
 
@@ -269,7 +279,8 @@ nav {
   max-width: 80%;
 }
 
-nav h4 {
+.navigation p {
+  font-weight: bold;
   margin: 0.5em 0;
 }
 
