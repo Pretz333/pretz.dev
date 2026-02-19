@@ -42,7 +42,7 @@
 				</div>
 
 				<div class="site-nav">
-					<h4>Pages</h4>
+					<p>Pages</p>
 					<ul>
 						{% for entry in collections.all | eleventyNavigation %}
 							<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
@@ -51,18 +51,18 @@
 				</div>
 			</nav>
 
+			{% if anchors %}
 			<nav class="page-nav-container" aria-label="Page">
 				<div class="page-nav">
-					<h4>On This Page</h4>
-					{% if anchors %}
+					<p>On This Page</p>
 					<ul>
 						{% for link in anchors %}
 							<li><a href="{{ link.url }}">{{ link.title }}</a></li>
 						{% endfor %}
 					</ul>
-					{% endif %}
 				</div>
 			</nav>
+			{% endif %}
 		</header>
 
 		<main id="main">
