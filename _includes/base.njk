@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="{{ metadata.language }}">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="{{ description or metadata.description }}">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="preload" href="/css/nunito.css" as="style">
+		<link rel="stylesheet" href="/css/nunito.css">
+		<link rel="preload" href="/css/nunito-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<script defer src="/js/carousel.js"></script>
+		<title>{{ metadata.title }}{% if title != undefined %} - {{ title }}{% endif %}</title>
+		
+		{# Canonical URL for Search Engines to keep track of our pages #}
+		{# The .slice([...] is to fix the fact that the metadata.js url has a trailing slash and the page.url has a leading slash #}
+		<link rel="canonical" href="{{ metadata.url.slice(0, -1) }}{{ page.url }}">
+
+		{# Atom and JSON feeds included by default #}
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
+
+		{# Let web divers know that we used Eleventy to build this site	#}
+		<meta name="generator" content="{{ eleventy.generator }}">
+
+		{# Favicons #}
+		<link rel="shortcut icon" href="/imgs/favicon.ico">
+		<link rel="icon" href="/img/pretz.png">
+		<link rel="apple-touch-icon" href="/img/pretz.png">
+	</head>
+	<body>
+
+		<header>
+			<nav aria-label="Site">
+				<div class="nowrap" id="logo-holder">
+					<a class="skip-to-contact-focusable" href="#main">
+						<img loading="eager" fetchpriority="high" decoding="sync" class="logo" src="imgs/pretz.png" alt="Pretz logo">
+						<span class="skip-to-contact-text">Skip to main content</span>
+					</a>
+					<p class="small-screens logo-label">Pretz</p>
+				</div>
+
+				<div class="site-nav">
+					<h4>Pages</h4>
+					<ul>
+						{% for entry in collections.all | eleventyNavigation %}
+							<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+			</nav>
+
+			<nav class="page-nav-container" aria-label="Page">
+				<div class="page-nav">
+					<h4>On This Page</h4>
+					<ul>
+						<li><a href="#about-preview">Introduction</a></li>
+						<li><a href="#projects-preview">Featured Projects</a></li>
+						<li><a href="#contact-preview">Reach Out</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<main id="main">
+			{{ content | safe }}
+		</main>
+		
+		<footer>
+			<div class="post">
+				<p>&copy; Pretz | <a class="only-image" href="https://github.com/pretz333" rel="external"><img class="footer-icon" src="imgs/techlogos/github.svg" alt="GitHub logo"></a> | <a href="/contact.html">Contact</a></p>
+				<p><a href="#top">Back to the top!</a></p>
+			</div>
+		</footer>
+	</body>
+</html>
