@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="/css/nunito.css">
 		<link rel="preload" href="/css/nunito-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<script defer src="/js/carousel.js"></script>
-		<title>{{ metadata.title }}{% if title != undefined %} - {{ title }}{% endif %}</title>
+		<title>{{ metadata.title }}{% if title != undefined %} | {{ title }}{% endif %}</title>
 		
 		{# Canonical URL for Search Engines to keep track of our pages #}
 		{# The .slice([...] is to fix the fact that the metadata.js url has a trailing slash and the page.url has a leading slash #}
@@ -54,11 +54,13 @@
 			<nav class="page-nav-container" aria-label="Page">
 				<div class="page-nav">
 					<h4>On This Page</h4>
+					{% if anchors %}
 					<ul>
-						<li><a href="#about-preview">Introduction</a></li>
-						<li><a href="#projects-preview">Featured Projects</a></li>
-						<li><a href="#contact-preview">Reach Out</a></li>
+						{% for link in anchors %}
+							<li><a href="{{ link.url }}">{{ link.title }}</a></li>
+						{% endfor %}
 					</ul>
+					{% endif %}
 				</div>
 			</nav>
 		</header>
@@ -74,7 +76,7 @@
 		
 		<footer>
 			<div class="post">
-				<p>&copy; Pretz | <a class="only-image" href="https://github.com/pretz333" rel="external"><img class="footer-icon" src="img/techlogos/github.svg" alt="GitHub logo"></a> | <a href="/contact.html">Contact</a></p>
+				<p>&copy; Pretz | <a class="only-image" href="https://github.com/pretz333" rel="external"><img class="footer-icon" src="img/techlogos/github.svg" alt="GitHub logo"></a> | <a href="/contact">Contact</a></p>
 				<p><a href="#top">Back to the top!</a></p>
 			</div>
 		</footer>
