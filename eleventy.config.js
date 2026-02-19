@@ -2,6 +2,7 @@ import { IdAttributePlugin, InputPathToUrlTransformPlugin, HtmlBasePlugin } from
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import fontAwesomePlugin from "@11ty/font-awesome";
 import { DateTime } from "luxon";
 import dotenv from 'dotenv';
 
@@ -80,6 +81,17 @@ export default async function(eleventyConfig) {
 	// InputPath to URL Plugin: https://www.11ty.dev/docs/plugins/inputpath-to-url/
 	// Maps an input file path to its output URL (e.g. href="image_in_folder.png" => href="/articles/article-4/image_in_folder.png")
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
+
+	// FontAwesome Plugin: https://github.com/11ty/eleventy-plugin-font-awesome
+	// Converts the i elements with font awesome markup to an optimized and re-usable (on that page) svg, meaning each icon only loads once
+	eleventyConfig.addPlugin(fontAwesomePlugin, {
+		// transform: 'i[class]',
+		shortcode: false,
+		failOnError: true,
+		defaultAttributes: {
+			class: 'icon-svg',
+		},
+	});
 
 	// RSS Feed Plugin: https://www.11ty.dev/docs/plugins/rss/
 	// Makes an RSS feed of our most recent articles

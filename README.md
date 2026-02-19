@@ -75,6 +75,7 @@
 - [x] Center the h1 and h2? It definitely looks better on mobile
 - [ ] p text gets too long and looks bad. Max at 75ch? 100ch? Time to research typography
   - [ ] p line height
+- [ ] fix links being one size - tie to font-size of attached element
 
 ### Small Screen Size Improvements
 
@@ -144,7 +145,7 @@ Note: *enhancements*. Someone with JavaScript disabled should still get a perfec
 
 - [ ] Remove ununsed classes
 - [ ] Simplify the classes and class selections
-- [ ] Make HTML and general layout consistent between pages
+- [x] Make HTML and general layout consistent between pages
 - [ ] Clean up and organize CSS
 - [ ] Split page-specific CSS into their own stylesheets
 - [ ] Combine duplicate code (CSS, primarily)

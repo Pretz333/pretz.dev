@@ -31,7 +31,7 @@
 	</head>
 	<body>
 
-		<header>
+		<header class="navigation">
 			<nav aria-label="Site">
 				<div class="nowrap" id="logo-holder">
 					<a class="skip-to-contact-focusable" href="#main">
@@ -66,6 +66,11 @@
 		<main id="main">
 			{{ content | safe }}
 		</main>
+
+		<div class="actually-hidden">
+			<i class="fa-solid fa-link"></i> <!-- Necessary for after-header links -->
+			{% getBundle "fontawesome" %}
+		</div>
 		
 		<footer>
 			<div class="post">
