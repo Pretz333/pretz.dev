@@ -210,12 +210,22 @@ a, p, li {
   font-size: var(--step-0);
 }
 
-img {
-  max-width: 100%;
+img, picture, svg, iframe, video {
+	max-width: 100%;
+	margin: 0;
+	border: none;
+	padding: 0;
+	height: fit-content;
+	width: fit-content;
 }
 
 strong {
   color: var(--accent-item-color);
+}
+
+.icon-svg {
+  aspect-ratio: 1;
+  max-width: 1.5rem;
 }
 
 /* 2.2 Layout */
@@ -228,7 +238,7 @@ strong {
   outline: none;
 }
 
-.skip-to-contact-text {
+.skip-to-contact-text, .actually-hidden {
   /* Basically, hide it until it is focused (via a screenreader or tabbing to it) */
   display: none;
 }
