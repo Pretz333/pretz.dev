@@ -247,13 +247,6 @@ export default async function(eleventyConfig) {
 		});
 	});
 
-	// Filter to convert the article JSON data to actual usable HTML
-	eleventyConfig.addFilter("lexicalToHTML", function(content) {
-		if (!content || !content.root) return "";
-
-		return convertLexicalToHTML(content.root);
-	});
-
 	eleventyConfig.addFilter("log", function(content) {
 		console.log(content);
 	});
