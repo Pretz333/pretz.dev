@@ -51,18 +51,12 @@
 				</div>
 			</nav>
 
-			{% if anchors %}
 			<nav class="page-nav-container" aria-label="Page">
 				<div class="page-nav">
 					<p>On This Page</p>
-					<ul>
-						{% for link in anchors %}
-							<li><a href="{{ link.url }}">{{ link.title }}</a></li>
-						{% endfor %}
-					</ul>
+					<ul id="page-anchor-list"></ul>
 				</div>
 			</nav>
-			{% endif %}
 		</header>
 
 		<main id="main">

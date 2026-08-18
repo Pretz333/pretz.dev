@@ -4,17 +4,10 @@ layout: base.njk
 eleventyNavigation:
   key: Home
   order: 1
-anchors:
-  - title: Introduction
-    url: "#about-preview"
-  - title: Featured Projects
-    url: "#projects-preview"
-  - title: Reach Out
-    url: "#contact-preview"
 ---
 {% from "components/website-carousel.njk" import websiteCarousel %}
 
-<section class="post" aria-labelledby="about-preview-label" id="about-preview">
+<section class="post" aria-labelledby="about-preview-label" id="about-preview" data-anchor="Introduction">
 	<header>
 		<h1 id="about-preview-label">Hiya, I'm Pretz!</h1>
 		<p>I enjoy making software projects to solve real problems.</p>
@@ -23,7 +16,7 @@ anchors:
 	<a class="btn" href="/about">Learn More About Me</a>
 </section>
 
-<section class="post" aria-labelledby="projects-preview-label" id="projects-preview">
+<section class="post" aria-labelledby="projects-preview-label" id="projects-preview" data-anchor="Featured Projects">
 	<header>
 		<h2 id="projects-preview-label">Projects</h2>
 		<p>Here are a few of my favorite projects I've worked on. See the <a href="/projects">projects page</a> for more information on these and other projects I've worked on.</p>
@@ -89,7 +82,7 @@ anchors:
 	<a class="btn" href="/projects">See More Projects</a>
 </section>
 
-<section class="post" aria-labelledby="contact-preview-label" id="contact-preview">
+<section class="post" aria-labelledby="contact-preview-label" id="contact-preview" data-anchor="Reach Out">
 	<h2 id="contact-preview-label">Contact</h2>
 	<p>If you'd like to get in touch, please do not hesitate to reach out at <a href="mailto:pretz333@gmail.com">pretz333@gmail.com</a>.</p>
 	<a class="btn" href="/contact">See Other Ways to Get In Contact</a>

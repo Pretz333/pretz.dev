@@ -4,21 +4,6 @@ layout: base.njk
 eleventyNavigation:
   key: Projects
   order: 3
-anchors:
-  - title: Go Scouting
-    url: "#goscouting"
-  - title: Plant It Forward
-    url: "#scoutingplantitforward"
-  - title: Northern Star Scouting DNN Network
-    url: "#northernstar-dnn-network"
-  - title: Join Cubs
-    url: "#joincubs"
-  - title: Inventory
-    url: "#inventory"
-  - title: Vehicle Maintenance Tracker
-    url: "#vehicle-maintenance-tracker"
-  - title: Memento Refresh
-    url: "#mementorefresh"
 ---
 {% from "components/website-carousel.njk" import websiteCarousel %}
 
@@ -35,7 +20,7 @@ anchors:
 		<h2 id="websites-label">Websites</h2>
 	</header>
 	
-	<article class="subpost" aria-labelledby="goscouting-label" id="goscouting">
+	<article class="subpost" aria-labelledby="goscouting-label" id="goscouting" data-anchor="Go Scouting">
 		{{ websiteCarousel([
 			{ url: "https://web.archive.org/web/20260723061613if_/https://www.goscouting.org/", alt: "The Go Scouting homepage, with a mountain-and-forest banner reading \"Preparing Kids For Real Life\" beside a ZIP code search bar to find local programs." }
 		]) }}
@@ -55,7 +40,7 @@ anchors:
 		</div>
 	</article>
 
-	<article class="subpost" aria-labelledby="scoutingplantitforward-label" id="scoutingplantitforward">
+	<article class="subpost" aria-labelledby="scoutingplantitforward-label" id="scoutingplantitforward" data-anchor="Plant It Forward">
 		{{ websiteCarousel([
 			{ url: "https://web.archive.org/web/20260818005234if_/https://scoutingplantitforward.org/", alt: "The Scouting Plant It Forward homepage, with a forest background reading \"Plant It Forward. Support a Scout. Create a Legacy.\" next to a stat reading \"Because of you, 787 Trees Planted,\"" }
 		]) }}
@@ -83,7 +68,7 @@ anchors:
 		</div>
 	</article>
 
-	<article class="subpost" aria-labelledby="northernstar-dnn-network-label" id="northernstar-dnn-network">
+	<article class="subpost" aria-labelledby="northernstar-dnn-network-label" id="northernstar-dnn-network" data-anchor="Northern Star Scouting DNN Network">
 		{{ websiteCarousel([
 			{ url: "https://web.archive.org/web/20260121190328if_/https://www.camptomahawk.org/", alt: "The Camp Tomahawk homepage, featuring a top navigation bar, some quick links with icons, and an embedded camp video player. More content is implied to be below the scroll." },
 			{ url: "https://web.archive.org/web/20251117060525if_/https://www.northernstar.org/about-us", alt: "The About Us page on the NorthernStar.org website. The shared navigation bar and skin from before is still present, followed by a large photo of two Scouts on a ropes course and a blue \"Mission\" panel introducing the council's mission statement." }
@@ -113,7 +98,7 @@ anchors:
 		</div>
 	</article>
 	
-	<article class="subpost" aria-labelledby="joincubs-label" id="joincubs">
+	<article class="subpost" aria-labelledby="joincubs-label" id="joincubs" data-anchor="Join Cubs">
 		{{ websiteCarousel([
 			{ url: "https://web.archive.org/web/20250203005453if_/https://www.joincubs.org/", alt: "The Join Cubs homepage, with a hero banner reading \"Race Into Scouting\" over a photo of Cub Scouts in t-shirts next to a pinewood derby track" }
 		]) }}
@@ -137,7 +122,7 @@ anchors:
 		<h2 id="apps-label">Desktop &amp; Mobile Apps</h2>
 	</header>
 
-	<article class="subpost" aria-labelledby="inventory-label" id="inventory">
+	<article class="subpost" aria-labelledby="inventory-label" id="inventory" data-anchor="Inventory">
 		<div class="carousel-container">
 			<div class="carousel">
 				<picture>
@@ -167,7 +152,7 @@ anchors:
 		</div>
 	</article>
 
-	<article class="subpost" aria-labelledby="vehicle-maintenance-tracker-label" id="vehicle-maintenance-tracker">
+	<article class="subpost" aria-labelledby="vehicle-maintenance-tracker-label" id="vehicle-maintenance-tracker" data-anchor="Vehicle Maintenance Tracker">
 		<div class="carousel-container">
 			<div class="carousel">
 				<img src="img/projects/stand-in_project_img.png" alt="Project Image">
@@ -192,7 +177,7 @@ anchors:
 		<h2 id="mods-label">AddOns/Mods</h2>
 	</header>
 	
-	<article class="subpost" aria-labelledby="mementorefresh-label" id="mementorefresh">
+	<article class="subpost" aria-labelledby="mementorefresh-label" id="mementorefresh" data-anchor="Memento Refresh">
 		<div class="carousel-container">
 			<div class="carousel">
 					<picture>

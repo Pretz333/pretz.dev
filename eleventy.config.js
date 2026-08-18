@@ -354,6 +354,33 @@ export default async function(eleventyConfig) {
 		return content;
 	});
 
+	// Builds the "On This Page" sidebar nav from `data-anchor="Title"` attributes
+	// found on elements in the rendered page, instead of a hand-maintained
+	// frontmatter `anchors` list that can drift out of sync with actual ids.
+	// See the `id="page-anchor-list"` placeholder `<ul>` in base.njk.
+	eleventyConfig.addTransform("generatePageAnchors", function(content, outputPath) {
+		if (outputPath && outputPath.endsWith(".html")) {
+			// Lookaheads let `id` and `data-anchor` appear in either order within the tag.
+			const anchorRegex = /<[a-z0-9]+\b(?=[^>]*\sid=["']([^"']+)["'])(?=[^>]*\sdata-anchor=["']([^"']+)["'])[^>]*>/gi;
+
+			const anchors = [];
+			let match;
+			while ((match = anchorRegex.exec(content)) !== null) {
+				anchors.push({ id: match[1], title: match[2] });
+			}
+
+			if (anchors.length === 0) {
+				// No anchor points on this page: drop the whole "On This Page" nav.
+				return content.replace(/<nav class="page-nav-container"[\s\S]*?<\/nav>\s*/i, "");
+			}
+
+			const listItems = anchors.map(a => `<li><a href="#${a.id}">${a.title}</a></li>`).join("");
+			return content.replace('<ul id="page-anchor-list"></ul>', `<ul id="page-anchor-list">${listItems}</ul>`);
+		}
+
+		return content;
+	});
+
 };
 
 export const config = {
