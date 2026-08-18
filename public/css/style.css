@@ -565,6 +565,7 @@ footer .only-image {
 	box-sizing: border-box;
 	display: inline-block;
 	height: 6em;
+	object-fit: contain;
 	padding: 0.5em;
 }
 
