@@ -81,7 +81,7 @@
 - [x] Header sizes are too big at small sizes
 - [ ] Fix text run-on in small sizes
   - [ ] decrease header size?
-- [ ] mobile website images are too wide
+- [x] mobile website images are too wide
 
 ### Large Screen Size Improvements
 
@@ -113,6 +113,10 @@
 - [x] Add other relevant links to the projects, such as the website link, ESOUI link, etc.
 - [x] Split the "on this page" section to websites, desktop apps, mobile apps, AddOns/mods, hardware, etc.
 - [ ] Add the rest of my projects.
+  - [ ] docker server on debian for work (n8n, nocodb, traefik, etc.)
+  - [ ] NAS for work
+  - [ ] short mention of tiny sites? preparedfor, preparedforlearning?
+  - [ ] etc
 - [x] Visual Studio is smaller than the rest of the techlogos.
 - [x] Techlogos are taking the focus away from the project. Are they too big? Wrong color?
 - [x] What about if we made the post color for projects the same as projects are on the front page? That would simplify the color for the problem above. Perhaps splitting the projects into the buckets from above could be the "base", then the projects would stack on top like on the homepage

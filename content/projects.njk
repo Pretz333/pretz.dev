@@ -7,16 +7,16 @@ eleventyNavigation:
 anchors:
   - title: Go Scouting
     url: "#goscouting"
-  - title: Scouting Plant It Forward
+  - title: Plant It Forward
     url: "#scoutingplantitforward"
   - title: Northern Star Scouting DNN Network
     url: "#northernstar-dnn-network"
   - title: Join Cubs
     url: "#joincubs"
-  - title: Vehicle Maintenance Tracker
-    url: "#vehicle-maintenance-tracker"
   - title: Inventory
     url: "#inventory"
+  - title: Vehicle Maintenance Tracker
+    url: "#vehicle-maintenance-tracker"
   - title: Memento Refresh
     url: "#mementorefresh"
 ---
@@ -25,7 +25,7 @@ anchors:
 <section class="post" aria-labelledby="projects-page-label" id="projects-page-header">
 	<header>
 		<h1 id="projects-page-label">Past Projects</h1>
-		<p>These are some of the software projects I've worked on in the past. I've split them into sections based on what they are, a; <a href="#websites">website</a>, <a href="#mobile-apps">mobile application</a>, <a href="#desktop-apps">desktop application</a>, or <a href="#mods">game mod/AddOn</a>.</p>
+		<p>These are some of the software projects I've worked on in the past. I've split them into sections based on what they are, a; <a href="#websites">website</a>, <a href="#apps">desktop or mobile application</a>, or <a href="#mods">game mod/AddOn</a>.</p>
 		<p>Most of these were made as the sole developer, though a few were made in small teams. Projects were I was not the sole developer call out this fact in their description.</p>
 	</header>
 </section>
@@ -37,7 +37,7 @@ anchors:
 	
 	<article class="subpost" aria-labelledby="goscouting-label" id="goscouting">
 		{{ websiteCarousel([
-			{ url: "https://web.archive.org/web/20260723061613if_/https://www.goscouting.org/", alt: "The Go Scouting homepage, with a mountain-and-forest banner reading \"Preparing Kids For Real Life\" beside a ZIP code search bar to find local programs, and three \"About the Program\" cards below answering what a child does, what they gain, and whether Scouting is right for their family." }
+			{ url: "https://web.archive.org/web/20260723061613if_/https://www.goscouting.org/", alt: "The Go Scouting homepage, with a mountain-and-forest banner reading \"Preparing Kids For Real Life\" beside a ZIP code search bar to find local programs." }
 		]) }}
 		<h3 id="goscouting-label">Go Scouting</h3>
 		<h4><a href="https://www.goscouting.org/" rel="external" target="_blank">Website</a></h4>
@@ -57,7 +57,7 @@ anchors:
 
 	<article class="subpost" aria-labelledby="scoutingplantitforward-label" id="scoutingplantitforward">
 		{{ websiteCarousel([
-			{ url: "https://web.archive.org/web/20260818005234if_/https://scoutingplantitforward.org/", alt: "The Scouting Plant It Forward homepage, with a forest photo background reading \"Plant It Forward. Support a Scout. Create a Legacy.\" next to a stat reading \"Because of you, 787 Trees Planted,\" followed by the start of a \"Why Donate?\" section explaining that donations fund trees planted in the Superior National Forest through the Arbor Day Foundation." }
+			{ url: "https://web.archive.org/web/20260818005234if_/https://scoutingplantitforward.org/", alt: "The Scouting Plant It Forward homepage, with a forest background reading \"Plant It Forward. Support a Scout. Create a Legacy.\" next to a stat reading \"Because of you, 787 Trees Planted,\"" }
 		]) }}
 		<h3 id="scoutingplantitforward-label">Scouting Plant It Forward</h3>
 		<h4><a href="https://scoutingplantitforward.org/" rel="external" target="_blank">Website</a></h4>
@@ -86,7 +86,7 @@ anchors:
 	<article class="subpost" aria-labelledby="northernstar-dnn-network-label" id="northernstar-dnn-network">
 		{{ websiteCarousel([
 			{ url: "https://web.archive.org/web/20260121190328if_/https://www.camptomahawk.org/", alt: "The Camp Tomahawk homepage, featuring a top navigation bar, some quick links with icons, and an embedded camp video player. More content is implied to be below the scroll." },
-			{ url: "https://web.archive.org/web/20251117060525if_/https://www.northernstar.org/about-us", alt: "The About Us page on the NorthernStar.org website, part of the same DNN network as Camp Tomahawk. The shared navigation bar and skin from before is still present, followed by a large photo of two Scouts on a ropes course and a blue \"Mission\" panel introducing the council's mission statement." }
+			{ url: "https://web.archive.org/web/20251117060525if_/https://www.northernstar.org/about-us", alt: "The About Us page on the NorthernStar.org website. The shared navigation bar and skin from before is still present, followed by a large photo of two Scouts on a ropes course and a blue \"Mission\" panel introducing the council's mission statement." }
 		]) }}
 		<h3 id="northernstar-dnn-network-label">Northern Star Scouting DNN Network</h3>
 		<h4><a href="https://www.camptomahawk.org/" rel="external" target="_blank">Camp Tomahawk</a> (pictured)</h4>
@@ -115,7 +115,7 @@ anchors:
 	
 	<article class="subpost" aria-labelledby="joincubs-label" id="joincubs">
 		{{ websiteCarousel([
-			{ url: "https://web.archive.org/web/20250203005453if_/https://www.joincubs.org/", alt: "The Join Cubs homepage, with a hero banner reading \"Race Into Scouting\" over a photo of Cub Scouts in blue t-shirts next to a pinewood derby track, \"Register for Cub Scouts\" and \"Why Choose Cub Scouts?\" buttons, and quick links for pack leaders, recruitment events, older-youth programs, and media/press." }
+			{ url: "https://web.archive.org/web/20250203005453if_/https://www.joincubs.org/", alt: "The Join Cubs homepage, with a hero banner reading \"Race Into Scouting\" over a photo of Cub Scouts in t-shirts next to a pinewood derby track" }
 		]) }}
 		<h3 id="joincubs-label">Join Cubs</h3>
 		<h4><a href="https://www.joincubs.org/" rel="external" target="_blank">Website</a></h4>
@@ -132,34 +132,9 @@ anchors:
 	</article>
 </section>
 
-<section class="post" id="mobile-apps" aria-labelledby="mobile-label">
+<section class="post" id="apps" aria-labelledby="apps-label">
 	<header>
-		<h2 id="mobile-label">Mobile Apps</h2>
-	</header>
-
-	<article class="subpost" aria-labelledby="vehicle-maintenance-tracker-label" id="vehicle-maintenance-tracker">
-		<div class="carousel-container">
-			<div class="carousel">
-				<img src="img/projects/stand-in_project_img.png" alt="Project Image">
-			</div>
-		</div>
-		<h3 id="vehicle-maintenance-tracker-label">Vehicle Maintenance Tracker</h3>
-		<h4>An Android Application | <a href="https://github.com/Pretz333/Vehicle-Maintenance-Tracker" rel="external" target="_blank">GitHub Repository</a></h4>
-		<p>An Open-Source Android Application to track vehicle maintenance. It utilizes a database (with full CRUD abilities) to track the vehicles and issues of those vehicles. With a few minor tweaks, this codebase could be made into a general issue (bug) tracker or support ticket manager.</p>
-		<h4>Technologies</h4>
-		<p>This project was built in Android Studio using Java and uses an SQLite Database to track the vehicles, issues, and logs.</p>
-		<div class="techlogos">
-			<img src="img/techlogos/androidstudio.svg" alt="Android Studio Logo">
-			<img src="img/techlogos/java.svg" alt="Java Logo">
-			<img src="img/techlogos/sqlite.svg" alt="SQLite Logo">
-			<img src="img/techlogos/github-circle.svg" alt="GitHub Logo">
-		</div>
-	</article>
-</section>
-
-<section class="post" id="desktop-apps" aria-labelledby="desktop-label">
-	<header>
-		<h2 id="desktop-label">Desktop Applications</h2>
+		<h2 id="apps-label">Desktop &amp; Mobile Apps</h2>
 	</header>
 
 	<article class="subpost" aria-labelledby="inventory-label" id="inventory">
@@ -187,6 +162,25 @@ anchors:
 			<img src="img/techlogos/dotnet.svg" alt="Dot Net Logo">
 			<img src="img/techlogos/visualstudio.svg" alt="Visual Studio Logo">
 			<img src="img/techlogos/visualbasic.svg" alt="Visual Basic Logo">
+			<img src="img/techlogos/sqlite.svg" alt="SQLite Logo">
+			<img src="img/techlogos/github-circle.svg" alt="GitHub Logo">
+		</div>
+	</article>
+
+	<article class="subpost" aria-labelledby="vehicle-maintenance-tracker-label" id="vehicle-maintenance-tracker">
+		<div class="carousel-container">
+			<div class="carousel">
+				<img src="img/projects/stand-in_project_img.png" alt="Project Image">
+			</div>
+		</div>
+		<h3 id="vehicle-maintenance-tracker-label">Vehicle Maintenance Tracker</h3>
+		<h4>An Android Application | <a href="https://github.com/Pretz333/Vehicle-Maintenance-Tracker" rel="external" target="_blank">GitHub Repository</a></h4>
+		<p>An Open-Source Android Application to track vehicle maintenance. It utilizes a database (with full CRUD abilities) to track the vehicles and issues of those vehicles. With a few minor tweaks, this codebase could be made into a general issue (bug) tracker or support ticket manager.</p>
+		<h4>Technologies</h4>
+		<p>This project was built in Android Studio using Java and uses an SQLite Database to track the vehicles, issues, and logs.</p>
+		<div class="techlogos">
+			<img src="img/techlogos/androidstudio.svg" alt="Android Studio Logo">
+			<img src="img/techlogos/java.svg" alt="Java Logo">
 			<img src="img/techlogos/sqlite.svg" alt="SQLite Logo">
 			<img src="img/techlogos/github-circle.svg" alt="GitHub Logo">
 		</div>
