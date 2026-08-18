@@ -28,24 +28,24 @@ anchors:
 		<h2 id="projects-preview-label">Projects</h2>
 		<p>Here are a few of my favorite projects I've worked on. See the <a href="/projects">projects page</a> for more information on these and other projects I've worked on.</p>
 	</header>
-	<article class="subpost" aria-labelledby="northernstar-dnn-network-label" id="northernstar-dnn-network">
+	<article class="subpost" aria-labelledby="scoutingplantitforward-label" id="scoutingplantitforward">
 		{{ websiteCarousel([
-			{ url: "https://web.archive.org/web/20260121190328if_/https://www.camptomahawk.org/", alt: "The Camp Tomahawk homepage, featuring a top navigation bar, some quick links with icons, and an embedded camp video player. More content is implied to be below the scroll." },
-			{ url: "https://web.archive.org/web/20251117060525if_/https://www.northernstar.org/about-us", alt: "The About Us page on the NorthernStar.org website, part of the same DNN network as Camp Tomahawk. The shared navigation bar and skin from before is still present, followed by a large photo of two Scouts on a ropes course and a blue \"Mission\" panel introducing the council's mission statement." }
+			{ url: "https://web.archive.org/web/20260818005234if_/https://scoutingplantitforward.org/", alt: "The Scouting Plant It Forward homepage, with a forest photo background reading \"Plant It Forward. Support a Scout. Create a Legacy.\" next to a stat reading \"Because of you, 787 Trees Planted,\" followed by the start of a \"Why Donate?\" section explaining that donations fund trees planted in the Superior National Forest through the Arbor Day Foundation." }
 		]) }}
-		<h3 id="northernstar-dnn-network-label">Northern Star Scouting DNN Network</h3>
-		<h4><a href="https://www.camptomahawk.org/" rel="external" target="_blank">Camp Tomahawk</a> (pictured)</h4>
-		<p>This is moreso a project about a shared DNN backend, not a single website: one inherited DNN instance serves several Northern Star Scouting sites. I led a redesign across all of them: a new shared skin, accessibility-focused components, Google Tag Manager/Analytics, Google Programmable Search Engine for local site search, automated redirects, security hardening, a full content reorganization, etc. Camp Tomahawk (shown here) is an easy example of how effective that redesign and reorganization was. Even without advertising or posting that it had happened, Camp Tomahawk saw a sizable increase in users of the site and decrease in questions where the answer could be found on the site. For stats and the full list of sites, check out the <a href="/projects#northernstar-dnn-network">Northern Star Scouting DNN Network entry of the projects page</a>.</p>
+		<h3 id="scoutingplantitforward-label">Scouting Plant It Forward</h3>
+		<h4><a href="https://scoutingplantitforward.org/" rel="external" target="_blank">Website</a></h4>
+		<p>A fundraising website for Northern Star Scouting, offering an alternative to the traditional popcorn sale: instead of a product, donors fund a native tree planted in the Superior National Forest through the Arbor Day Foundation, keeping the benefit local to the community that donates. Proceeds are split evenly between the participating Scout and the council, which covers card-processing fees and tree-planting logistics. For the full technical writeup, check out the <a href="/projects#scoutingplantitforward">Scouting Plant It Forward entry of the projects page</a>.</p>
 		<h4>Technologies</h4>
-		<p>The network runs on the DNN content management system, which lets non-technical staff manage the sites without needing to work with HTML. It uses EasyDNNNews to manage articles and has several display modules written with Bootstrap.</p>
+		<p>ScoutingPlantItForward.org starts from the same Eleventy (11ty) static build as this site, but layers a Cloudflare Workers backend on top to handle logins, payments, and reporting: Clover's iframe integration for PCI-light card processing, Cloudflare D1/KV for accounts and sessions, PBKDF2-SHA256 password hashing, and an n8n workflow that triggers a nightly rebuild so figures like the homepage's "trees planted" counter stay current.</p>
 		<div class="techlogos">
-			<img src="img/techlogos/dnn.svg" alt="DNN Logo">
+			<img src="img/techlogos/11ty.svg" alt="Eleventy Logo">
 			<img src="img/techlogos/html.svg" alt="HTML5 Logo">
 			<img src="img/techlogos/css.svg" alt="CSS3 Logo">
-			<img src="img/techlogos/bootstrap.svg" alt="Bootstrap Logo">
-			<img src="img/techlogos/googleanalytics.svg" alt="Google Analytics Logo">
-			<img src="img/techlogos/google-search-console.svg" alt="Google Search Console Logo">
-			<img src="img/techlogos/google-tag-manager.svg" alt="Google Tag Manager Logo">
+			<img src="img/techlogos/javascript.svg" alt="JavaScript Logo">
+			<img src="img/techlogos/cloudflare.svg" alt="Cloudflare Logo">
+			<img src="img/techlogos/clover.svg" alt="Clover Logo">
+			<img src="img/techlogos/n8n.svg" alt="n8n Logo" width="128">
+			<img src="img/techlogos/github-circle.svg" alt="GitHub Logo">
 		</div>
 	</article>
 	<article class="subpost" aria-labelledby="mementorefresh-label" id="mementorefresh">
