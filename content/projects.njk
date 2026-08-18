@@ -16,6 +16,7 @@ anchors:
   - title: Memento Refresh
     url: "#mementorefresh"
 ---
+{% from "components/website-carousel.njk" import websiteCarousel %}
 
 <section class="post" aria-labelledby="projects-page-label" id="projects-page-header">
 	<header>
@@ -31,18 +32,10 @@ anchors:
 	</header>
 	
 	<article class="subpost" aria-labelledby="camptomahawk-label" id="camptomahawk">
-		<div class="carousel-container">
-			<div class="carousel">
-				<picture>
-					<source srcset="img/projects/camptomahawk/camptomahawk_mobile.png" media="(orientation: portrait)">
-					<img src="img/projects/camptomahawk/camptomahawk_desktop.png" alt="The Camp Tomahawk homepage, featuring a top navigation bar, some quick links with icons, and a promotional video. More content is implied to be below the scroll.">
-				</picture>
-				<picture>
-					<source srcset="img/projects/camptomahawk/camptomahawk_mobile_content.png" media="(orientation: portrait)">
-					<img loading="lazy" src="img/projects/camptomahawk/camptomahawk_desktop_content.png" alt="An article on the Camp Tomahawk website talking about camp staff. The navigation bar from before is still present, then the main article is shown along with an image of a group of camp staff with their hand together off to the right.">
-				</picture>
-			</div>
-		</div>
+		{{ websiteCarousel([
+			{ url: "https://www.camptomahawk.org/", alt: "The Camp Tomahawk homepage, featuring a top navigation bar, some quick links with icons, and a promotional video. More content is implied to be below the scroll." },
+			{ url: "https://www.camptomahawk.org/Details-Page/Camp-Staff", alt: "An article on the Camp Tomahawk website talking about camp staff. The navigation bar from before is still present, then the main article is shown along with an image of a group of camp staff with their hand together off to the right." }
+		]) }}
 		<h3 id="camptomahawk-label">Camp Tomahawk</h3>
 		<h4><a href="https://www.camptomahawk.org/" rel="external" target="_blank">Website</a></h4>
 		<p>A website to both market Camp Tomahawk and distribute information to participants. After finishing the website, even without advertising or posting that the website was remade, Camp Tomahawk saw:</p>

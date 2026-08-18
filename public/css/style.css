@@ -536,6 +536,21 @@ footer .only-image {
   }
 }
 
+/* Website screenshot carousel slides (see _includes/components/website-carousel.njk) ship both a desktop and a mobile screenshot per slide; only one is shown at a time. */
+.screenshot-mobile {
+  display: none;
+}
+
+@media screen and (orientation:portrait) {
+  .screenshot-desktop {
+    display: none;
+  }
+
+  .screenshot-mobile {
+    display: block;
+  }
+}
+
 .techlogos {
   display: flex;
   flex-wrap: wrap;

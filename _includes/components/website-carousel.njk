@@ -1,0 +1,41 @@
+{#
+	Renders a project carousel from live URLs instead of committed screenshot files.
+	`pages`: array of { url, alt } - one carousel slide per entry.
+
+	Each slide fetches a desktop and a mobile screenshot from thum.io at build time.
+	The resulting <img> tags are picked up by the eleventyImageTransformPlugin already
+	configured in eleventy.config.js, which detects the remote src (via eleventy-img's
+	Util.isRemoteUrl) and downloads/caches it with @11ty/eleventy-fetch before optimizing
+	it into local avif/webp files, same as any other image on the site.
+
+	Note: this can't reuse the single-<picture>-with-a-portrait-<source> pattern used
+	elsewhere, because eleventyImageTransformPlugin replaces a <picture>'s entire content
+	based on the one <img> it finds inside - a hand-written <source> sibling gets discarded.
+	So desktop and mobile screenshots are two separate <picture> elements instead, and CSS
+	(.screenshot-desktop/.screenshot-mobile in style.css) shows only one at a time.
+
+	The mobile capture is 600px wide, not a true phone width (~390px) - several real sites
+	(camptomahawk.org's inner pages, joincubs.org) have their own responsive bugs that clip
+	text below ~500px, since a headless screenshot at a custom viewport width can land
+	between a site's actual breakpoints in ways a real device wouldn't. 600 was the
+	narrowest width that rendered cleanly on every URL in use as of writing; re-check new
+	URLs before assuming it's universal. Crop height is capped at 1200 - thum.io's free
+	tier renders in a max 1200×1200 browser, so taller `crop` values get silently
+	clamped to 1200.
+#}
+{% macro websiteCarousel(pages) %}
+<div class="carousel-container">
+	<div class="carousel">
+		{% for page in pages %}
+		<div class="carousel-slide">
+			<picture class="screenshot-desktop">
+				<img{% if not loop.first %} loading="lazy"{% endif %} src="https://image.thum.io/get/viewportWidth/1440/width/1440/crop/810/noanimate/{{ page.url }}" alt="{{ page.alt }}">
+			</picture>
+			<picture class="screenshot-mobile">
+				<img loading="lazy" src="https://image.thum.io/get/viewportWidth/600/width/600/crop/1200/noanimate/{{ page.url }}" alt="{{ page.alt }}">
+			</picture>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+{% endmacro %}
