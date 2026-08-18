@@ -33,8 +33,8 @@ anchors:
 	
 	<article class="subpost" aria-labelledby="camptomahawk-label" id="camptomahawk">
 		{{ websiteCarousel([
-			{ url: "https://www.camptomahawk.org/", alt: "The Camp Tomahawk homepage, featuring a top navigation bar, some quick links with icons, and a promotional video. More content is implied to be below the scroll." },
-			{ url: "https://www.camptomahawk.org/Details-Page/Camp-Staff", alt: "An article on the Camp Tomahawk website talking about camp staff. The navigation bar from before is still present, then the main article is shown along with an image of a group of camp staff with their hand together off to the right." }
+			{ url: "https://web.archive.org/web/20260121190328if_/https://www.camptomahawk.org/", alt: "The Camp Tomahawk homepage, featuring a top navigation bar, some quick links with icons, and an embedded camp video player. More content is implied to be below the scroll." },
+			{ url: "https://web.archive.org/web/20260723060555if_/https://www.camptomahawk.org/Details-Page/Camp-Staff", alt: "An article on the Camp Tomahawk website talking about camp staff. The navigation bar from before is still present, then the main article is shown along with an image of a group of camp staff with their hand together off to the right." }
 		]) }}
 		<h3 id="camptomahawk-label">Camp Tomahawk</h3>
 		<h4><a href="https://www.camptomahawk.org/" rel="external" target="_blank">Website</a></h4>
@@ -60,14 +60,9 @@ anchors:
 	</article>
 	
 	<article class="subpost" aria-labelledby="joincubs-label" id="joincubs">
-		<div class="carousel-container">
-			<div class="carousel">
-				<picture>
-					<source srcset="img/projects/joincubs/joincubs_mobile.png" media="(orientation: portrait)">
-					<img src="img/projects/joincubs/joincubs_desktop.png" alt="The Join Cubs homepage, showing links to register for Scouting floating over an image of Cub Scouts celebrating.">
-				</picture>
-			</div>
-		</div>
+		{{ websiteCarousel([
+			{ url: "https://web.archive.org/web/20250203005453if_/https://www.joincubs.org/", alt: "The Join Cubs homepage, with a hero banner reading \"Race Into Scouting\" over a photo of Cub Scouts in blue t-shirts next to a pinewood derby track, \"Register for Cub Scouts\" and \"Why Choose Cub Scouts?\" buttons, and quick links for pack leaders, recruitment events, older-youth programs, and media/press." }
+		]) }}
 		<h3 id="joincubs-label">Join Cubs</h3>
 		<h4><a href="https://www.joincubs.org/" rel="external" target="_blank">Website</a></h4>
 		<p>A fully responsive (up to 280px in width) website to market Scouting (specifically Cub Scouting) for Northern Star Scouting, a Scouting council in the MN/WI area.</p>
