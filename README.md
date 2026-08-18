@@ -11,7 +11,7 @@
 - [x] Skip navigation link
 - [x] Accessibility aria labels
 - [x] Make basic CSS for main page
-- [x] [Set up Cloudflare Pages](#cloudflare-pages-steps)
+- [x] Set up Cloudflare Workers
 - [x] Finalize main page content
 - [x] About page basic format
 - [x] About page content
@@ -36,16 +36,6 @@
 - [ ] Site audit with Lighthouse
 - [ ] Lighthouse follow-up
 - [ ] [Code cleanup](#code-cleanup-steps)
-
-### Cloudflare Pages Steps
-
-- [x] Basic setup
-- [x] Set up custom domain
-- [x] DNSSEC Records
-- [x] Fix Cloudflare hiding the email
-- [x] Set up www subdomain (for those that type that in out of habit)
-- [x] Set up build caching
-- [x] Update build system version to 2
 
 ### Finalize Design Steps
 
@@ -76,6 +66,7 @@
 - [ ] p text gets too long and looks bad. Max at 75ch? 100ch? Time to research typography
   - [ ] p line height
 - [ ] fix links being one size - tie to font-size of attached element
+- [ ] after header links look funny. too small and misaligned?
 
 ### Small Screen Size Improvements
 
@@ -90,6 +81,7 @@
 - [x] Header sizes are too big at small sizes
 - [ ] Fix text run-on in small sizes
   - [ ] decrease header size?
+- [ ] mobile website images are too wide
 
 ### Large Screen Size Improvements
 
@@ -122,7 +114,7 @@
 - [x] Split the "on this page" section to websites, desktop apps, mobile apps, AddOns/mods, hardware, etc.
 - [ ] Add the rest of my projects.
 - [x] Visual Studio is smaller than the rest of the techlogos.
-- [ ] Techlogos are taking the focus away from the project. Are they too big? Wrong color?
+- [x] Techlogos are taking the focus away from the project. Are they too big? Wrong color?
 - [x] What about if we made the post color for projects the same as projects are on the front page? That would simplify the color for the problem above. Perhaps splitting the projects into the buckets from above could be the "base", then the projects would stack on top like on the homepage
 
 ### Contact Page Improvements
@@ -136,7 +128,6 @@
 Note: *enhancements*. Someone with JavaScript disabled should still get a perfectly functioning site, just missing a few niceties that are either not possible or not worth making in plain HTML + CSS.
 
 - [x] Add buttons to navigate between the slides of the carousel
-- [ ] Add little chain links for after each header. The links already exist (and are on the sidebar), but this may be a more obvious way of making it clear that it's a link
 - [ ] Change the sidebar to indicate what part of the page they are on
 - [ ] Theme switcher
 - [ ] Add the "active-tab" class on the li's in the "On this page" section

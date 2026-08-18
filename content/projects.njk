@@ -9,8 +9,8 @@ anchors:
     url: "#goscouting"
   - title: Scouting Plant It Forward
     url: "#scoutingplantitforward"
-  - title: Camp Tomahawk
-    url: "#camptomahawk"
+  - title: Northern Star Scouting DNN Network
+    url: "#northernstar-dnn-network"
   - title: Join Cubs
     url: "#joincubs"
   - title: Vehicle Maintenance Tracker
@@ -65,7 +65,7 @@ anchors:
 		<h4>Technologies</h4>
 		<p>ScoutingPlantItForward.org starts from the same Eleventy (11ty) static build as this site, but layers a Cloudflare Workers backend on top to handle logins, payments, and reporting:</p>
 		<ul>
-			<li>Payments run through Clover's iframe integration, so card details are entered directly into a Clover-hosted frame and never touch this site's servers &mdash; it only ever receives a payment token back, keeping the PCI DSS burden much lower. Cloudflare Turnstile guards the donate and checkout forms after Clover's own bot protection didn't work correctly.</li>
+			<li>Payments run through Clover's iframe integration, so card details are entered directly into a Clover-hosted frame and never touch the site's servers. As it only ever receives a payment token back, keeping the PCI DSS burden much lower. Cloudflare Turnstile guards the donate and checkout forms after Clover's own bot protection didn't work correctly.</li>
 			<li>A full account system backs donor and Scout logins: Cloudflare D1 stores users, troops, and transactions, while Cloudflare KV stores sessions, checked on every page load so a stolen or edited cookie alone can't forge a session. Passwords are salted and hashed with PBKDF2-SHA256, and forgotten-password requests hand off to an n8n webhook to email a reset link.</li>
 			<li>Every page is deliberately named <code>template.html</code> instead of <code>index.html</code>. Cloudflare Workers with static assets skips running the Worker entirely whenever a request matches an existing static file (for speed and to save on Worker invocations), so forcing a 404 on the "pretty" URL is what lets the Worker step in to inject login state or dashboard data, while every other request still gets served straight from the fast static cache.</li>
 			<li>An n8n workflow triggers a Cloudflare deploy hook every night, rebuilding the site so data like the homepage's "trees planted" counter stays current even on days with no code changes.</li>
@@ -83,14 +83,15 @@ anchors:
 		</div>
 	</article>
 
-	<article class="subpost" aria-labelledby="camptomahawk-label" id="camptomahawk">
+	<article class="subpost" aria-labelledby="northernstar-dnn-network-label" id="northernstar-dnn-network">
 		{{ websiteCarousel([
 			{ url: "https://web.archive.org/web/20260121190328if_/https://www.camptomahawk.org/", alt: "The Camp Tomahawk homepage, featuring a top navigation bar, some quick links with icons, and an embedded camp video player. More content is implied to be below the scroll." },
-			{ url: "https://web.archive.org/web/20260723060555if_/https://www.camptomahawk.org/Details-Page/Camp-Staff", alt: "An article on the Camp Tomahawk website talking about camp staff. The navigation bar from before is still present, then the main article is shown along with an image of a group of camp staff with their hand together off to the right." }
+			{ url: "https://web.archive.org/web/20251117060525if_/https://www.northernstar.org/about-us", alt: "The About Us page on the NorthernStar.org website, part of the same DNN network as Camp Tomahawk. The shared navigation bar and skin from before is still present, followed by a large photo of two Scouts on a ropes course and a blue \"Mission\" panel introducing the council's mission statement." }
 		]) }}
-		<h3 id="camptomahawk-label">Camp Tomahawk</h3>
-		<h4><a href="https://www.camptomahawk.org/" rel="external" target="_blank">Website</a></h4>
-		<p>A website to both market Camp Tomahawk and distribute information to participants. After finishing the website, even without advertising or posting that the website was remade, Camp Tomahawk saw:</p>
+		<h3 id="northernstar-dnn-network-label">Northern Star Scouting DNN Network</h3>
+		<h4><a href="https://www.camptomahawk.org/" rel="external" target="_blank">Camp Tomahawk</a> (pictured)</h4>
+		<p>This is moreso a project about a shared DNN backend, not a single website: one DNN instance (inherited, along with EasyDNNNews and its Azure hosting) serves several Northern Star Scouting sites; Camp Tomahawk, <a href="https://www.northernstar.org/" rel="external" target="_blank">NorthernStar.org</a>, <a href="https://camp.northernstar.org/" rel="external" target="_blank">Camp.NorthernStar.org</a>, <a href="https://www.manypoint.org/" rel="external" target="_blank">ManyPoint.org</a>, <a href="https://www.explorebasecamp.org/" rel="external" target="_blank">ExploreBaseCamp.org</a>, and <a href="https://www.explorenow.org/" rel="external" target="_blank">ExploreNow.org</a>. I led a redesign across all six, on top of that inherited platform: a new shared skin, a rewrite of large parts of the CSS for accessibility, Google Tag Manager and Analytics, a Google Programmable Search Engine, automated redirects, security hardening, and a full reorganization of content network-wide.</p>
+		<p>Camp Tomahawk (shown in this carousel) is the clearest example of how effective that redesign and reorganization were. Even without advertising or posting that it had happened, Camp Tomahawk saw:</p>
 		<ul>
 			<li>A 35% decrease in "easy questions" in phone calls and emails, such as "What is your address?" or "Where can I find the health form?"</li>
 			<li>A 50% increase in impressions (5000) from search results</li>
@@ -100,7 +101,7 @@ anchors:
 			<li>An 8.2% decrease in bounce rate</li>
 		</ul>
 		<h4>Technologies</h4>
-		<p>CampTomahawk.org is built on the DNN content management system to allow the camp to manage their website without needing to work with HTML (or me). It uses EasyDNNNews to manage the articles and has several display modules written with Bootstrap to display the articles.</p>
+		<p>The network runs on the DNN content management system, which lets non-technical staff manage the sites without needing to work with HTML (or me). It uses EasyDNNNews to manage articles and has several display modules written with Bootstrap.</p>
 		<div class="techlogos">
 			<img src="img/techlogos/dnn.svg" alt="DNN Logo">
 			<img src="img/techlogos/html.svg" alt="HTML5 Logo">
@@ -108,6 +109,7 @@ anchors:
 			<img src="img/techlogos/bootstrap.svg" alt="Bootstrap Logo">
 			<img src="img/techlogos/googleanalytics.svg" alt="Google Analytics Logo">
 			<img src="img/techlogos/google-search-console.svg" alt="Google Search Console Logo">
+			<img src="img/techlogos/google-tag-manager.svg" alt="Google Tag Manager Logo">
 		</div>
 	</article>
 	
