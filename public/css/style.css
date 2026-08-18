@@ -546,8 +546,20 @@ footer .only-image {
 		display: none;
 	}
 
+	/* Phone screenshots are captured tall (roughly 1:2) - showing them at full width made
+	   each slide a full page of scrolling. Pillarbox them into a shorter ~2:3 box instead,
+	   so the whole screenshot still shows (nothing cropped) but doesn't dominate the page. */
 	.screenshot-mobile {
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		aspect-ratio: 2 / 3;
+		background-color: var(--content-background-color);
+	}
+
+	.screenshot-mobile img {
+		width: auto;
+		height: 100%;
 	}
 }
 
