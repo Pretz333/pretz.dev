@@ -15,12 +15,12 @@ eleventyNavigation:
 	</header>
 </section>
 
-<section class="post" id="websites" aria-labelledby="websites-label">
+<section class="post" id="websites" aria-labelledby="websites-label" data-anchor="Websites">
 	<header>
 		<h2 id="websites-label">Websites</h2>
 	</header>
 	
-	<article class="subpost" aria-labelledby="goscouting-label" id="goscouting" data-anchor="Go Scouting">
+	<article class="subpost" aria-labelledby="goscouting-label" id="goscouting">
 		{{ websiteCarousel([
 			{ url: "https://web.archive.org/web/20260723061613if_/https://www.goscouting.org/", alt: "The Go Scouting homepage, with a mountain-and-forest banner reading \"Preparing Kids For Real Life\" beside a ZIP code search bar to find local programs." }
 		]) }}
@@ -40,7 +40,7 @@ eleventyNavigation:
 		</div>
 	</article>
 
-	<article class="subpost" aria-labelledby="scoutingplantitforward-label" id="scoutingplantitforward" data-anchor="Plant It Forward">
+	<article class="subpost" aria-labelledby="scoutingplantitforward-label" id="scoutingplantitforward">
 		{{ websiteCarousel([
 			{ url: "https://web.archive.org/web/20260818005234if_/https://scoutingplantitforward.org/", alt: "The Scouting Plant It Forward homepage, with a forest background reading \"Plant It Forward. Support a Scout. Create a Legacy.\" next to a stat reading \"Because of you, 787 Trees Planted,\"" }
 		]) }}
@@ -68,7 +68,7 @@ eleventyNavigation:
 		</div>
 	</article>
 
-	<article class="subpost" aria-labelledby="northernstar-dnn-network-label" id="northernstar-dnn-network" data-anchor="Northern Star Scouting DNN Network">
+	<article class="subpost" aria-labelledby="northernstar-dnn-network-label" id="northernstar-dnn-network">
 		{{ websiteCarousel([
 			{ url: "https://web.archive.org/web/20260121190328if_/https://www.camptomahawk.org/", alt: "The Camp Tomahawk homepage, featuring a top navigation bar, some quick links with icons, and an embedded camp video player. More content is implied to be below the scroll." },
 			{ url: "https://web.archive.org/web/20251117060525if_/https://www.northernstar.org/about-us", alt: "The About Us page on the NorthernStar.org website. The shared navigation bar and skin from before is still present, followed by a large photo of two Scouts on a ropes course and a blue \"Mission\" panel introducing the council's mission statement." }
@@ -98,7 +98,7 @@ eleventyNavigation:
 		</div>
 	</article>
 	
-	<article class="subpost" aria-labelledby="joincubs-label" id="joincubs" data-anchor="Join Cubs">
+	<article class="subpost" aria-labelledby="joincubs-label" id="joincubs">
 		{{ websiteCarousel([
 			{ url: "https://web.archive.org/web/20250203005453if_/https://www.joincubs.org/", alt: "The Join Cubs homepage, with a hero banner reading \"Race Into Scouting\" over a photo of Cub Scouts in t-shirts next to a pinewood derby track" }
 		]) }}
@@ -117,12 +117,12 @@ eleventyNavigation:
 	</article>
 </section>
 
-<section class="post" id="apps" aria-labelledby="apps-label">
+<section class="post" id="apps" aria-labelledby="apps-label" data-anchor="Desktop &amp; Mobile Apps">
 	<header>
 		<h2 id="apps-label">Desktop &amp; Mobile Apps</h2>
 	</header>
 
-	<article class="subpost" aria-labelledby="inventory-label" id="inventory" data-anchor="Inventory">
+	<article class="subpost" aria-labelledby="inventory-label" id="inventory">
 		<div class="carousel-container">
 			<div class="carousel">
 				<picture>
@@ -152,7 +152,7 @@ eleventyNavigation:
 		</div>
 	</article>
 
-	<article class="subpost" aria-labelledby="vehicle-maintenance-tracker-label" id="vehicle-maintenance-tracker" data-anchor="Vehicle Maintenance Tracker">
+	<article class="subpost" aria-labelledby="vehicle-maintenance-tracker-label" id="vehicle-maintenance-tracker">
 		<div class="carousel-container">
 			<div class="carousel">
 				<img src="img/projects/stand-in_project_img.png" alt="Project Image">
@@ -172,12 +172,12 @@ eleventyNavigation:
 	</article>
 </section>
 
-<section class="post" id="mods" aria-labelledby="mods-label">
+<section class="post" id="mods" aria-labelledby="mods-label" data-anchor="AddOns/Mods">
 	<header>
 		<h2 id="mods-label">AddOns/Mods</h2>
 	</header>
 	
-	<article class="subpost" aria-labelledby="mementorefresh-label" id="mementorefresh" data-anchor="Memento Refresh">
+	<article class="subpost" aria-labelledby="mementorefresh-label" id="mementorefresh">
 		<div class="carousel-container">
 			<div class="carousel">
 					<picture>
@@ -199,12 +199,12 @@ eleventyNavigation:
 	</article>
 </section>
 
-<section class="post" id="hardware" aria-labelledby="hardware-label">
+<section class="post" id="hardware" aria-labelledby="hardware-label" data-anchor="Hardware &amp; Infrastructure">
 	<header>
 		<h2 id="hardware-label">Hardware &amp; Infrastructure</h2>
 	</header>
 
-	<article class="subpost" aria-labelledby="media-server-label" id="media-server" data-anchor="Media Server">
+	<article class="subpost" aria-labelledby="media-server-label" id="media-server">
 		<div class="carousel-container">
 			<div class="carousel">
 				<img src="img/projects/stand-in_project_img.png" alt="Project Image">
@@ -223,6 +223,33 @@ eleventyNavigation:
 			<img src="img/techlogos/intune.svg" alt="Microsoft Intune Logo">
 			<img src="img/techlogos/backblaze.svg" alt="Backblaze Logo" width="128">
 			<img src="img/techlogos/mailgun.svg" alt="Mailgun Logo" width="128">
+		</div>
+	</article>
+
+	<article class="subpost" aria-labelledby="automation-server-label" id="automation-server">
+		<div class="carousel-container">
+			<div class="carousel">
+				<img src="img/projects/stand-in_project_img.png" alt="Project Image">
+			</div>
+		</div>
+		<h3 id="automation-server-label">Automation Server</h3>
+		<h4>A Docker Server for Northern Star Scouting</h4>
+		<p>A self-hosted Docker server for Northern Star Scouting that replaced a huge amount of manual data work. Before it existed, getting any real reporting done meant sorting and combining Excel files by hand, with no shared database, no real backups, and no way to connect one system's data to another. This server gives the council a real database with real backups, plus the ability to connect nearly any two systems together. It's still actively growing and, between the time it saves and the reporting it makes possible, it consistently saves 40+ hours of staff time a week, sometimes 80+ on busier weeks.</p>
+		<p>It runs on a Dell server running Debian, with every service (routing, data storage, automation, and monitoring) in its own Docker container behind Traefik, which owns ports 80 and 443, handles TLS, and routes each incoming request to the right container by hostname.</p>
+		<p>NocoDB is the primary data store, a spreadsheet-like interface over a real database with no practical row or column limit, connected to Cloudflare R2 for file storage (PDFs, images, etc.) and secured with Google SSO.</p>
+		<p>n8n handles automation, triggered by NocoDB webhooks, schedules, and forms, and can genuinely connect anything to anything via http(s) requests. One workflow collects all sales data, filters and cleans the data, converts the result to a PDF, and sends it straight to a printer with no manual steps in between. There are over 65 workflows running today, each allowing employees to focus on value-add projects instead of repetitive tasks.</p>
+		<p>Dozzle gives remote visibility into every container's logs.</p>
+		<h4>Technologies</h4>
+		<p>The server runs Debian on a Dell server, with Traefik as a reverse proxy and TLS terminator (using Let's Encrypt for certificates) in front of NocoDB, n8n, and Dozzle, all managed via Docker Compose.</p>
+		<div class="techlogos">
+			<img src="img/techlogos/debian.svg" alt="Debian Logo" width="128">
+			<img src="img/techlogos/docker.svg" alt="Docker Logo" width="128">
+			<img src="img/techlogos/traefik.svg" alt="Traefik Logo" width="128">
+			<img src="img/techlogos/letsencrypt.svg" alt="Let's Encrypt Logo" width="128">
+			<img src="img/techlogos/nocodb.png" alt="NocoDB Logo">
+			<img src="img/techlogos/n8n.svg" alt="n8n Logo" width="128">
+			<img src="img/techlogos/dozzle.svg" alt="Dozzle Logo">
+			<img src="img/techlogos/cloudflare.svg" alt="Cloudflare Logo">
 		</div>
 	</article>
 </section>

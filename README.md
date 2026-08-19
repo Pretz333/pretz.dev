@@ -104,6 +104,7 @@
 - [ ] Assess the accessibility of tooltips
 - [ ] tooltips can go off-screen when content is high on the screen
 - [ ] Wider tooltips that do not go off the screen
+- [ ] pic of laptop?
 
 ### Projects Page Improvements
 
@@ -112,7 +113,8 @@
 - [x] Add other relevant links to the projects, such as the website link, ESOUI link, etc.
 - [x] Split the "on this page" section to websites, desktop apps, mobile apps, AddOns/mods, hardware, etc.
 - [ ] Add the rest of my projects.
-  - [ ] docker server on debian for work (n8n, nocodb, traefik, etc.)
+  - [x] docker server on debian for work (n8n, nocodb, traefik, etc.)
+    - [ ] screenies for nocodb, n8n dashboard, dozzle with logs, traefik dashboard
   - [x] NAS for work
     - [ ] screenshots of company portal listing, file share, truenas dashboard
   - [ ] short mention of tiny sites? preparedfor, preparedforlearning?

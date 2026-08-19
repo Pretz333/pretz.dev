@@ -50,11 +50,20 @@ eleventyNavigation:
 		<a class="tooltip" tooltip-text="Bootstrap, a toolkit for building the front-end of websites. I've used it for the custom DNN display modules on Northern Star Scoutings's site network and for Join Cubs' hand-coded layout." href="https://getbootstrap.com/" rel="external" target="_blank">
 			<img src="img/techlogos/bootstrap.svg" alt="Bootstrap Logo">
 		</a>
-		<a class="tooltip" tooltip-text="Cloudflare has many useful tools. I deploy static sites and serverless backends on Workers, and have used D1 for SQL storage, KV for session data, and Turnstile for bot protection on donation and login forms." href="https://www.cloudflare.com/" rel="external" target="_blank">
+		<a class="tooltip" tooltip-text="Cloudflare has many useful tools. I deploy static sites and serverless backends on Workers, have used D1 for SQL storage, KV for session data, and R2 for file storage backing a NocoDB server I run for Northern Star Scouting, and use Turnstile for bot protection on donation and login forms." href="https://www.cloudflare.com/" rel="external" target="_blank">
 			<img src="img/techlogos/cloudflare.svg" alt="Cloudflare Logo">
 		</a>
 		<a class="tooltip" tooltip-text="DNN (formerly DotNetNuke), a content management system. I inherited a six-site DNN network including northernstar.org and redesigned it, including custom Bootstrap-based display modules and the EasyDNNNews module for managing articles." href="https://www.dnnsoftware.com/" rel="external" target="_blank">
 			<img src="img/techlogos/dnn.svg" alt="DNN Logo">
+		</a>
+		<a class="tooltip" tooltip-text="Debian, a Linux distribution. I run it on a Dell server for Northern Star Scouting, hosting NocoDB, n8n, Traefik, and Dozzle in Docker." href="https://www.debian.org/" rel="external" target="_blank">
+			<img src="img/techlogos/debian.svg" alt="Debian Logo" width="128">
+		</a>
+		<a class="tooltip" tooltip-text="Docker, a way to package and run software in containers. I use it to run NocoDB, n8n, Traefik, and Dozzle on a server I built for Northern Star Scouting." href="https://www.docker.com/" rel="external" target="_blank">
+			<img src="img/techlogos/docker.svg" alt="Docker Logo" width="128">
+		</a>
+		<a class="tooltip" tooltip-text="Dozzle, a tool for viewing Docker container logs remotely. I use it to keep an eye on a Docker server I run for Northern Star Scouting." href="https://dozzle.dev/" rel="external" target="_blank">
+			<img src="img/techlogos/dozzle.svg" alt="Dozzle Logo">
 		</a>
 		<a class="tooltip" tooltip-text="Eleventy (11ty), a simpler static site generator. I've used it to build this site, GoScouting.org, and the static front end of Scouting Plant It Forward." href="https://www.11ty.dev/" rel="external" target="_blank">
 			<img src="img/techlogos/11ty.svg" alt="Eleventy Logo">
@@ -86,14 +95,23 @@ eleventyNavigation:
 		<a class="tooltip" tooltip-text="Mailgun, an email delivery service. I use it to send S.M.A.R.T. and scrub alerts from a TrueNAS server I built for Northern Star Scouting." href="https://www.mailgun.com/" rel="external" target="_blank">
 			<img src="img/techlogos/mailgun.svg" alt="Mailgun Logo" width="128">
 		</a>
-		<a class="tooltip" tooltip-text="n8n, a workflow automation tool. On Scouting Plant It Forward, I use it to email password-reset links and to trigger a nightly rebuild that keeps stats like the homepage's tree count current." href="https://n8n.io/" rel="external" target="_blank">
+		<a class="tooltip" tooltip-text="n8n, a workflow automation tool. I run 65+ workflows on a Docker server for Northern Star Scouting, connecting NocoDB and other systems together, and use it on Scouting Plant It Forward to email password-reset links and trigger a nightly rebuild that keeps stats like the homepage's tree count current." href="https://n8n.io/" rel="external" target="_blank">
 			<img src="img/techlogos/n8n.svg" alt="n8n Logo" width="128">
+		</a>
+		<a class="tooltip" tooltip-text="NocoDB, a spreadsheet-like interface over a real database. I use it as the primary data store on a Docker server I run for Northern Star Scouting, replacing a lot of manual work moving data between spreadsheets." href="https://nocodb.com/" rel="external" target="_blank">
+			<img src="img/techlogos/nocodb.png" alt="NocoDB Logo">
 		</a>
 		<a class="tooltip" tooltip-text="SQL Server, a relational database management system developed by Microsoft." href="https://www.microsoft.com/en-us/sql-server/" rel="external" target="_blank">
 			<img src="img/techlogos/sqlserver.svg" alt="Microsoft SQL Server Logo">
 		</a>
 		<a class="tooltip" tooltip-text="SQLite, a small, self-contained relational database management system. I've used it to store data locally in both the Vehicle Maintenance Tracker and Inventory apps." href="https://www.sqlite.org/index.html" rel="external" target="_blank">
 			<img src="img/techlogos/sqlite.svg" alt="SQLite Logo">
+		</a>
+		<a class="tooltip" tooltip-text="Let's Encrypt, a free certificate authority. Traefik uses it to automatically issue and renew TLS certificates on a Docker server I run for Northern Star Scouting." href="https://letsencrypt.org/" rel="external" target="_blank">
+			<img src="img/techlogos/letsencrypt.svg" alt="Let's Encrypt Logo" width="128">
+		</a>
+		<a class="tooltip" tooltip-text="Traefik, a reverse proxy. It routes incoming traffic to the right container and handles TLS certificates on a Docker server I run for Northern Star Scouting." href="https://traefik.io/traefik/" rel="external" target="_blank">
+			<img src="img/techlogos/traefik.svg" alt="Traefik Logo" width="128">
 		</a>
 		<a class="tooltip" tooltip-text="TrueNAS, an open-source NAS operating system built on ZFS. I used TrueNAS SCALE to build a media server for Northern Star Scouting." href="https://www.truenas.com/" rel="external" target="_blank">
 			<img src="img/techlogos/truenas.svg" alt="TrueNAS Logo" width="128">
