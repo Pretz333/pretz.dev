@@ -101,7 +101,6 @@
 - [x] Click to go to that tech's website (such as click on the DNN logo to go to [DotNetNuke](https://www.dnnsoftware.com/))
 - [x] Google Analytics is deciding not to be a square with round corners again
 - [x] Hover/Focus border has a gap at the bottom
-- [ ] Add an arrow to signal where the tooltip is coming from
 - [ ] Assess the accessibility of tooltips
 - [ ] tooltips can go off-screen when content is high on the screen
 - [ ] Wider tooltips that do not go off the screen
@@ -114,7 +113,8 @@
 - [x] Split the "on this page" section to websites, desktop apps, mobile apps, AddOns/mods, hardware, etc.
 - [ ] Add the rest of my projects.
   - [ ] docker server on debian for work (n8n, nocodb, traefik, etc.)
-  - [ ] NAS for work
+  - [x] NAS for work
+    - [ ] screenshots of company portal listing, file share, truenas dashboard
   - [ ] short mention of tiny sites? preparedfor, preparedforlearning?
   - [ ] etc
 - [x] Visual Studio is smaller than the rest of the techlogos.

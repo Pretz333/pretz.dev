@@ -10,7 +10,7 @@ eleventyNavigation:
 <section class="post" aria-labelledby="projects-page-label" id="projects-page-header">
 	<header>
 		<h1 id="projects-page-label">Past Projects</h1>
-		<p>These are some of the software projects I've worked on in the past. I've split them into sections based on what they are, a; <a href="#websites">website</a>, <a href="#apps">desktop or mobile application</a>, or <a href="#mods">game mod/AddOn</a>.</p>
+		<p>These are some of the software projects I've worked on in the past. I've split them into sections based on what they are, whether a <a href="#websites">website</a>, a <a href="#apps">desktop or mobile application</a>, a <a href="#mods">game mod/AddOn</a>, or a <a href="#hardware">hardware and infrastructure build</a>.</p>
 		<p>Most of these were made as the sole developer, though a few were made in small teams. Projects were I was not the sole developer call out this fact in their description.</p>
 	</header>
 </section>
@@ -195,6 +195,34 @@ eleventyNavigation:
 			<img src="img/techlogos/eso.png" alt="Elder Scrolls Online Logo">
 			<img src="img/techlogos/lua.svg" alt="Lua Logo">
 			<img src="img/techlogos/github-circle.svg" alt="GitHub Logo">
+		</div>
+	</article>
+</section>
+
+<section class="post" id="hardware" aria-labelledby="hardware-label">
+	<header>
+		<h2 id="hardware-label">Hardware &amp; Infrastructure</h2>
+	</header>
+
+	<article class="subpost" aria-labelledby="media-server-label" id="media-server" data-anchor="Media Server">
+		<div class="carousel-container">
+			<div class="carousel">
+				<img src="img/projects/stand-in_project_img.png" alt="Project Image">
+			</div>
+		</div>
+		<h3 id="media-server-label">Media Server</h3>
+		<h4>A TrueNAS File Server for Northern Star Scouting</h4>
+		<p>A "dump" style photo and video server built for Northern Star Scouting, a Scouting council in the MN/WI area with about 90 full-time employees. Before this server existed, all photos and videos were scattered across loose external hard drives and individual employees' personal iCloud/Google Photos libraries, with no common place able to have all photos from all events. The server exists so anyone can dump every photo and video from an event in one go, without first sorting it, deduplicating it, or worrying whether it belongs in someone else's folder.</p>
+		<p>I built the server from the ground up, starting with an LSI SAS HBA to add enough SATA ports for the drive count, then installed TrueNAS Scale and laid the pool out as two RAIDZ2 vdevs of six drives each, for ~50TB of usable capacity. On top of the pool, I set up automated scrubbing, SMART checks, and email alerts (through an SMTP relay) so drive problems get caught and reported well before they become data loss, along with nightly cloud backups to Backblaze B2 as an off-site copy.</p>
+		<p>Each department got its own dataset and network share, provisioned with a PowerShell script so every employee can write to their own department's share while only viewing everyone else's, since it's all just photos and video. I packaged that script as an intunewin file and published it through Intune to Company Portal, so any employee's computer sets up its share automatically instead of needing an individual IT ticket. The server launched in March 2025 with about 8TB of data migrated immediately from those old external drives and employees' personal photo libraries.</p>
+		<h4>Technologies</h4>
+		<p>The server runs TrueNAS SCALE on top of an LSI SAS HBA for extra SATA connectivity, with the network shares provisioned by a PowerShell script packaged and deployed through Microsoft Intune's Company Portal. Backups run to Backblaze B2, and health alerts are emailed out through an SMTP relay (Mailgun).</p>
+		<div class="techlogos">
+			<img src="img/techlogos/truenas.svg" alt="TrueNAS Logo" width="128">
+			<img src="img/techlogos/powershell.svg" alt="PowerShell Logo">
+			<img src="img/techlogos/intune.svg" alt="Microsoft Intune Logo">
+			<img src="img/techlogos/backblaze.svg" alt="Backblaze Logo" width="128">
+			<img src="img/techlogos/mailgun.svg" alt="Mailgun Logo" width="128">
 		</div>
 	</article>
 </section>
