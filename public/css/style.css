@@ -602,6 +602,8 @@ footer .only-image {
 	border-radius: var(--border-radius);
 	background-color: var(--logo-background-color);
 	box-sizing: border-box;
+	display: block; /* img is inline by default, which reserves descender space below it and left a gap under the hover/focus outline */
+	object-fit: contain;
 	padding: 0.4em;
 	width: 100%; /* of their column in the grid */
 }

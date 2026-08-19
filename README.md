@@ -100,7 +100,7 @@
 - [x] Hover over for an explanation of what it is/is used for
 - [x] Click to go to that tech's website (such as click on the DNN logo to go to [DotNetNuke](https://www.dnnsoftware.com/))
 - [x] Google Analytics is deciding not to be a square with round corners again
-- [ ] Hover/Focus border has a gap at the bottom
+- [x] Hover/Focus border has a gap at the bottom
 - [ ] Add an arrow to signal where the tooltip is coming from
 - [ ] Assess the accessibility of tooltips
 - [ ] tooltips can go off-screen when content is high on the screen
