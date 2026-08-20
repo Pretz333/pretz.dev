@@ -292,36 +292,6 @@ export default async function(eleventyConfig) {
 		return content;
 	});
 
-	// Add phone and email icons to a elements with a tel or mailto link
-	// This ONLY works because the icons are in use in the footer, otherwise we'd
-	// need to set this to run pre-fontawesome plugin and use the <i></i> version.
-	eleventyConfig.addTransform("prependLinksWithIcon", function(content, outputPath) {
-		// Only run this transform on HTML output
-		if (outputPath && outputPath.endsWith(".html")) {
-			const phoneSVG = `<svg class="icon-svg" aria-hidden="true" focusable="false" role="img"><use href="#fas-fa-phone" xlink:href="#fas-fa-phone"></use></svg>`;
-			const mailSVG = `<svg class="icon-svg" aria-hidden="true" focusable="false" role="img"><use href="#fas-fa-at" xlink:href="#fas-fa-at"></use></svg>`;
-			
-			// Regex to find <a> tags where the href starts with 'tel:' AND does NOT contain the class 'data-no-icon'.
-			// 1. (tel:.*?"[^>]*?): Matches the href="tel:..." part, including any attributes before the closing >
-			// 2. (?!.*data-no-icon): NEGATIVE LOOKAHEAD to ensure 'data-no-icon' is NOT anywhere in the <a> tag's attributes
-			// 3. (.*?) captures the inner content of the <a> tag (the phone number text)
-			const telLinkRegex = /(<a\s(?!.*data-no-icon)[^>]*?href=['"]tel:.*?"[^>]*?>)(.*?)(<\/a>)/gim;
-			const mailLinkRegex = /(<a\s(?!.*data-no-icon)[^>]*?href=['"]mailto:.*?"[^>]*?>)(.*?)(<\/a>)/gim;
-
-			content = content.replace(telLinkRegex, (match, openTag, innerContent, closeTag) => {
-				// Return the new structure: <a href="tel:XXX-XXX-XXXX"> + SVG + Text Content + </a>
-				return `${openTag}${phoneSVG} ${innerContent}${closeTag}`;
-			});
-
-			content = content.replace(mailLinkRegex, (match, openTag, innerContent, closeTag) => {
-				// Return the new structure: <a href="mailto/tel:"> + SVG + Text Content + </a>
-				return `${openTag}${mailSVG} ${innerContent}${closeTag}`;
-			});
-		}
-
-		return content;
-	});
-	
 	eleventyConfig.addTransform("html-anchor-transform", function(content, outputPath) {
 		// Only run this transform for HTML output
 		if (outputPath && outputPath.endsWith(".html")) {
