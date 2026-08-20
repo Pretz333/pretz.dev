@@ -117,7 +117,7 @@
     - [ ] screenies for nocodb, n8n dashboard, dozzle with logs, traefik dashboard
   - [x] NAS for work
     - [ ] screenshots of company portal listing, file share, truenas dashboard
-  - [ ] short mention of tiny sites? preparedfor, preparedforlearning?
+  - [x] short mention of tiny sites? preparedfor, preparedforlearning?
   - [ ] etc
 - [x] Visual Studio is smaller than the rest of the techlogos.
 - [x] Techlogos are taking the focus away from the project. Are they too big? Wrong color?

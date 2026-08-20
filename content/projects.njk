@@ -11,7 +11,7 @@ eleventyNavigation:
 	<header>
 		<h1 id="projects-page-label">Past Projects</h1>
 		<p>These are some of the software projects I've worked on in the past. I've split them into sections based on what they are, whether a <a href="#websites">website</a>, a <a href="#apps">desktop or mobile application</a>, a <a href="#mods">game mod/AddOn</a>, or a <a href="#hardware">hardware and infrastructure build</a>.</p>
-		<p>Most of these were made as the sole developer, though a few were made in small teams. Projects were I was not the sole developer call out this fact in their description.</p>
+		<p>Most of these were made as the sole developer, though a few were made in small teams. Projects where I was not the sole developer call out this fact in their description.</p>
 	</header>
 </section>
 
@@ -111,6 +111,26 @@ eleventyNavigation:
 			<img src="img/techlogos/html.svg" alt="HTML5 Logo">
 			<img src="img/techlogos/css.svg" alt="CSS3 Logo">
 			<img src="img/techlogos/bootstrap.svg" alt="Bootstrap Logo">
+			<img src="img/techlogos/cloudflare.svg" alt="Cloudflare Logo">
+			<img src="img/techlogos/github-circle.svg" alt="GitHub Logo">
+		</div>
+	</article>
+
+	<article class="subpost" aria-labelledby="marketing-campaign-sites-label" id="marketing-campaign-sites">
+		{{ websiteCarousel([
+			{ url: "https://web.archive.org/web/20260820005317if_/https://preparedfor.org/", alt: "The Prepared For homepage, with a video background of a Scout riding an ATV through a field over the text \"Prepared For More Than You Think\"" },
+			{ url: "https://web.archive.org/web/20260820005335if_/https://preparedforlearning.org/", alt: "The Prepared for Learning homepage, a green-tinted photo of a Scout in a school hallway beside the text \"Learning Doesnt End With The Last Bell\"" }
+		]) }}
+		<h3 id="marketing-campaign-sites-label">Marketing Campaign Sites</h3>
+		<h4><a href="https://preparedfor.org/" rel="external" target="_blank">Prepared For</a> and <a href="https://preparedforlearning.org/" rel="external" target="_blank">Prepared for Learning</a> (pictured)</h4>
+		<p>A handful of small marketing sites for Northern Star Scouting, one built for each roughly 8-month ad campaign the council has run. Each is only a few pages, built from scratch and fully hand-coded rather than reused from a template, then retired (as in not updated, the site is left live) once its campaign wraps up.</p>
+		<h4>Technologies</h4>
+		<p>These are plain HTML and CSS with no JavaScript, hosted on Cloudflare Pages. Some, like Prepared for Learning, use Bootstrap and jQuery for layout and interactive components, while others, like Prepared For, are hand-rolled CSS with no framework. They have private GitHub repositories.</p>
+		<div class="techlogos">
+			<img src="img/techlogos/html.svg" alt="HTML5 Logo">
+			<img src="img/techlogos/css.svg" alt="CSS3 Logo">
+			<img src="img/techlogos/bootstrap.svg" alt="Bootstrap Logo">
+			<img src="img/techlogos/jquery.svg" alt="JQuery Logo">
 			<img src="img/techlogos/cloudflare.svg" alt="Cloudflare Logo">
 			<img src="img/techlogos/github-circle.svg" alt="GitHub Logo">
 		</div>
