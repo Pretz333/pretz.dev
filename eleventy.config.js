@@ -267,6 +267,12 @@ export default async function(eleventyConfig) {
 		return (new Date()).toISOString();
 	});
 
+	// Count of primary site pages (those with an eleventyNavigation entry, i.e. shown in the top nav).
+	// Pass `collections.all` in from the template, e.g. {% pageCount collections.all %}
+	eleventyConfig.addShortcode("pageCount", (allPages) => {
+		return (allPages || []).filter(page => page.data.eleventyNavigation).length;
+	});
+
 	/**
 	 * Transforms
 	 * The opposite of the preprocessor - transforms modify the output of a file

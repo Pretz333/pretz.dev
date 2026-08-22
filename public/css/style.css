@@ -263,6 +263,10 @@ strong {
 	display: none;
 }
 
+.large-screens {
+	display: inline;
+}
+
 nav {
 	background-color: var(--content-background-color);
 	border-top-right-radius: var(--border-radius);
@@ -386,7 +390,11 @@ footer .only-image {
 	}
 
 	.small-screens {
-		display: block;
+		display: inline;
+	}
+
+	.large-screens {
+		display: none;
 	}
 
 	.logo {

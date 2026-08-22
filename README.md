@@ -28,10 +28,9 @@
 - [ ] [About page improvements](#about-page-improvements)
 - [x] [Projects page improvements](#projects-page-improvements)
 - [ ] [Contact page improvements](#contact-page-improvements)
-- [ ] [JS site enhancements](#js-site-enhancements)
+- [x] [JS site enhancements](#js-site-enhancements)
 - [ ] Note about techlogos not being my trademark (footer? They're on every page but contact. Ignoring that, contact makes the most sense to put this note on.)
-- [ ] Custom 404 Page
-  - Did you know my [sidebar (desktop)/navbar (mobile)] doubles as a sitemap? There's really not a lot going on here - how did you get lost?
+- [x] Custom 404 Page
 - [ ] Assess how big the carousel images really need to be
 - [ ] Add modern formats (webp/avif) to images with more-standard fallbacks (jpg/png)
 - [ ] Site audit with Lighthouse
@@ -137,7 +136,6 @@ Note: *enhancements*. Someone with JavaScript disabled should still get a perfec
 
 - [x] Add buttons to navigate between the slides of the carousel
 - [x] Change the sidebar to indicate what part of the page they are on
-- [ ] Theme switcher
 - [x] Add the "active-tab" class on the li's in the "On this page" section
 
 ### Code Cleanup Steps
