@@ -60,22 +60,34 @@ eleventyNavigation:
 			<img src="img/techlogos/github-circle.svg" alt="GitHub Logo">
 		</div>
 	</article>
-	<article class="subpost" aria-labelledby="vehicle-maintenance-tracker-label" id="vehicle-maintenance-tracker">
+	<article class="subpost" aria-labelledby="automation-server-label" id="automation-server">
 		<div class="carousel-container">
 			<div class="carousel">
-				<img src="img/projects/stand-in_project_img.png" alt="Project Image">
+				<img src="img/projects/automation_server/nocodb_dashboard.png" alt="The NocoDB workspace, listing many bases such as Unit Registration History, BILL Automations, and Council Vehicles used across the council">
+				<img src="img/projects/automation_server/nocodb_camping_reg_view.png" alt="A NocoDB grid view of camping registrations, with columns for registration number, camp, subcamp, campsite, and booking date across thousands of rows">
+				<img src="img/projects/automation_server/n8n_dashboard.png" alt="The n8n workflow overview, showing 596 production executions with a 0.03% failure rate and 52 hours of estimated time saved, above a list of active workflows">
+				<img src="img/projects/automation_server/n8n_flow.png" alt="An n8n workflow canvas for a poster pickup request, chaining a webhook trigger through NocoDB lookups and updates to a final message send">
+				<img src="img/projects/automation_server/dozzle_dashboard.png" alt="The Dozzle dashboard, listing the server's five running containers (nocodb, n8n, directus, traefik, dozzle) with their live CPU and memory usage">
 			</div>
 		</div>
-		<h3 id="vehicle-maintenance-tracker-label">Vehicle Maintenance Tracker</h3>
-		<h4>An Android Application | <a href="https://github.com/Pretz333/Vehicle-Maintenance-Tracker" rel="external" target="_blank">GitHub Repository</a></h4>
-		<p>An Open-Source Android Application to track vehicle maintenance. It utilizes a database (with full CRUD abilities) to track the vehicles and issues of those vehicles. With a few minor tweaks, this codebase could be made into a general issue (bug) tracker or support ticket manager.</p>
+		<h3 id="automation-server-label">Automation Server</h3>
+		<h4>A Docker Server for Northern Star Scouting</h4>
+		<p>A self-hosted Docker server for Northern Star Scouting that replaced a huge amount of manual data work. Before it existed, getting any real reporting done meant sorting and combining Excel files by hand, with no shared database, no real backups, and no way to connect one system's data to another. This server gives the council a real database with real backups, plus the ability to connect nearly any two systems together. It's still actively growing and, between the time it saves and the reporting it makes possible, it consistently saves 40+ hours of staff time a week, sometimes 80+ on busier weeks.</p>
+		<p>It runs on a Dell server running Debian, with every service (routing, data storage, automation, and monitoring) in its own Docker container behind Traefik, which owns ports 80 and 443, handles TLS, and routes each incoming request to the right container by hostname.</p>
+		<p>NocoDB is the primary data store, a spreadsheet-like interface over a real database with no practical row or column limit, connected to Cloudflare R2 for file storage (PDFs, images, etc.) and secured with Google SSO.</p>
+		<p>n8n handles automation, triggered by NocoDB webhooks, schedules, and forms, and can genuinely connect anything to anything via http(s) requests. One workflow collects all sales data, filters and cleans the data, converts the result to a PDF, and sends it straight to a printer with no manual steps in between. There are over 65 workflows running today, each allowing employees to focus on value-add projects instead of repetitive tasks.</p>
+		<p>Dozzle gives remote visibility into every container's logs.</p>
 		<h4>Technologies</h4>
-		<p>This project was built in Android Studio using Java and uses an SQLite Database to track the vehicles, issues, and logs.</p>
+		<p>The server runs Debian on a Dell server, with Traefik as a reverse proxy and TLS terminator (using Let's Encrypt for certificates) in front of NocoDB, n8n, and Dozzle, all managed via Docker Compose.</p>
 		<div class="techlogos">
-			<img src="img/techlogos/androidstudio.svg" alt="Android Studio Logo">
-			<img src="img/techlogos/java.svg" alt="Java Logo">
-			<img src="img/techlogos/sqlite.svg" alt="SQLite Logo">
-			<img src="img/techlogos/github-circle.svg" alt="GitHub Logo">
+			<img src="img/techlogos/debian.svg" alt="Debian Logo" width="128">
+			<img src="img/techlogos/docker.svg" alt="Docker Logo" width="128">
+			<img src="img/techlogos/traefik.svg" alt="Traefik Logo" width="128">
+			<img src="img/techlogos/letsencrypt.svg" alt="Let's Encrypt Logo" width="128">
+			<img src="img/techlogos/nocodb.svg" alt="NocoDB Logo">
+			<img src="img/techlogos/n8n.svg" alt="n8n Logo" width="128">
+			<img src="img/techlogos/dozzle.svg" alt="Dozzle Logo">
+			<img src="img/techlogos/cloudflare.svg" alt="Cloudflare Logo">
 		</div>
 	</article>
 	<a class="btn" href="/projects">See More Projects</a>
