@@ -26,11 +26,12 @@
 - [ ] [Large screen sizes](#large-screen-size-improvements)
 - [ ] [Small screen sizes](#small-screen-size-improvements)
 - [ ] [About page improvements](#about-page-improvements)
-- [ ] [Projects page improvements](#projects-page-improvements)
+- [x] [Projects page improvements](#projects-page-improvements)
 - [ ] [Contact page improvements](#contact-page-improvements)
 - [ ] [JS site enhancements](#js-site-enhancements)
 - [ ] Note about techlogos not being my trademark (footer? They're on every page but contact. Ignoring that, contact makes the most sense to put this note on.)
 - [ ] Custom 404 Page
+  - Did you know my [sidebar (desktop)/navbar (mobile)] doubles as a sitemap? There's really not a lot going on here - how did you get lost?
 - [ ] Assess how big the carousel images really need to be
 - [ ] Add modern formats (webp/avif) to images with more-standard fallbacks (jpg/png)
 - [ ] Site audit with Lighthouse
@@ -115,12 +116,11 @@
 - [ ] Add the rest of my projects.
   - [x] docker server on debian for work (n8n, nocodb, traefik, etc.)
     - [x] screenies for nocodb, n8n dashboard, dozzle with logs, traefik dashboard
-    - [ ] screenshots leave funny gap due to inconsistent height
+    - [x] screenshots leave funny gap due to inconsistent height
   - [x] NAS for work
     - [x] screenshots of company portal listing, file share, truenas dashboard
-    - [ ] screenshots leave funny gap due to inconsistent height
+    - [x] screenshots leave funny gap due to inconsistent height
   - [x] short mention of tiny sites? preparedfor, preparedforlearning?
-  - [ ] etc
 - [x] Visual Studio is smaller than the rest of the techlogos.
 - [x] Techlogos are taking the focus away from the project. Are they too big? Wrong color?
 - [x] What about if we made the post color for projects the same as projects are on the front page? That would simplify the color for the problem above. Perhaps splitting the projects into the buckets from above could be the "base", then the projects would stack on top like on the homepage
@@ -136,9 +136,9 @@
 Note: *enhancements*. Someone with JavaScript disabled should still get a perfectly functioning site, just missing a few niceties that are either not possible or not worth making in plain HTML + CSS.
 
 - [x] Add buttons to navigate between the slides of the carousel
-- [ ] Change the sidebar to indicate what part of the page they are on
+- [x] Change the sidebar to indicate what part of the page they are on
 - [ ] Theme switcher
-- [ ] Add the "active-tab" class on the li's in the "On this page" section
+- [x] Add the "active-tab" class on the li's in the "On this page" section
 
 ### Code Cleanup Steps
 
