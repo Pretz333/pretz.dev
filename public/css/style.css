@@ -570,15 +570,18 @@ footer .only-image {
 	justify-content: center;
 }
 
-.techlogos img {
+.techlogos img, .about-image-grid img {
 	aspect-ratio: 1;
-	background-color: var(--logo-background-color);
+	background-color: var(--accent-item-color);
 	border-radius: var(--border-radius);
 	box-sizing: border-box;
 	display: inline-block;
-	height: 6em;
 	object-fit: contain;
 	padding: 0.5em;
+}
+
+.techlogos img {
+	height: 6em;
 }
 
 /* 3.0 Page-Specific Styles */
@@ -592,20 +595,17 @@ footer .only-image {
 }
 
 .about-image-grid {
+	background-color: var(--highlight-background-color);
+	border-radius: var(--border-radius);
 	display: grid;
 	gap: 1em;
 	grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
+	padding: var(--post-padding-width);
 }
 
 .about-image-grid img {
-	aspect-ratio: 1;
-	border-radius: var(--border-radius);
-	background-color: var(--logo-background-color);
-	box-sizing: border-box;
-	display: block; /* img is inline by default, which reserves descender space below it and left a gap under the hover/focus outline */
-	object-fit: contain;
-	padding: 0.4em;
-	width: 100%; /* of their column in the grid */
+	/* img is inline by default, which reserves descender space below it and left a gap under the hover/focus outline */
+	display: block; 
 }
 
 /* Override the default a border-radius. The default a:hover/:focus border is less round than everything else to avoid colliding with text */

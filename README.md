@@ -114,9 +114,11 @@
 - [x] Split the "on this page" section to websites, desktop apps, mobile apps, AddOns/mods, hardware, etc.
 - [ ] Add the rest of my projects.
   - [x] docker server on debian for work (n8n, nocodb, traefik, etc.)
-    - [ ] screenies for nocodb, n8n dashboard, dozzle with logs, traefik dashboard
+    - [x] screenies for nocodb, n8n dashboard, dozzle with logs, traefik dashboard
+    - [ ] screenshots leave funny gap due to inconsistent height
   - [x] NAS for work
-    - [ ] screenshots of company portal listing, file share, truenas dashboard
+    - [x] screenshots of company portal listing, file share, truenas dashboard
+    - [ ] screenshots leave funny gap due to inconsistent height
   - [x] short mention of tiny sites? preparedfor, preparedforlearning?
   - [ ] etc
 - [x] Visual Studio is smaller than the rest of the techlogos.
