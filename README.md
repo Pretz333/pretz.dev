@@ -36,6 +36,7 @@
 - [ ] Site audit with Lighthouse
 - [ ] Lighthouse follow-up
 - [ ] [Code cleanup](#code-cleanup-steps)
+- [ ] loading lazy and missing fetchpriority on LCP image
 
 ### Finalize Design Steps
 

@@ -308,8 +308,10 @@ export default async function(eleventyConfig) {
 			// (.*?): Captures the content of the heading (Group 4).
 			// (<\/h\2>): Captures the closing tag, matching the level (Group 5).
 			const regex = /(<h([23])[^>]*id=['"]([^'"]+)['"][^>]*>)(.*?)(<\/h\2>)/gsi;
-			const faLinkSymbol = '<svg class="icon-svg"><use href="#fas-fa-link" xlink:href="#fas-fa-link"></use></svg>'
-			
+			// aria-hidden on the icon (decorative), not the link itself, which stays focusable
+			// and gets a real accessible name via aria-label so AT users know what it does.
+			const faLinkSymbol = '<svg class="icon-svg" aria-hidden="true" focusable="false"><use href="#fas-fa-link" xlink:href="#fas-fa-link"></use></svg>'
+
 			content = content.replace(regex, (
 				match,          // Full match string
 				openingTag,     // Group 1: <h2 id="x" ...>
@@ -323,7 +325,8 @@ export default async function(eleventyConfig) {
 				if (isLinkHeader) return match;
 
 				// Construct the anchor link using the captured ID value
-				const anchorLink = `<a href="#${idValue}" aria-hidden="true" class="header-anchor">${faLinkSymbol}</a>`;
+				const headingText = contentBody.replace(/<[^>]+>/g, '').trim();
+				const anchorLink = `<a href="#${idValue}" aria-label="Link to ${headingText} heading" class="header-anchor">${faLinkSymbol}</a>`;
 				
 				// This places an anchor link after the heading's content.
 				return openingTag + contentBody + " " + anchorLink + closingTag;
