@@ -45,7 +45,7 @@ eleventyNavigation:
 		]) }}
 		<h3 id="scoutingplantitforward-label">Scouting Plant It Forward</h3>
 		<h4><a href="https://scoutingplantitforward.org/" rel="external" target="_blank">Website</a></h4>
-		<p>A fundraising website for Northern Star Scouting, offering an alternative to the traditional popcorn sale: instead of a product, donors fund a native tree planted in the Superior National Forest through the Arbor Day Foundation, keeping the benefit local to the community that donates. Proceeds are split evenly between the participating Scout and the council, which covers card-processing fees and tree-planting logistics.</p>
+		<p>A fundraising website for a Scouting America Council, offering an alternative to the traditional popcorn sale. Instead of a product, donors fund a native tree planted in the Superior National Forest through the Arbor Day Foundation, keeping the benefit local to the community that donates. Proceeds are split evenly between the participating Scout and the organization, which covers card-processing fees and tree-planting logistics.</p>
 		<h4>Technologies</h4>
 		<p>ScoutingPlantItForward.org starts from the same Eleventy (11ty) static build as this site, but layers a Cloudflare Workers backend on top to handle logins, payments, and reporting:</p>
 		<ul>
@@ -105,9 +105,9 @@ eleventyNavigation:
 		]) }}
 		<h3 id="joincubs-label">Join Cubs</h3>
 		<h4><a href="https://www.joincubs.org/" rel="external" target="_blank">Website</a></h4>
-		<p>A fully responsive (up to 280px in width) website to market Scouting (specifically Cub Scouting) for Northern Star Scouting, a Scouting council in the MN/WI area.</p>
+		<p>A fully responsive (down to 280px in width) website to market Cub Scouting for Northern Star Scouting, a Scouting America Council based in the MN/WI area.</p>
 		<h4>Technologies</h4>
-		<p>JoinCubs.org is written in HTML and CSS and uses Bootstrap. It has a (private, per the business' request) GitHub repository connected to <a href="https://pages.cloudflare.com/" rel="external">Cloudflare Pages</a> to be displayed.</p>
+		<p>JoinCubs.org is written in HTML and CSS and uses Bootstrap. It has a (private, per the organziation's request) GitHub repository connected to <a href="https://pages.cloudflare.com/" rel="external">Cloudflare Pages</a> to be displayed.</p>
 		<div class="techlogos">
 			<img src="img/techlogos/html.svg" alt="HTML5 Logo">
 			<img src="img/techlogos/css.svg" alt="CSS3 Logo">
@@ -124,7 +124,7 @@ eleventyNavigation:
 		]) }}
 		<h3 id="marketing-campaign-sites-label">Marketing Campaign Sites</h3>
 		<h4><a href="https://preparedfor.org/" rel="external" target="_blank">Prepared For</a> and <a href="https://preparedforlearning.org/" rel="external" target="_blank">Prepared for Learning</a> (pictured)</h4>
-		<p>A handful of small marketing sites for Northern Star Scouting, one built for each roughly 8-month ad campaign the council has run. Each is only a few pages, built from scratch and fully hand-coded rather than reused from a template, then retired (as in not updated, the site is left live) once its campaign wraps up.</p>
+		<p>A handful of small marketing sites, one built for each roughly 8-month ad campaign this non-profit has run. Each is only a few pages, built from scratch and fully hand-coded rather than reused from a template, then retired (as in not updated, the site is left live) once its campaign wraps up.</p>
 		<h4>Technologies</h4>
 		<p>These are plain HTML and CSS with no JavaScript, hosted on Cloudflare Pages. Some, like Prepared for Learning, use Bootstrap and jQuery for layout and interactive components, while others, like Prepared For, are hand-rolled CSS with no framework. They have private GitHub repositories.</p>
 		<div class="techlogos">
@@ -236,8 +236,8 @@ eleventyNavigation:
 			</div>
 		</div>
 		<h3 id="automation-server-label">Automation Server</h3>
-		<h4>A Docker Server for Northern Star Scouting</h4>
-		<p>A self-hosted Docker server for Northern Star Scouting that replaced a huge amount of manual data work. Before it existed, getting any real reporting done meant sorting and combining Excel files by hand, with no shared database, no real backups, and no way to connect one system's data to another. This server gives the council a real database with real backups, plus the ability to connect nearly any two systems together. It's still actively growing and, between the time it saves and the reporting it makes possible, it consistently saves 40+ hours of staff time a week, sometimes 80+ on busier weeks.</p>
+		<h4>A Docker Server for a Non-Profit</h4>
+		<p>A self-hosted Docker server for a 501(c)(3) non-profit that replaced a huge amount of manual data work. Before it existed, getting any real reporting done meant sorting and combining Excel files by hand, with no shared database, no real backups, and no way to connect one system's data to another. This server gives the organization a real database with real backups, plus the ability to connect nearly any two systems together, freeing up staff to focus on the mission instead of manual data work. It's still actively growing and, between the time it saves and the reporting it makes possible, it consistently saves 40+ hours of staff time a week, sometimes 80+ on busier weeks.</p>
 		<p>It runs on a Dell server running Debian, with every service (routing, data storage, automation, and monitoring) in its own Docker container behind Traefik, which owns ports 80 and 443, handles TLS, and routes each incoming request to the right container by hostname.</p>
 		<p>NocoDB is the primary data store, a spreadsheet-like interface over a real database with no practical row or column limit, connected to Cloudflare R2 for file storage (PDFs, images, etc.) and secured with Google SSO.</p>
 		<p>n8n handles automation, triggered by NocoDB webhooks, schedules, and forms, and can genuinely connect anything to anything via http(s) requests. One workflow collects all sales data, filters and cleans the data, converts the result to a PDF, and sends it straight to a printer with no manual steps in between. There are over 65 workflows running today, each allowing employees to focus on value-add projects instead of repetitive tasks.</p>
@@ -264,8 +264,8 @@ eleventyNavigation:
 			</div>
 		</div>
 		<h3 id="media-server-label">Media Server</h3>
-		<h4>A TrueNAS File Server for 90+ users</h4>
-		<p>A "dump" style photo and video server built for Northern Star Scouting, a Scouting council in the MN/WI area with about 90 full-time employees. Before this server existed, all photos and videos were scattered across loose external hard drives and individual employees' personal iCloud/Google Photos libraries, with no common place able to have all photos from all events. The server exists so anyone can dump every photo and video from an event in one go, without first sorting it, deduplicating it, or worrying whether it belongs in someone else's folder.</p>
+		<h4>A TrueNAS File Server and Network Share By Department via Intune</h4>
+		<p>A "dump" style photo and video server built for an organization of 90+ full-time employees. Before this server existed, all photos and videos were scattered across loose external hard drives and individual employees' personal iCloud/Google Photos libraries, with no common place able to have all photos from all events. The server exists so anyone can dump every photo and video from an event in one go, without first sorting it, deduplicating it, or worrying whether it belongs in a specific folder.</p>
 		<p>I built the server from the ground up, starting with an LSI SAS HBA to add enough SATA ports for the drive count, then installed TrueNAS Scale and laid the pool out as two RAIDZ2 vdevs of six drives each, for ~50TB of usable capacity. On top of the pool, I set up automated scrubbing, SMART checks, and email alerts (through an SMTP relay) so drive problems get caught and reported well before they become data loss, along with nightly cloud backups to Backblaze B2 as an off-site copy.</p>
 		<p>Each department got its own dataset and network share, provisioned with a PowerShell script so every employee can write to their own department's share while only viewing everyone else's, since it's all just photos and video. I packaged that script as an intunewin file and published it through Intune to Company Portal, so any employee's computer sets up its share automatically instead of needing an individual IT ticket. The server launched in March 2025 with about 8TB of data migrated immediately from those old external drives and employees' personal photo libraries.</p>
 		<h4>Technologies</h4>

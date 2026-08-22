@@ -304,10 +304,10 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addTransform("html-anchor-transform", function(content, outputPath) {
 		// Only run this transform for HTML output
 		if (outputPath && outputPath.endsWith(".html")) {
-			// (<h([234])[^>]*id=['"]([^'"]+)['"][^>]*>): Captures the opening tag (Group 1), heading level (Group 2), and ID value (Group 3).
+			// (<h([23])[^>]*id=['"]([^'"]+)['"][^>]*>): Captures the opening tag (Group 1), heading level (Group 2), and ID value (Group 3).
 			// (.*?): Captures the content of the heading (Group 4).
 			// (<\/h\2>): Captures the closing tag, matching the level (Group 5).
-			const regex = /(<h([234])[^>]*id=['"]([^'"]+)['"][^>]*>)(.*?)(<\/h\2>)/gsi;
+			const regex = /(<h([23])[^>]*id=['"]([^'"]+)['"][^>]*>)(.*?)(<\/h\2>)/gsi;
 			const faLinkSymbol = '<svg class="icon-svg"><use href="#fas-fa-link" xlink:href="#fas-fa-link"></use></svg>'
 			
 			content = content.replace(regex, (
@@ -316,7 +316,7 @@ export default async function(eleventyConfig) {
 				headingLevel,   // Group 2: 2, 3, or 4. Unused here but used in the original string, so we have to have it here.
 				idValue,        // Group 3: The actual ID string
 				contentBody,    // Group 4: The content inside the heading
-				closingTag      // Group 5: </h2>, </h3>, or </h4>
+				closingTag      // Group 5: </h2> or </h3>
 			) => {
 				// If the header content is a link, return the original match without adding an anchor.
 				const isLinkHeader = contentBody.trim().toLowerCase().startsWith('<a');

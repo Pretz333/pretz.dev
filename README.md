@@ -120,6 +120,7 @@
     - [x] screenshots of company portal listing, file share, truenas dashboard
     - [x] screenshots leave funny gap due to inconsistent height
   - [x] short mention of tiny sites? preparedfor, preparedforlearning?
+  - [ ] torn scripts
 - [x] Visual Studio is smaller than the rest of the techlogos.
 - [x] Techlogos are taking the focus away from the project. Are they too big? Wrong color?
 - [x] What about if we made the post color for projects the same as projects are on the front page? That would simplify the color for the problem above. Perhaps splitting the projects into the buckets from above could be the "base", then the projects would stack on top like on the homepage
