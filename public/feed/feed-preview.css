@@ -1,0 +1,22 @@
+/* Layout for the human-readable preview of /feed.xml, see pretty-atom-feed.xsl */
+
+.feed-page {
+	max-width: 45rem;
+	margin: 0 auto;
+	padding: 0 1rem 3rem;
+}
+
+.feed-banner p {
+	text-align: center;
+}
+
+.feed-icon {
+	color: var(--accent-item-color);
+	vertical-align: middle;
+	margin-right: 0.25em;
+}
+
+small {
+	font-family: 'Nunito', sans-serif;
+	color: var(--text-color-secondary);
+}

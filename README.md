@@ -29,10 +29,10 @@
 - [x] [Projects page improvements](#projects-page-improvements)
 - [ ] [Contact page improvements](#contact-page-improvements)
 - [x] [JS site enhancements](#js-site-enhancements)
-- [ ] Note about techlogos not being my trademark (footer? They're on every page but contact. Ignoring that, contact makes the most sense to put this note on.)
 - [x] Custom 404 Page
+- [x] Add modern formats (webp/avif) to images with more-standard fallbacks (jpg/png)
 - [ ] Assess how big the carousel images really need to be
-- [ ] Add modern formats (webp/avif) to images with more-standard fallbacks (jpg/png)
+- [ ] Note about techlogos not being my trademark (footer? They're on every page but contact. Ignoring that, contact makes the most sense to put this note on.)
 - [ ] Site audit with Lighthouse
 - [ ] Lighthouse follow-up
 - [ ] [Code cleanup](#code-cleanup-steps)
@@ -112,7 +112,7 @@
 - [x] Add GitHub links to the projects' repos
 - [x] Add other relevant links to the projects, such as the website link, ESOUI link, etc.
 - [x] Split the "on this page" section to websites, desktop apps, mobile apps, AddOns/mods, hardware, etc.
-- [ ] Add the rest of my projects.
+- [x] Add the rest of my projects. There's more, but this is good enough to mark this as good.
   - [x] docker server on debian for work (n8n, nocodb, traefik, etc.)
     - [x] screenies for nocodb, n8n dashboard, dozzle with logs, traefik dashboard
     - [x] screenshots leave funny gap due to inconsistent height

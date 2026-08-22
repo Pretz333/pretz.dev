@@ -18,9 +18,8 @@
 		{# The .slice([...] is to fix the fact that the metadata.js url has a trailing slash and the page.url has a leading slash #}
 		<link rel="canonical" href="{{ metadata.url.slice(0, -1) }}{{ page.url }}">
 
-		{# Atom and JSON feeds included by default #}
-		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
-		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
+		{# Atom feed of the articles collection (currently empty, no blog content yet) #}
+		<link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 
 		{# Let web divers know that we used Eleventy to build this site	#}
 		<meta name="generator" content="{{ eleventy.generator }}">

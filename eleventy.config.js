@@ -109,6 +109,9 @@ export default async function(eleventyConfig) {
 			title: "Pretz",
 			subtitle: "Hiya, I'm Pretz! I enjoy making software projects to solve real problems.",
 			base: "https://www.pretz.dev/",
+			author: {
+				name: "Pretz",
+			},
 		}
 	});
 
@@ -355,6 +358,22 @@ export default async function(eleventyConfig) {
 		}
 
 		return content;
+	});
+
+	// The font-awesome plugin's {% getBundle "fontawesome" %} in base.njk hardcodes
+	// style="display: none;" on the <svg> of each icon. Our CSP blocks inline CSS, so
+	// each icon logs an error in the console. As we already have these hidden via 
+	// a wrapper, these inline styles are unneeded and can be removed. However, the
+	// fontawesome bundle runs after all normal transforms, including any `addTransform`
+	// in this file. Wrapping ours the same way is the only way act on its markup.
+	eleventyConfig.addPlugin((eleventyConfig) => {
+		eleventyConfig.addTransform("faSymbolStyleTransform", function(content, outputPath) {
+			if (outputPath && outputPath.endsWith(".html")) {
+				content = content.replace(/<svg style="display: none;"><symbol/g, "<svg><symbol");
+			}
+
+			return content;
+		});
 	});
 
 };

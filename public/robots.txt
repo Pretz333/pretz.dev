@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pretz.dev/sitemap.xml
+Sitemap: https://www.pretz.dev/sitemap.xml
+
+# EOF

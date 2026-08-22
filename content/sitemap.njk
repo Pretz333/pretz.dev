@@ -1,0 +1,17 @@
+---
+layout: false
+eleventyExcludeFromCollections: true
+permalink: sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for entry in collections.all %}
+{%- if entry.data.eleventyNavigation %}
+	<url>
+		<loc>{{ metadata.url.slice(0, -1) }}{{ entry.url }}</loc>
+		<changefreq>monthly</changefreq>
+		<lastmod>{{ entry.date | htmlDateString }}</lastmod>
+	</url>
+{%- endif %}
+{%- endfor %}
+</urlset>
