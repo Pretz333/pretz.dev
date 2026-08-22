@@ -10,7 +10,7 @@ eleventyNavigation:
 <section class="post" aria-labelledby="projects-page-label" id="projects-page-header">
 	<header>
 		<h1 id="projects-page-label">Past Projects</h1>
-		<p>These are some of the software projects I've worked on in the past. I've split them into sections based on what they are, whether a <a href="#websites">website</a>, a <a href="#apps">desktop or mobile application</a>, a <a href="#mods">game mod/AddOn</a>, or a <a href="#hardware">hardware and infrastructure build</a>.</p>
+		<p>These are some of the software projects I've worked on in the past. I've split them into sections based on what they are, whether a <a href="#websites">website</a>, a <a href="#apps">native application</a>, a <a href="#mods">game mod/AddOn</a>, or a <a href="#hardware">hardware and infrastructure build</a>.</p>
 		<p>Most of these were made as the sole developer, though a few were made in small teams. Projects where I was not the sole developer call out this fact in their description.</p>
 	</header>
 </section>
@@ -50,9 +50,10 @@ eleventyNavigation:
 		<h4>Technologies</h4>
 		<p>ScoutingPlantItForward.org starts from the same Eleventy (11ty) static build as this site, but layers a Cloudflare Workers backend on top to handle logins, payments, and reporting:</p>
 		<ul>
-			<li>Payments run through Clover's iframe integration, so card details are entered directly into a Clover-hosted frame and never touch the site's servers. As it only ever receives a payment token back, keeping the PCI DSS burden much lower. Cloudflare Turnstile guards the donate and checkout forms after Clover's own bot protection didn't work correctly.</li>
-			<li>A full account system backs donor and Scout logins: Cloudflare D1 stores users, troops, and transactions, while Cloudflare KV stores sessions, checked on every page load so a stolen or edited cookie alone can't forge a session. Passwords are salted and hashed with PBKDF2-SHA256, and forgotten-password requests hand off to an n8n webhook to email a reset link.</li>
-			<li>Every page is deliberately named <code>template.html</code> instead of <code>index.html</code>. Cloudflare Workers with static assets skips running the Worker entirely whenever a request matches an existing static file (for speed and to save on Worker invocations), so forcing a 404 on the "pretty" URL is what lets the Worker step in to inject login state or dashboard data, while every other request still gets served straight from the fast static cache.</li>
+			<li>Payments run through Clover's iframe integration, so card details are entered directly into a Clover-hosted frame by the user and never touch the site's servers. As it only ever receives a payment token back, the PCI DSS burden is much lower than actually natively processing payments.</li>
+			<li>Cloudflare Turnstile guards the donate and checkout forms after Clover's own bot protection didn't actually work - it just put up a recaptcha logo but never ran any scripts or checks.</li>
+			<li>A full account system backs Scout, leader, and admin logins. Cloudflare D1 stores users, units (packs/troops), and transactions, while Cloudflare KV stores sessions, checked on every (secured) page load (i.e. dashboards) so a stolen or edited cookie alone can't forge a session. Passwords are salted and hashed with PBKDF2-SHA256, and forgotten-password requests first store a secret in D1, then hand off emailing to an n8n webhook to email a magic reset link that verifies against the secret in D1 server-side.</li>
+			<li>Every page except the home page is deliberately named <code>template.html</code> instead of <code>index.html</code>. Cloudflare Workers with static assets skips running the Worker entirely whenever a request matches an existing static file (for speed and to save on Worker invocations), so forcing a 404 on the "pretty" URL is what lets the Worker step in to inject login state or dashboard data, while every other request still gets served straight from the fast static cache.</li>
 			<li>An n8n workflow triggers a Cloudflare deploy hook every night, rebuilding the site so data like the homepage's "trees planted" counter stays current even on days with no code changes.</li>
 		</ul>
 		<p>It has a private GitHub repository.</p>
@@ -70,8 +71,8 @@ eleventyNavigation:
 
 	<article class="subpost" aria-labelledby="northernstar-dnn-network-label" id="northernstar-dnn-network">
 		{{ websiteCarousel([
-			{ url: "https://web.archive.org/web/20260121190328if_/https://www.camptomahawk.org/", alt: "The Camp Tomahawk homepage, featuring a top navigation bar, some quick links with icons, and an embedded camp video player. More content is implied to be below the scroll." },
-			{ url: "https://web.archive.org/web/20251117060525if_/https://www.northernstar.org/about-us", alt: "The About Us page on the NorthernStar.org website. The shared navigation bar and skin from before is still present, followed by a large photo of two Scouts on a ropes course and a blue \"Mission\" panel introducing the council's mission statement." }
+			{ url: "https://web.archive.org/web/20251117060525if_/https://www.northernstar.org/about-us", alt: "The About Us page on the NorthernStar.org website. The shared navigation bar and skin from before is still present, followed by a large photo of two Scouts on a ropes course and a blue \"Mission\" panel introducing the council's mission statement." },
+			{ url: "https://web.archive.org/web/20260121190328if_/https://www.camptomahawk.org/", alt: "The Camp Tomahawk homepage, featuring a top navigation bar, some quick links with icons, and an embedded camp video player. More content is implied to be below the scroll." }
 		]) }}
 		<h3 id="northernstar-dnn-network-label">Northern Star Scouting DNN Network</h3>
 		<h4><a href="https://www.camptomahawk.org/" rel="external" target="_blank">Camp Tomahawk</a> (pictured)</h4>
@@ -92,6 +93,7 @@ eleventyNavigation:
 			<img src="img/techlogos/html.svg" alt="HTML5 Logo">
 			<img src="img/techlogos/css.svg" alt="CSS3 Logo">
 			<img src="img/techlogos/bootstrap.svg" alt="Bootstrap Logo">
+			<img src="img/techlogos/azure.svg" alt="Microsoft Azure Logo">
 			<img src="img/techlogos/googleanalytics.svg" alt="Google Analytics Logo">
 			<img src="img/techlogos/google-search-console.svg" alt="Google Search Console Logo">
 			<img src="img/techlogos/google-tag-manager.svg" alt="Google Tag Manager Logo">
@@ -137,9 +139,9 @@ eleventyNavigation:
 	</article>
 </section>
 
-<section class="post" id="apps" aria-labelledby="apps-label" data-anchor="Desktop &amp; Mobile Apps">
+<section class="post" id="apps" aria-labelledby="apps-label" data-anchor="Native Applications">
 	<header>
-		<h2 id="apps-label">Desktop &amp; Mobile Apps</h2>
+		<h2 id="apps-label">Native Applications</h2>
 	</header>
 
 	<article class="subpost" aria-labelledby="inventory-label" id="inventory">
@@ -152,7 +154,7 @@ eleventyNavigation:
 		</div>
 		<h3 id="inventory-label">Inventory</h3>
 		<h4>A Windows Application | <a href="https://github.com/Pretz333/Inventory" rel="external" target="_blank">GitHub Repository</a></h4>
-		<p>An Open-Source Windows Form Application to track inventory of items in multiple locations in a way that requires a minimal amount of effort from the user. When making a brand-new installation, a user must:</p>
+		<p>An Open-Source Windows Form Application made with four other developers to track inventory of items in multiple locations in a way that requires a minimal amount of effort from the user. When making a brand-new installation, a user must:</p>
 		<ol>
 			<li>Launch the application</li>
 			<li>Put in categories of items, such as "Cleaning Supplies" and "Climbing Gear".</li>
@@ -162,7 +164,7 @@ eleventyNavigation:
 		</ol>
 		<p>From there, the application will store everything in a database locally on the computer. Users can print off reports to give to employees to go and inventory each location. The user can enter the results into the application where they will be stored.</p>
 		<h4>Technologies</h4>
-		<p>This project was built in Visual Studio as a Windows Form Application. It is written in Visual Basic and uses SQL to query the included SQLite database.</p>
+		<p>This project was built in Visual Studio as a Windows Form Application. It is written in Visual Basic and uses SQL to query the built-in SQLite database.</p>
 		<div class="techlogos">
 			<img src="img/techlogos/dotnet.svg" alt="Dot Net Logo">
 			<img src="img/techlogos/visualstudio.svg" alt="Visual Studio Logo">
@@ -180,7 +182,7 @@ eleventyNavigation:
 		</div>
 		<h3 id="vehicle-maintenance-tracker-label">Vehicle Maintenance Tracker</h3>
 		<h4>An Android Application | <a href="https://github.com/Pretz333/Vehicle-Maintenance-Tracker" rel="external" target="_blank">GitHub Repository</a></h4>
-		<p>An Open-Source Android Application to track vehicle maintenance. It utilizes a database (with full CRUD abilities) to track the vehicles and issues of those vehicles. With a few minor tweaks, this codebase could be made into a general issue (bug) tracker or support ticket manager.</p>
+		<p>An Open-Source Android Application made with a group of three other developers to track vehicle maintenance. It utilizes a database (with full CRUD abilities) to track the vehicles and issues of those vehicles. With a few minor tweaks, this codebase could be made into a general issue (bug) tracker or support ticket manager.</p>
 		<h4>Technologies</h4>
 		<p>This project was built in Android Studio using Java and uses an SQLite Database to track the vehicles, issues, and logs.</p>
 		<div class="techlogos">
@@ -227,11 +229,12 @@ eleventyNavigation:
 	<article class="subpost" aria-labelledby="media-server-label" id="media-server">
 		<div class="carousel-container">
 			<div class="carousel">
-				<img src="img/projects/stand-in_project_img.png" alt="Project Image">
+				<img src="img/projects/truenas/truenas_dashboard.png" alt="The TrueNAS SCALE dashboard, showing the server's CPU and memory usage alongside the photovideo and serverbackups storage pools, both reporting healthy status with no disk errors">
+				<img src="img/projects/truenas/nas_intune_listing.png" alt="The Microsoft Intune admin center's Windows apps list, showing several PhotoVideo Drive packages (Marketing, Camping, Field) published as Win32 apps and assigned to devices">
 			</div>
 		</div>
 		<h3 id="media-server-label">Media Server</h3>
-		<h4>A TrueNAS File Server for Northern Star Scouting</h4>
+		<h4>A TrueNAS File Server for 90+ users</h4>
 		<p>A "dump" style photo and video server built for Northern Star Scouting, a Scouting council in the MN/WI area with about 90 full-time employees. Before this server existed, all photos and videos were scattered across loose external hard drives and individual employees' personal iCloud/Google Photos libraries, with no common place able to have all photos from all events. The server exists so anyone can dump every photo and video from an event in one go, without first sorting it, deduplicating it, or worrying whether it belongs in someone else's folder.</p>
 		<p>I built the server from the ground up, starting with an LSI SAS HBA to add enough SATA ports for the drive count, then installed TrueNAS Scale and laid the pool out as two RAIDZ2 vdevs of six drives each, for ~50TB of usable capacity. On top of the pool, I set up automated scrubbing, SMART checks, and email alerts (through an SMTP relay) so drive problems get caught and reported well before they become data loss, along with nightly cloud backups to Backblaze B2 as an off-site copy.</p>
 		<p>Each department got its own dataset and network share, provisioned with a PowerShell script so every employee can write to their own department's share while only viewing everyone else's, since it's all just photos and video. I packaged that script as an intunewin file and published it through Intune to Company Portal, so any employee's computer sets up its share automatically instead of needing an individual IT ticket. The server launched in March 2025 with about 8TB of data migrated immediately from those old external drives and employees' personal photo libraries.</p>
@@ -249,7 +252,11 @@ eleventyNavigation:
 	<article class="subpost" aria-labelledby="automation-server-label" id="automation-server">
 		<div class="carousel-container">
 			<div class="carousel">
-				<img src="img/projects/stand-in_project_img.png" alt="Project Image">
+				<img src="img/projects/automation_server/nocodb_dashboard.png" alt="The NocoDB workspace, listing many bases such as Unit Registration History, BILL Automations, and Council Vehicles used across the council">
+				<img src="img/projects/automation_server/nocodb_camping_reg_view.png" alt="A NocoDB grid view of camping registrations, with columns for registration number, camp, subcamp, campsite, and booking date across thousands of rows">
+				<img src="img/projects/automation_server/n8n_dashboard.png" alt="The n8n workflow overview, showing 596 production executions with a 0.03% failure rate and 52 hours of estimated time saved, above a list of active workflows">
+				<img src="img/projects/automation_server/n8n_flow.png" alt="An n8n workflow canvas for a poster pickup request, chaining a webhook trigger through NocoDB lookups and updates to a final message send">
+				<img src="img/projects/automation_server/dozzle_dashboard.png" alt="The Dozzle dashboard, listing the server's five running containers (nocodb, n8n, directus, traefik, dozzle) with their live CPU and memory usage">
 			</div>
 		</div>
 		<h3 id="automation-server-label">Automation Server</h3>
