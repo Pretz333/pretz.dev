@@ -487,10 +487,13 @@ footer .only-image {
 .carousel {
 	border-radius: var(--border-radius);
 	display: flex;
+	align-items: flex-start;
 	gap: 1em;
 	overflow-x: scroll;
+	overflow-y: hidden; /* a taller off-screen slide would otherwise overflow the shorter current slide's height and add a second (vertical) scrollbar */
 	scroll-snap-type: x mandatory;
 	scrollbar-color: var(--primary-background-color) transparent; /* Firefox scrollbar styling - Chrome is below */
+	transition: height 0.2s ease; /* for when two slides have different height */
 }
 
 /* Have each item take up the full available space and have the scroll lock onto on each item as it goes by */

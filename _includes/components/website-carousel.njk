@@ -24,8 +24,8 @@
 	clamped to 1200.
 
 	A page entry can be a video clip instead of a live-URL screenshot: pass
-	{ video, poster, alt } (a local path under /video and /img, committed to the repo -
-	there's no live source to screenshot at build time for these). It renders a single
+	{ video, poster, alt } (a local path under /video and /img committed to the repo,
+	as we don't use a live source at build time for these). It renders a single
 	<video>, not a desktop/mobile pair - a landscape recording is a reasonable width on
 	mobile too, unlike the tall portrait screenshots the desktop/mobile split exists for.
 	No autoplay: `preload="none"` means nothing is fetched until the viewer presses play
