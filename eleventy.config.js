@@ -31,7 +31,8 @@ export default async function(eleventyConfig) {
 		// Instead of _site/public/css, just do _site/css via options
 		.addPassthroughCopy({
 			"./public/": "/", // The entire public folder and all contents
-			"./content/img/": "/img" // The entire img folder and all contents
+			"./content/img/": "/img", // The entire img folder and all contents
+			"./content/video/": "/video" // Video clips (e.g. carousel slides) - not run through the image pipeline
 		});
 
 	/**
@@ -42,6 +43,7 @@ export default async function(eleventyConfig) {
 
 	eleventyConfig.addWatchTarget("public/css/**/*.css");
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpg,jpeg,gif}"); // For the image pipeline
+	eleventyConfig.addWatchTarget("content/video/**/*.mp4");
 
 	/**
 	 * Plugins

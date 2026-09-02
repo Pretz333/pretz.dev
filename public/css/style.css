@@ -500,7 +500,8 @@ footer .only-image {
 	scroll-snap-align: center;
 }
 
-.carousel img {
+.carousel img,
+.carousel video {
 	width: 100%;
 	filter: brightness(85%);
 }

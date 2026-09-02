@@ -3,14 +3,14 @@
 	`pages`: array of { url, alt } - one carousel slide per entry.
 
 	Each slide fetches a desktop and a mobile screenshot from thum.io at build time.
-	The resulting <img> tags are picked up by the eleventyImageTransformPlugin already
+	The resulting <img> tags are picked up by the eleventyImageTransformPlugin
 	configured in eleventy.config.js, which detects the remote src (via eleventy-img's
 	Util.isRemoteUrl) and downloads/caches it with @11ty/eleventy-fetch before optimizing
 	it into local avif/webp files, same as any other image on the site.
 
 	Note: this can't reuse the single-<picture>-with-a-portrait-<source> pattern used
-	elsewhere, because eleventyImageTransformPlugin replaces a <picture>'s entire content
-	based on the one <img> it finds inside - a hand-written <source> sibling gets discarded.
+	elsewhere/previously, because eleventyImageTransformPlugin replaces a <picture>'s entire
+	content based on the one <img> it finds inside - any <source> siblings gets discarded.
 	So desktop and mobile screenshots are two separate <picture> elements instead, and CSS
 	(.screenshot-desktop/.screenshot-mobile in style.css) shows only one at a time.
 
@@ -22,18 +22,32 @@
 	URLs before assuming it's universal. Crop height is capped at 1200 - thum.io's free
 	tier renders in a max 1200×1200 browser, so taller `crop` values get silently
 	clamped to 1200.
+
+	A page entry can be a video clip instead of a live-URL screenshot: pass
+	{ video, poster, alt } (a local path under /video and /img, committed to the repo -
+	there's no live source to screenshot at build time for these). It renders a single
+	<video>, not a desktop/mobile pair - a landscape recording is a reasonable width on
+	mobile too, unlike the tall portrait screenshots the desktop/mobile split exists for.
+	No autoplay: `preload="none"` means nothing is fetched until the viewer presses play
+	on the native `controls`, and `poster` gives them something to look at until then.
 #}
 {% macro websiteCarousel(pages) %}
 <div class="carousel-container">
 	<div class="carousel">
 		{% for page in pages %}
 		<div class="carousel-slide">
+			{% if page.video %}
+			<video playsinline controls preload="none" poster="{{ page.poster }}" aria-label="{{ page.alt }}">
+				<source src="{{ page.video }}" type="video/mp4">
+			</video>
+			{% else %}
 			<picture class="screenshot-desktop">
 				<img{% if not loop.first %} loading="lazy"{% endif %} src="https://image.thum.io/get/viewportWidth/1440/width/1440/crop/810/noanimate/{{ page.url }}" alt="{{ page.alt }}">
 			</picture>
 			<picture class="screenshot-mobile">
 				<img loading="lazy" src="https://image.thum.io/get/viewportWidth/600/width/600/crop/1200/noanimate/{{ page.url }}" alt="{{ page.alt }}">
 			</picture>
+			{% endif %}
 		</div>
 		{% endfor %}
 	</div>
