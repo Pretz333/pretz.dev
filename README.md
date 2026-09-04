@@ -58,16 +58,21 @@
 - [x] Make an image carousel so I can have multiple images on projects. This will also fix the gap on the side of the current single image.
 - [x] I feel like the project images are too distracting, possibly due to how bright and colorful they are. Desaturate and/or darken the carousel images slightly?
 - [x] Preload font to fix the brief flash of default sans-serif
+- [x] Center the h1 and h2? It definitely looks better on mobile
+- [x] mark current page and section on page in nav, not just section on page
+- [x] traefik logo has no contrast
+- [x] Logo on footer
 - [ ] Fix carousel's bottom line not having the round corners (due to the scrollbar being beneath it)
 - [ ] h4 and strong look bad in Firefox's render of Nunito
 - [ ] h1s of Nunito are also not looking too good with the new font size changes
 - [ ] Use overflow-clip-margin to fix the corners not matching
-- [ ] Logo on footer
-- [x] Center the h1 and h2? It definitely looks better on mobile
 - [ ] p text gets too long and looks bad. Max at 75ch? 100ch? Time to research typography
   - [ ] p line height
 - [ ] fix links being one size - tie to font-size of attached element
 - [ ] after header links look funny. too small and misaligned?
+- [ ] anchor schnanigans for tooltips
+- [ ] goscouting video with rising bars (sunset) or just the clouds moving as a gif looping
+- [ ] tomahawk picture bad - missing video, icons
 
 ### Small Screen Size Improvements
 
@@ -77,19 +82,19 @@
 - [x] Do something to make the list of a links feel more like a proper menu. Display as table? Make links take the full width?
 - [x] While the changes made to fix the above issue look and feel better, they also cause overflow at 550-ish px in width
 - [x] On this page section takes up too much space.
+- [x] Header sizes are too big at small sizes
+- [x] mobile website images are too wide
 - [ ] Adjust techlogo image size to fill the space when in single-column layout
 - [ ] Images are very small at small sizes, consider adjusting margins?
-- [x] Header sizes are too big at small sizes
 - [ ] Fix text run-on in small sizes
   - [ ] decrease header size?
-- [x] mobile website images are too wide
 
 ### Large Screen Size Improvements
 
+- [x] Make nav headers and links bigger
 - [ ] Above a certain width, move the image to the side (2-column layout)
 - [ ] Above a certain width, move the project blocks be all in one row (3-column layout)
 - [ ] Add max-width to the sidebar?
-- [x] Make nav headers and links bigger
 - [ ] Carousel buttons will scroll until the image is 1.5 rem from the top of the screen. On larger screens, this may scroll the buttons off of the screen, resulting in a jittery process
 
 ### About Page Improvements
@@ -122,6 +127,7 @@
     - [x] screenshots leave funny gap due to inconsistent height
   - [x] short mention of tiny sites? preparedfor, preparedforlearning?
   - [ ] torn scripts
+  - [ ] sqlite -> postgres script for n8n?
 - [x] Visual Studio is smaller than the rest of the techlogos.
 - [x] Techlogos are taking the focus away from the project. Are they too big? Wrong color?
 - [x] What about if we made the post color for projects the same as projects are on the front page? That would simplify the color for the problem above. Perhaps splitting the projects into the buckets from above could be the "base", then the projects would stack on top like on the homepage
@@ -142,9 +148,9 @@ Note: *enhancements*. Someone with JavaScript disabled should still get a perfec
 
 ### Code Cleanup Steps
 
+- [x] Make HTML and general layout consistent between pages
 - [ ] Remove ununsed classes
 - [ ] Simplify the classes and class selections
-- [x] Make HTML and general layout consistent between pages
 - [ ] Clean up and organize CSS
 - [ ] Split page-specific CSS into their own stylesheets
 - [ ] Combine duplicate code (CSS, primarily)

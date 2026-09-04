@@ -35,7 +35,7 @@
 			<nav aria-label="Site">
 				<div class="nowrap" id="logo-holder">
 					<a class="skip-to-contact-focusable" href="#main">
-						<img loading="eager" fetchpriority="high" decoding="sync" class="logo" src="img/pretz.png" alt="Pretz logo">
+						<img loading="eager" fetchpriority="high" decoding="sync" class="logo" src="img/pretz.svg" alt="Pretz logo">
 						<span class="skip-to-contact-text">Skip to main content</span>
 					</a>
 					<p class="small-screens logo-label">Pretz</p>
@@ -45,7 +45,7 @@
 					<p>Pages</p>
 					<ul>
 						{% for entry in collections.all | eleventyNavigation %}
-							<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+							<li class="nav-item{% if entry.url == page.url %} active-tab{% endif %}"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 						{% endfor %}
 					</ul>
 				</div>
@@ -70,7 +70,7 @@
 		
 		<footer>
 			<div class="post">
-				<p>&copy; Pretz | <a class="only-image" href="https://github.com/pretz333" rel="external"><img class="footer-icon" src="img/techlogos/github.svg" alt="GitHub logo"></a> | <a href="/contact">Contact</a></p>
+				<p><img class="footer-logo" src="img/pretz.svg" alt="Pretz logo"> Pretz | <a class="only-image" href="https://github.com/pretz333" rel="external"><img class="footer-icon" src="img/techlogos/github.svg" alt="GitHub logo"></a> | <a href="/contact">Contact</a></p>
 				<p><a href="#top">Back to the top!</a></p>
 			</div>
 		</footer>

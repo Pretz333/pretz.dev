@@ -369,7 +369,7 @@ footer .only-image {
 	text-decoration: none;
 }
 
-.footer-icon {
+.footer-icon, .footer-logo {
 	max-height: 30px;
 	vertical-align: middle;
 }
