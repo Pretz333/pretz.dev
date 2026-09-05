@@ -641,26 +641,46 @@ footer .only-image {
 	bottom: 110%; /* float slightly above the top of the element */
 	left: calc(-0.75em - 1em); /* half the width over 100% of the tooltip (currently 2em, see below) - the padding-left */
 	/* The width is the width of the image + some of the minimum extra space around the image (.post margin + .post padding) */
-	/* wider looks better (such as 250% of the image width), but will go off the screen for items in the first and last columns. */
+	/* wider looks better (such as 250-300% of the image width), but will go off the screen for items in the first and last columns. */
 	width: calc(100% + 2em);
 }
-
-/* :nth-col is still part a draft (as part of selectors 4), so it has zero support in browers at this moment */
-/* However, it would solve the above-mentioned width issue in a pure-CSS way. */
-/*
-.about-image-grid:nth-col(1) .tooltip::after {
-	left: -1em;
-}
-
-.about-image-grid:nth-last-col() .tooltip::after {
-	left: unset;
-	right: -1em;
-}
-*/
 
 /* Override the "display: none;" when interacted with */
 .tooltip:hover::after, .tooltip:focus::after {
 	display: block;
+}
+
+/* (Progressive enhancement) CSS anchor positioning lets the browser place the tooltips to stay on-screen, allowing wider tooltips. */
+/* This replaces the fixed offset/width above, which was tuned to avoid overflow by being much narrower than ideal. */
+@supports (anchor-name: --tooltip-trigger) {
+	.tooltip {
+		anchor-name: --tooltip-trigger;
+		anchor-scope: --tooltip-trigger;
+	}
+
+	.tooltip::after {
+		/* fixed keeps the containing block as the viewport instead of the tooltip's own box,	which throws off the position-area/fallback math */
+		position: fixed;
+		position-anchor: --tooltip-trigger;
+		position-area: top;
+		position-try-fallbacks: flip-block, flip-inline, flip-block flip-inline;
+		inset: unset;
+		margin-bottom: 0.5em;
+		width: max-content;
+		max-width: min(calc(300% + 2em), 90vw);
+	}
+}
+
+/* Anchor positioning only checks the viewport, so it has no idea .navigation will sit on top of a tooltip due to position: sticky. */
+/* To fix this, place the tooltip below and use flip-block to protect a tooltip in the last row with no room below. */
+@media (max-width: 667px) {
+	@supports (anchor-name: --tooltip-trigger) {
+		.tooltip::after {
+			position-area: bottom;
+			margin-bottom: unset;
+			margin-top: 0.5em;
+		}
+	}
 }
 
 /* 3.3 Projects Page */

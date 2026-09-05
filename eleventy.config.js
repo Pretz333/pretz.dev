@@ -109,7 +109,7 @@ export default async function(eleventyConfig) {
 		metadata: {
 			language: "en",
 			title: "Pretz",
-			subtitle: "Hiya, I'm Pretz! I enjoy making software projects to solve real problems.",
+			subtitle: "Hiya, I'm Pretz! I enjoy making software solutions for real problems.",
 			base: "https://pretz.dev/",
 			author: {
 				name: "Pretz",

@@ -37,6 +37,8 @@
 - [ ] Lighthouse follow-up
 - [ ] [Code cleanup](#code-cleanup-steps)
 - [ ] loading lazy and missing fetchpriority on LCP image
+- [ ] other pages to add
+- [ ] articles to write?
 
 ### Finalize Design Steps
 
@@ -63,16 +65,18 @@
 - [x] traefik logo has no contrast
 - [x] Logo on footer
 - [ ] Fix carousel's bottom line not having the round corners (due to the scrollbar being beneath it)
+- [ ] Fix carousel's bottom line having a scrollbar when there's only one slide
 - [ ] h4 and strong look bad in Firefox's render of Nunito
 - [ ] h1s of Nunito are also not looking too good with the new font size changes
 - [ ] Use overflow-clip-margin to fix the corners not matching
-- [ ] p text gets too long and looks bad. Max at 75ch? 100ch? Time to research typography
+- [ ] p text gets too long and looks bad.
+  - [ ] Max at 75ch? 100ch? Time to research typography
   - [ ] p line height
 - [ ] fix links being one size - tie to font-size of attached element
 - [ ] after header links look funny. too small and misaligned?
-- [ ] anchor schnanigans for tooltips
+- [x] anchor schnanigans for tooltips
 - [ ] goscouting video with rising bars (sunset) or just the clouds moving as a gif looping
-- [ ] tomahawk picture bad - missing video, icons
+- [ ] use mobile video for goscouting and remove carousel.js entirely?
 
 ### Small Screen Size Improvements
 
@@ -88,6 +92,8 @@
 - [ ] Images are very small at small sizes, consider adjusting margins?
 - [ ] Fix text run-on in small sizes
   - [ ] decrease header size?
+- [ ] At zoom levels >200%, the small-screen header takes up too much space
+- [ ] getting tooltips on mobile kinda sucks (press and hold on each logo). Do I need the links or should a click simply open the tooltip?
 
 ### Large Screen Size Improvements
 
@@ -108,8 +114,8 @@
 - [x] Google Analytics is deciding not to be a square with round corners again
 - [x] Hover/Focus border has a gap at the bottom
 - [ ] Assess the accessibility of tooltips
-- [ ] tooltips can go off-screen when content is high on the screen
-- [ ] Wider tooltips that do not go off the screen
+- [x] tooltips can go off-screen when content is high on the screen
+- [x] Wider tooltips that do not go off the screen
 - [ ] pic of laptop?
 
 ### Projects Page Improvements
@@ -155,6 +161,8 @@ Note: *enhancements*. Someone with JavaScript disabled should still get a perfec
 - [ ] Clean up and organize CSS
 - [ ] Split page-specific CSS into their own stylesheets
 - [ ] Combine duplicate code (CSS, primarily)
+- [ ] Minify CSS during build
+- [ ] Remove empty lines in HTML during build (leftover from comments, my njk files, etc.)
 
 ### Long-Term Enhancements
 
