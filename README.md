@@ -149,6 +149,7 @@ Note: *enhancements*. Someone with JavaScript disabled should still get a perfec
 ### Code Cleanup Steps
 
 - [x] Make HTML and general layout consistent between pages
+- [ ] Review comments in eleventy.config.js, as some are not applicable to this site but instead the site I wrote most of that for
 - [ ] Remove ununsed classes
 - [ ] Simplify the classes and class selections
 - [ ] Clean up and organize CSS
@@ -157,7 +158,7 @@ Note: *enhancements*. Someone with JavaScript disabled should still get a perfec
 
 ### Long-Term Enhancements
 
-- [ ] It could be a fun project to execute the carousel button script before shipping the HTML to visitors, eliminating the need for the script entirely
+- [x] It could be a fun project to execute the carousel button script before shipping the HTML to visitors, eliminating the need for the script entirely
 - feed's visit website link takes you to <www.pretz.dev>, not straight pretz.dev.
   - [x] fix the feed's link
   - [ ] set up a permanent redirect from www to non-www

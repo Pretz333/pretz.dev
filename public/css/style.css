@@ -542,7 +542,6 @@ footer .only-image {
 @media screen and (orientation:portrait) {
 	/* The scrollbar is really not for mobile */
 	/* I'd rather just have them swipe the images or tap the buttons to the other image */
-	/* Plus, mobile users are much less likely to be blocking the JS which adds the buttons, so less navigation options is a nicety */
 	.carousel::-webkit-scrollbar {
 		display: none;
 	}

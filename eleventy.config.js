@@ -361,6 +361,77 @@ export default async function(eleventyConfig) {
 		const listItems = anchors.map(a => `<li><a href="#${a.id}">${a.title}</a></li>`).join("");
 		return content.replace('<ul id="page-anchor-list"></ul>', `<ul id="page-anchor-list">${listItems}</ul>`);
 	});
+	
+	// Builds carousel's nav buttons (and the ids they link to).
+	// Every slide is wrapped in a `<div class="carousel-slide">`
+	eleventyConfig.addTransform("carouselButtons", function(content, outputPath) {
+		// Only run this transform for HTML output with carousels
+		if (!outputPath || !outputPath.endsWith(".html")) return content;
+		if (!content.includes('class="carousel"')) return content;
+
+		// Finds the closing div tag for the carousel, starting at `searchFrom` while tracking
+		// <div>/</div> nesting since a carousel's content is an unknown number of slide divs.
+		function findCarouselEnd(html, searchFrom) {
+			const divRegex = /<\/?div\b[^>]*>/g;
+			divRegex.lastIndex = searchFrom;
+			let depth = 1;
+			let match;
+			while ((match = divRegex.exec(html)) !== null) {
+				depth += match[0][1] === "/" ? -1 : 1;
+				if (depth === 0) return divRegex.lastIndex;
+			}
+			return -1;
+		}
+
+		// Since we're running through every HTML page with carousels, we need to check if those carousels have any slides
+		const carouselMatches = [...content.matchAll(/<div class="carousel">/g)];
+		let result = "";
+		let cursor = 0; // end of the last carousel already copied into `result`
+		let carouselIndex = 0; // shared across every carousel on the page, so ids stay unique when a page has more than one. The first number in carou_#_slide_#
+
+		// Walk each `.carousel` div on the page
+		for (let i = 0; i < carouselMatches.length; i++) {
+			const match = carouselMatches[i];
+			const openTagEnd = match.index + match[0].length;
+			const closeTagEnd = findCarouselEnd(content, openTagEnd); // skips past the slide divs to this carousel's own close
+			if (closeTagEnd === -1) continue;
+
+			// Only the slide's opening tag matters as we're simply inserting an id into that tag
+			const carouselInnerHTML = content.slice(openTagEnd, closeTagEnd - "</div>".length);
+			const slideStarts = [...carouselInnerHTML.matchAll(/<div class="carousel-slide">/g)];
+
+			// Copy through any untouched HTML before this carousel, plus its opening tag as-is
+			result += content.slice(cursor, match.index) + match[0];
+
+			// Only multi-slide carousels need nav buttons/ids. A single slide has nothing to jump to
+			if (slideStarts.length > 1) {
+				const index = carouselIndex++;
+
+				// Rebuild the inner HTML, giving each slide's opening div an id to link/scroll to
+				let newInner = "";
+				let innerCursor = 0;
+				const buttons = [];
+				slideStarts.forEach((slideStart, slideIndex) => {
+					const id = `carou_${index}_slide_${slideIndex}`;
+					// untouched gap before this slide, then its opening tag with the new id
+					newInner += carouselInnerHTML.slice(innerCursor, slideStart.index) + `<div class="carousel-slide" id="${id}">`;
+					innerCursor = slideStart.index + slideStart[0].length;
+					buttons.push(`<a class="carousel-button" href="#${id}"> ${slideIndex + 1}</a>`);
+				});
+				newInner += carouselInnerHTML.slice(innerCursor); // rest of the last slide plus any trailing HTML, all untouched
+
+				result += newInner + "</div>" + `<div class="carousel-button-holder">${buttons.join("")}</div>`;
+			} else {
+				// No slides to id and no buttons to add, just close the div unchanged
+				result += carouselInnerHTML + "</div>";
+			}
+
+			cursor = closeTagEnd;
+		}
+		result += content.slice(cursor); // copy through anything after the last carousel
+
+		return result;
+	});
 
 	// The font-awesome plugin's {% getBundle "fontawesome" %} in base.njk hardcodes
 	// style="display: none;" on the <svg> of each icon. Our CSP blocks inline CSS, so
