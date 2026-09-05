@@ -251,6 +251,19 @@ strong {
 	white-space: nowrap;
 }
 
+.sr-only {
+	/* Visually hidden but still exposed to assistive tech (unlike display: none, which .actually-hidden uses). */
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
 .navigation {
 	position: fixed;
 	top: 0;
@@ -629,25 +642,27 @@ footer .only-image {
 	text-align: center;
 }
 
-.tooltip::after {
-	border-radius: var(--border-radius);
-	padding: var(--border-radius);
-	background-color: #222;
-	content: attr(tooltip-text);
-	color: var(--text-color);
-	display: none;
+/* The tooltip's visible content IS .tooltip-text (the same sr-only span read by assistive tech), */
+/* revealed on hover/focus instead of duplicating its text into a generated ::after via attr(). */
+.tooltip:hover .tooltip-text, .tooltip:focus .tooltip-text {
+	/* Override the .sr-only clip-hiding technique to make this a real, visible tooltip box. */
 	position: absolute;
-	z-index: 2;
-	bottom: 110%; /* float slightly above the top of the element */
-	left: calc(-0.75em - 1em); /* half the width over 100% of the tooltip (currently 2em, see below) - the padding-left */
 	/* The width is the width of the image + some of the minimum extra space around the image (.post margin + .post padding) */
 	/* wider looks better (such as 250-300% of the image width), but will go off the screen for items in the first and last columns. */
 	width: calc(100% + 2em);
-}
+	height: auto;
+	padding: var(--border-radius);
+	margin: 0;
+	overflow: visible;
+	clip: auto;
+	white-space: normal;
 
-/* Override the "display: none;" when interacted with */
-.tooltip:hover::after, .tooltip:focus::after {
-	display: block;
+	border-radius: var(--border-radius);
+	background-color: #222;
+	color: var(--text-color);
+	z-index: 2;
+	bottom: 110%; /* float slightly above the top of the element */
+	left: calc(-0.75em - 1em); /* half the width over 100% of the tooltip (currently 2em, see above) minus the padding-left */
 }
 
 /* (Progressive enhancement) CSS anchor positioning lets the browser place the tooltips to stay on-screen, allowing wider tooltips. */
@@ -658,7 +673,7 @@ footer .only-image {
 		anchor-scope: --tooltip-trigger;
 	}
 
-	.tooltip::after {
+	.tooltip:hover .tooltip-text, .tooltip:focus .tooltip-text {
 		/* fixed keeps the containing block as the viewport instead of the tooltip's own box,	which throws off the position-area/fallback math */
 		position: fixed;
 		position-anchor: --tooltip-trigger;
@@ -667,7 +682,8 @@ footer .only-image {
 		inset: unset;
 		margin-bottom: 0.5em;
 		width: max-content;
-		max-width: min(calc(300% + 2em), 90vw);
+		/* anchor-size(), not a plain %, because percentages on a position: fixed box resolve against the viewport, */
+		max-width: min(calc(anchor-size(width) * 3 + 2em), 90vw);
 	}
 }
 
@@ -675,7 +691,7 @@ footer .only-image {
 /* To fix this, place the tooltip below and use flip-block to protect a tooltip in the last row with no room below. */
 @media (max-width: 667px) {
 	@supports (anchor-name: --tooltip-trigger) {
-		.tooltip::after {
+		.tooltip:hover .tooltip-text, .tooltip:focus .tooltip-text {
 			position-area: bottom;
 			margin-bottom: unset;
 			margin-top: 0.5em;

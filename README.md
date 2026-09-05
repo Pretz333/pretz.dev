@@ -113,7 +113,7 @@
 - [x] Click to go to that tech's website (such as click on the DNN logo to go to [DotNetNuke](https://www.dnnsoftware.com/))
 - [x] Google Analytics is deciding not to be a square with round corners again
 - [x] Hover/Focus border has a gap at the bottom
-- [ ] Assess the accessibility of tooltips
+- [x] Assess the accessibility of tooltips
 - [x] tooltips can go off-screen when content is high on the screen
 - [x] Wider tooltips that do not go off the screen
 - [ ] pic of laptop?
