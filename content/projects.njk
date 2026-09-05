@@ -147,9 +147,7 @@ eleventyNavigation:
 	<article class="subpost" aria-labelledby="inventory-label" id="inventory">
 		<div class="carousel-container">
 			<div class="carousel">
-				<picture>
-					<img src="img/projects/inventory/inventory_dashboard.png" alt="The Inventory's Dashboard, showing how the item categories, locations, and items all combine into a simple end-user interface">
-				</picture>
+				<div class="carousel-slide"><img src="img/projects/inventory/inventory_dashboard.png" alt="The Inventory's Dashboard, showing how the item categories, locations, and items all combine into a simple end-user interface"></div>
 			</div>
 		</div>
 		<h3 id="inventory-label">Inventory</h3>
@@ -177,7 +175,7 @@ eleventyNavigation:
 	<article class="subpost" aria-labelledby="vehicle-maintenance-tracker-label" id="vehicle-maintenance-tracker">
 		<div class="carousel-container">
 			<div class="carousel">
-				<img src="img/projects/stand-in_project_img.png" alt="Project Image">
+				<div class="carousel-slide"><img src="img/projects/stand-in_project_img.png" alt="Project Image"></div>
 			</div>
 		</div>
 		<h3 id="vehicle-maintenance-tracker-label">Vehicle Maintenance Tracker</h3>
@@ -200,14 +198,9 @@ eleventyNavigation:
 	</header>
 	
 	<article class="subpost" aria-labelledby="mementorefresh-label" id="mementorefresh">
-		<div class="carousel-container">
-			<div class="carousel">
-					<picture>
-						<source srcset="img/projects/mementorefresh/memento_refresh_mobile.png" media="(orientation: portrait)">
-						<img src="img/projects/mementorefresh/memento_refresh_desktop.png" alt="The Memento Refresh AddOn page on ESOUI. It shows that the AddOn gets roughly 475 monthly downloads, has been recently updated, and contains the instructions to use it in-game.">
-					</picture>
-			</div>
-		</div>
+		{{ websiteCarousel([
+			{ desktop: "img/projects/mementorefresh/memento_refresh_desktop.png", mobile: "img/projects/mementorefresh/memento_refresh_mobile.png", alt: "The Memento Refresh AddOn page on ESOUI. It shows that the AddOn gets roughly 475 monthly downloads, has been recently updated, and contains the instructions to use it in-game." }
+		]) }}
 		<h3 id="mementorefresh-label">Memento Refresh</h3>
 		<h4><a href="https://www.esoui.com/downloads/info2671-MementoRefresh.html" rel="external" target="_blank">An AddOn for the Elder Scrolls Online</a> | <a href="https://github.com/Pretz333/MementoRefresh" rel="external" target="_blank">GitHub Repository</a></h4>
 		<p>An Open-Source AddOn for the Elder Scrolls Online to provide an easy way for players to automatically reuse collectibles with a cosmetic effect when they expire. Memento Refresh has had over 4,000 users up to this point.</p>
@@ -229,11 +222,11 @@ eleventyNavigation:
 	<article class="subpost" aria-labelledby="automation-server-label" id="automation-server">
 		<div class="carousel-container">
 			<div class="carousel">
-				<img src="img/projects/automation_server/nocodb_dashboard.png" alt="The NocoDB workspace, listing many bases such as Unit Registration History, BILL Automations, and Council Vehicles used across the council">
-				<img src="img/projects/automation_server/nocodb_camping_reg_view.png" alt="A NocoDB grid view of camping registrations, with columns for registration number, camp, subcamp, campsite, and booking date across thousands of rows">
-				<img src="img/projects/automation_server/n8n_dashboard.png" alt="The n8n workflow overview, showing 596 production executions with a 0.03% failure rate and 52 hours of estimated time saved, above a list of active workflows">
-				<img src="img/projects/automation_server/n8n_flow.png" alt="An n8n workflow canvas for a poster pickup request, chaining a webhook trigger through NocoDB lookups and updates to a final message send">
-				<img src="img/projects/automation_server/dozzle_dashboard.png" alt="The Dozzle dashboard, listing the server's five running containers (nocodb, n8n, directus, traefik, dozzle) with their live CPU and memory usage">
+				<div class="carousel-slide"><img src="img/projects/automation_server/nocodb_dashboard.png" alt="The NocoDB workspace, listing many bases such as Unit Registration History, BILL Automations, and Council Vehicles used across the council"></div>
+				<div class="carousel-slide"><img src="img/projects/automation_server/nocodb_camping_reg_view.png" alt="A NocoDB grid view of camping registrations, with columns for registration number, camp, subcamp, campsite, and booking date across thousands of rows"></div>
+				<div class="carousel-slide"><img src="img/projects/automation_server/n8n_dashboard.png" alt="The n8n workflow overview, showing 596 production executions with a 0.03% failure rate and 52 hours of estimated time saved, above a list of active workflows"></div>
+				<div class="carousel-slide"><img src="img/projects/automation_server/n8n_flow.png" alt="An n8n workflow canvas for a poster pickup request, chaining a webhook trigger through NocoDB lookups and updates to a final message send"></div>
+				<div class="carousel-slide"><img src="img/projects/automation_server/dozzle_dashboard.png" alt="The Dozzle dashboard, listing the server's five running containers (nocodb, n8n, directus, traefik, dozzle) with their live CPU and memory usage"></div>
 			</div>
 		</div>
 		<h3 id="automation-server-label">Automation Server</h3>
@@ -260,8 +253,8 @@ eleventyNavigation:
 	<article class="subpost" aria-labelledby="media-server-label" id="media-server">
 		<div class="carousel-container">
 			<div class="carousel">
-				<img src="img/projects/truenas/truenas_dashboard.png" alt="The TrueNAS SCALE dashboard, showing the server's CPU and memory usage alongside the photovideo and serverbackups storage pools, both reporting healthy status with no disk errors">
-				<img src="img/projects/truenas/nas_intune_listing.png" alt="The Microsoft Intune admin center's Windows apps list, showing several PhotoVideo Drive packages (Marketing, Camping, Field) published as Win32 apps and assigned to devices">
+				<div class="carousel-slide"><img src="img/projects/truenas/truenas_dashboard.png" alt="The TrueNAS SCALE dashboard, showing the server's CPU and memory usage alongside the photovideo and serverbackups storage pools, both reporting healthy status with no disk errors"></div>
+				<div class="carousel-slide"><img src="img/projects/truenas/nas_intune_listing.png" alt="The Microsoft Intune admin center's Windows apps list, showing several PhotoVideo Drive packages (Marketing, Camping, Field) published as Win32 apps and assigned to devices"></div>
 			</div>
 		</div>
 		<h3 id="media-server-label">Media Server</h3>
@@ -270,7 +263,7 @@ eleventyNavigation:
 		<p>I built the server from the ground up, starting with an LSI SAS HBA to add enough SATA ports for the drive count, then installed TrueNAS Scale and laid the pool out as two RAIDZ2 vdevs of six drives each, for ~50TB of usable capacity. On top of the pool, I set up automated scrubbing, SMART checks, and email alerts (through an SMTP relay) so drive problems get caught and reported well before they become data loss, along with nightly cloud backups to Backblaze B2 as an off-site copy.</p>
 		<p>Each department got its own dataset and network share, provisioned with a PowerShell script so every employee can write to their own department's share while only viewing everyone else's, since it's all just photos and video. I packaged that script as an intunewin file and published it through Intune to Company Portal, so any employee's computer sets up its share automatically instead of needing an individual IT ticket. The server launched in March 2025 with about 8TB of data migrated immediately from those old external drives and employees' personal photo libraries.</p>
 		<h4>Technologies</h4>
-		<p>The server runs TrueNAS SCALE on top of an LSI SAS HBA for extra SATA connectivity, with the network shares provisioned by a PowerShell script packaged and deployed through Microsoft Intune's Company Portal. Backups run to Backblaze B2, and health alerts are emailed out through an SMTP relay (Mailgun).</p>
+		<p>The server runs TrueNAS SCALE with an LSI SAS HBA for extra SATA connectivity, with the network shares provisioned by a PowerShell script packaged and deployed through Microsoft Intune's Company Portal. Backups run to Backblaze B2, and health alerts are emailed out through an SMTP relay (Mailgun).</p>
 		<div class="techlogos">
 			<img src="img/techlogos/truenas.svg" alt="TrueNAS Logo" width="128">
 			<img src="img/techlogos/powershell.svg" alt="PowerShell Logo">

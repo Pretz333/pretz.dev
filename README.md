@@ -158,3 +158,6 @@ Note: *enhancements*. Someone with JavaScript disabled should still get a perfec
 ### Long-Term Enhancements
 
 - [ ] It could be a fun project to execute the carousel button script before shipping the HTML to visitors, eliminating the need for the script entirely
+- feed's visit website link takes you to <www.pretz.dev>, not straight pretz.dev.
+  - [x] fix the feed's link
+  - [ ] set up a permanent redirect from www to non-www

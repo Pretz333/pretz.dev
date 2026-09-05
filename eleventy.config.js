@@ -110,7 +110,7 @@ export default async function(eleventyConfig) {
 			language: "en",
 			title: "Pretz",
 			subtitle: "Hiya, I'm Pretz! I enjoy making software projects to solve real problems.",
-			base: "https://www.pretz.dev/",
+			base: "https://pretz.dev/",
 			author: {
 				name: "Pretz",
 			},
@@ -263,7 +263,7 @@ export default async function(eleventyConfig) {
 	 * */
 
 	// The current year as a 4 digit number
-	// Used for the copyright year in the footer
+	// Currently not used. Used for the copyright year in the footer on some of my sites
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
 	// When the site was last built
@@ -280,89 +280,86 @@ export default async function(eleventyConfig) {
 
 	/**
 	 * Transforms
-	 * The opposite of the preprocessor - transforms modify the output of a file
+	 * The opposite of the preprocessor - transforms modify the output of the build process
 	 * See https://www.11ty.dev/docs/transforms/
 	 * */
 
 	// Wrap tables in a <div> that allows for scrollable overflow, preventing tables from getting cut off
-	eleventyConfig.addTransform("wrapTables", function(content) {
+	eleventyConfig.addTransform("wrapTables", function(content, outputPath) {
 		// Only run this transform on HTML output
-		if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
-			const regex = /<table\b[\s\S]*?<\/table>/gi;
-			
-			// Replace all <table> elements with the wrapped version
-			const wrappedContent = content.replace(regex, (match) => {
-				// tabindex="0" makes this div focusable, which is necessary if it has scroll
-				// See Accessibility under https://piccalil.li/blog/styling-tables-the-modern-css-way/
-				return `<div class="table-wrapper" tabindex="0">${match}</div>`;
-			});
+		if (!outputPath || !outputPath.endsWith(".html")) return content;
+		
+		const regex = /<table\b[\s\S]*?<\/table>/gi;
+		
+		// Replace all <table> elements with the wrapped version
+		const wrappedContent = content.replace(regex, (match) => {
+			// tabindex="0" makes this div focusable, which is necessary if it has scroll
+			// See Accessibility under https://piccalil.li/blog/styling-tables-the-modern-css-way/
+			return `<div class="table-wrapper" tabindex="0">${match}</div>`;
+		});
 
-			return wrappedContent;
-		}
-
-		return content;
+		return wrappedContent;
 	});
 
+	// Add anchors to select headings
 	eleventyConfig.addTransform("html-anchor-transform", function(content, outputPath) {
 		// Only run this transform for HTML output
-		if (outputPath && outputPath.endsWith(".html")) {
-			// (<h([23])[^>]*id=['"]([^'"]+)['"][^>]*>): Captures the opening tag (Group 1), heading level (Group 2), and ID value (Group 3).
-			// (.*?): Captures the content of the heading (Group 4).
-			// (<\/h\2>): Captures the closing tag, matching the level (Group 5).
-			const regex = /(<h([23])[^>]*id=['"]([^'"]+)['"][^>]*>)(.*?)(<\/h\2>)/gsi;
-			// aria-hidden on the icon (decorative), not the link itself, which stays focusable
-			// and gets a real accessible name via aria-label so AT users know what it does.
-			const faLinkSymbol = '<svg class="icon-svg" aria-hidden="true" focusable="false"><use href="#fas-fa-link" xlink:href="#fas-fa-link"></use></svg>'
-
-			content = content.replace(regex, (
-				match,          // Full match string
-				openingTag,     // Group 1: <h2 id="x" ...>
-				headingLevel,   // Group 2: 2, 3, or 4. Unused here but used in the original string, so we have to have it here.
-				idValue,        // Group 3: The actual ID string
-				contentBody,    // Group 4: The content inside the heading
-				closingTag      // Group 5: </h2> or </h3>
-			) => {
-				// If the header content is a link, return the original match without adding an anchor.
-				const isLinkHeader = contentBody.trim().toLowerCase().startsWith('<a');
-				if (isLinkHeader) return match;
-
-				// Construct the anchor link using the captured ID value
-				const headingText = contentBody.replace(/<[^>]+>/g, '').trim();
-				const anchorLink = `<a href="#${idValue}" aria-label="Link to ${headingText} heading" class="header-anchor">${faLinkSymbol}</a>`;
-				
-				// This places an anchor link after the heading's content.
-				return openingTag + contentBody + " " + anchorLink + closingTag;
-			});
-		}
+		if (!outputPath || !outputPath.endsWith(".html")) return content;
+		
+		// (<h([23])[^>]*id=['"]([^'"]+)['"][^>]*>): Captures the opening tag (Group 1), heading level (Group 2), and ID value (Group 3).
+		// (.*?): Captures the content of the heading (Group 4).
+		// (<\/h\2>): Captures the closing tag, matching the level (Group 5).
+		const regex = /(<h([23])[^>]*id=['"]([^'"]+)['"][^>]*>)(.*?)(<\/h\2>)/gsi;
+		// aria-hidden on the icon (decorative), not the link itself, which stays focusable
+		// and gets a real accessible name via aria-label so AT users know what it does.
+		const faLinkSymbol = '<svg class="icon-svg" aria-hidden="true" focusable="false"><use href="#fas-fa-link" xlink:href="#fas-fa-link"></use></svg>'
+		
+		content = content.replace(regex, (
+			match,          // Full match string
+			openingTag,     // Group 1: <h2 id="x" ...>
+			headingLevel,   // Group 2: 2, 3, or 4. Unused here but used in the original string, so we have to have it here.
+			idValue,        // Group 3: The actual ID string
+			contentBody,    // Group 4: The content inside the heading
+			closingTag      // Group 5: </h2> or </h3>
+		) => {
+			// If the header content is a link, return the original match without adding an anchor.
+			const isLinkHeader = contentBody.trim().toLowerCase().startsWith('<a');
+			if (isLinkHeader) return match;
+			
+			// Construct the anchor link using the captured ID value
+			const headingText = contentBody.replace(/<[^>]+>/g, '').trim();
+			const anchorLink = `<a href="#${idValue}" aria-label="Link to ${headingText} heading" class="header-anchor">${faLinkSymbol}</a>`;
+			
+			// This places an anchor link after the heading's content.
+			return openingTag + contentBody + " " + anchorLink + closingTag;
+		});
 
 		return content;
 	});
-
+	
 	// Builds the "On This Page" sidebar nav from `data-anchor="Title"` attributes
-	// found on elements in the rendered page, instead of a hand-maintained
-	// frontmatter `anchors` list that can drift out of sync with actual ids.
-	// See the `id="page-anchor-list"` placeholder `<ul>` in base.njk.
+	// found in the markup, instead of a hand-maintained `anchors` list that drifted
+	// from the actual layout. See the "page-anchor-list" placeholder in base.njk.
 	eleventyConfig.addTransform("generatePageAnchors", function(content, outputPath) {
-		if (outputPath && outputPath.endsWith(".html")) {
-			// Lookaheads let `id` and `data-anchor` appear in either order within the tag.
-			const anchorRegex = /<[a-z0-9]+\b(?=[^>]*\sid=["']([^"']+)["'])(?=[^>]*\sdata-anchor=["']([^"']+)["'])[^>]*>/gi;
-
-			const anchors = [];
-			let match;
-			while ((match = anchorRegex.exec(content)) !== null) {
-				anchors.push({ id: match[1], title: match[2] });
-			}
-
-			if (anchors.length === 0) {
-				// No anchor points on this page: drop the whole "On This Page" nav.
-				return content.replace(/<nav class="page-nav-container"[\s\S]*?<\/nav>\s*/i, "");
-			}
-
-			const listItems = anchors.map(a => `<li><a href="#${a.id}">${a.title}</a></li>`).join("");
-			return content.replace('<ul id="page-anchor-list"></ul>', `<ul id="page-anchor-list">${listItems}</ul>`);
+		// Only run this transform for HTML output
+		if (!outputPath || !outputPath.endsWith(".html")) return content;
+		
+		// Lookaheads let `id` and `data-anchor` appear in either order within the tag.
+		const anchorRegex = /<[a-z0-9]+\b(?=[^>]*\sid=["']([^"']+)["'])(?=[^>]*\sdata-anchor=["']([^"']+)["'])[^>]*>/gi;
+		
+		const anchors = [];
+		let match;
+		while ((match = anchorRegex.exec(content)) !== null) {
+			anchors.push({ id: match[1], title: match[2] });
 		}
-
-		return content;
+		
+		if (anchors.length === 0) {
+			// No anchor points on this page: drop the whole "On This Page" nav.
+			return content.replace(/<nav class="page-nav-container"[\s\S]*?<\/nav>\s*/i, "");
+		}
+		
+		const listItems = anchors.map(a => `<li><a href="#${a.id}">${a.title}</a></li>`).join("");
+		return content.replace('<ul id="page-anchor-list"></ul>', `<ul id="page-anchor-list">${listItems}</ul>`);
 	});
 
 	// The font-awesome plugin's {% getBundle "fontawesome" %} in base.njk hardcodes
