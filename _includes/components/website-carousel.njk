@@ -1,35 +1,17 @@
 {#
-	Renders a project carousel from live URLs instead of committed screenshot files.
-	`pages`: array of { url, alt } - one carousel slide per entry.
+	Renders a project carousel from committed screenshot or video files.
+	One carousel slide per entry, all images and videos must be in the repo.
 
-	Each slide fetches a desktop and a mobile screenshot from thum.io at build time.
-	The resulting <img> tags are picked up by the eleventyImageTransformPlugin
-	configured in eleventy.config.js, which detects the remote src (via eleventy-img's
-	Util.isRemoteUrl) and downloads/caches it with @11ty/eleventy-fetch before optimizing
-	it into local avif/webp files, same as any other image on the site.
+	Screenshots: { desktop, mobile, alt }
+	`desktop`/`mobile` are local screenshots (1440x810 and 600x1200 viewports)
+	rather than fetched from a live URL at build time. These <img> tags still
+	pass through eleventyImageTransformPlugin to be optimized (e.g. webp/avif)
 
-	Note: this can't reuse the single-<picture>-with-a-portrait-<source> pattern used
-	elsewhere/previously, because eleventyImageTransformPlugin replaces a <picture>'s entire
-	content based on the one <img> it finds inside - any <source> siblings gets discarded.
-	So desktop and mobile screenshots are two separate <picture> elements instead, and CSS
-	(.screenshot-desktop/.screenshot-mobile in style.css) shows only one at a time.
-
-	The mobile capture is 600px wide, not a true phone width (~390px) - several real sites
-	(camptomahawk.org's inner pages, joincubs.org) have their own responsive bugs that clip
-	text below ~500px, since a headless screenshot at a custom viewport width can land
-	between a site's actual breakpoints in ways a real device wouldn't. 600 was the
-	narrowest width that rendered cleanly on every URL in use as of writing; re-check new
-	URLs before assuming it's universal. Crop height is capped at 1200 - thum.io's free
-	tier renders in a max 1200×1200 browser, so taller `crop` values get silently
-	clamped to 1200.
-
-	A page entry can be a video clip instead of a live-URL screenshot: pass
-	{ video, poster, alt } (a local path under /video and /img committed to the repo,
-	as we don't use a live source at build time for these). It renders a single
-	<video>, not a desktop/mobile pair - a landscape recording is a reasonable width on
-	mobile too, unlike the tall portrait screenshots the desktop/mobile split exists for.
-	No autoplay: `preload="none"` means nothing is fetched until the viewer presses play
-	on the native `controls`, and `poster` gives them something to look at until then.
+	Videos: { video, poster, alt }
+	Videos render as a single landscape <video>, as it is visible enough on mobile
+	and desktop, unlike the portrait screenshots the desktop/mobile split exists for.
+	No autoplay, `preload="none"` means nothing is fetched until they press play on
+	the native controls, and `poster` gives them the screenshot experience until then.
 #}
 {% macro websiteCarousel(pages) %}
 <div class="carousel-container">
@@ -42,10 +24,10 @@
 			</video>
 			{% else %}
 			<picture class="screenshot-desktop">
-				<img{% if not loop.first %} loading="lazy"{% endif %} src="https://image.thum.io/get/viewportWidth/1440/width/1440/crop/810/noanimate/{{ page.url }}" alt="{{ page.alt }}">
+				<img{% if not loop.first %} loading="lazy"{% endif %} src="{{ page.desktop }}" alt="{{ page.alt }}">
 			</picture>
 			<picture class="screenshot-mobile">
-				<img loading="lazy" src="https://image.thum.io/get/viewportWidth/600/width/600/crop/1200/noanimate/{{ page.url }}" alt="{{ page.alt }}">
+				<img loading="lazy" src="{{ page.mobile }}" alt="{{ page.alt }}">
 			</picture>
 			{% endif %}
 		</div>
