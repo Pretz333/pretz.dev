@@ -42,7 +42,7 @@
 				</div>
 
 				<div class="site-nav">
-					<p>Pages</p>
+					<p class="large-screens">Pages</p>
 					<ul>
 						{% for entry in collections.all | eleventyNavigation %}
 							<li class="nav-item{% if entry.url == page.url %} active-tab{% endif %}"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>

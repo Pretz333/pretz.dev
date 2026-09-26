@@ -12,8 +12,11 @@
 	and desktop, unlike the portrait screenshots the desktop/mobile split exists for.
 	No autoplay, `preload="none"` means nothing is fetched until they press play on
 	the native controls, and `poster` gives them the screenshot experience until then.
+
+	Pass lcp=true when the first slide is the page's LCP element to give it loading="eager"
+	and fetchpriority="high" instead of eleventyImage's default	loading="lazy"
 #}
-{% macro websiteCarousel(pages) %}
+{% macro websiteCarousel(pages, lcp=false) %}
 <div class="carousel-container">
 	<div class="carousel">
 		{% for page in pages %}
@@ -24,10 +27,10 @@
 			</video>
 			{% else %}
 			<picture class="screenshot-desktop">
-				<img{% if not loop.first %} loading="lazy"{% endif %} src="{{ page.desktop }}" alt="{{ page.alt }}">
+				<img{% if lcp and loop.first %} loading="eager" fetchpriority="high"{% elif not loop.first %} loading="lazy"{% endif %} src="{{ page.desktop }}" alt="{{ page.alt }}">
 			</picture>
 			<picture class="screenshot-mobile">
-				<img loading="lazy" src="{{ page.mobile }}" alt="{{ page.alt }}">
+				<img{% if lcp and loop.first %} loading="eager" fetchpriority="high"{% else %} loading="lazy"{% endif %} src="{{ page.mobile }}" alt="{{ page.alt }}">
 			</picture>
 			{% endif %}
 		</div>

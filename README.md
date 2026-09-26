@@ -36,7 +36,7 @@
 - [ ] Site audit with Lighthouse
 - [ ] Lighthouse follow-up
 - [ ] [Code cleanup](#code-cleanup-steps)
-- [ ] loading lazy and missing fetchpriority on LCP image
+- [x] loading lazy and missing fetchpriority on LCP images
 - [ ] other pages to add
 - [ ] articles to write?
 
@@ -92,7 +92,7 @@
 - [ ] Images are very small at small sizes, consider adjusting margins?
 - [ ] Fix text run-on in small sizes
   - [ ] decrease header size?
-- [ ] At zoom levels >200%, the small-screen header takes up too much space
+- [ ] At zoom levels >200%, the small-screen header takes up too much space. Flow to 1 row with margin-blocks?
 - [ ] getting tooltips on mobile kinda sucks (press and hold on each logo). Do I need the links or should a click simply open the tooltip?
 
 ### Large Screen Size Improvements
