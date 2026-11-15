@@ -36,9 +36,9 @@ JavaScript is only ever an *enhancement*. Someone with JavaScript disabled will 
 
 ### Design
 
-- [ ] Fix the carousel's bottom edge not having round corners (the scrollbar sits beneath it)
-- [ ] Fix the carousel showing a scrollbar when there's only one slide
-- [ ] Use `overflow-clip-margin` to fix the corners not matching
+- [x] Fix the carousel's bottom edge not having round corners (the scrollbar sits beneath it)
+- [x] Fix the carousel showing a scrollbar when there's only one slide
+- [x] Use `overflow-clip-margin` to fix the corners not matching
 - [ ] h4 and strong look bad in Firefox's render of Nunito
 - [ ] h1s in Nunito also don't look great after the font size changes
 - [ ] p text gets too long and looks bad
@@ -71,8 +71,11 @@ JavaScript is only ever an *enhancement*. Someone with JavaScript disabled will 
 
 ### Projects to Add
 
-- [ ] TORN scripts
+- [ ] the physical server
+- [ ] personal NAS w/ apps for compute
 - [ ] n8n SQLite -> Postgres migration script? It kinda sucks, but it work(s/ed)
+- [ ] TORN scripts
+- [ ] game save editors
 
 ### Contact Page
 

@@ -498,7 +498,7 @@ footer .only-image {
 	display: flex;
 	align-items: flex-start;
 	gap: 1em;
-	overflow-x: scroll;
+	overflow-x: auto; /* `scroll` causes single-slide carousels to get a scrollbar. Multi-slides carousels naturally overflow, and thus get a scrollbar */
 	overflow-y: hidden; /* a taller off-screen slide would otherwise overflow the shorter current slide's height and add a second (vertical) scrollbar */
 	scroll-snap-type: x mandatory;
 	scrollbar-color: var(--primary-background-color) transparent; /* Firefox scrollbar styling - Chrome is below */
@@ -512,8 +512,14 @@ footer .only-image {
 	scroll-snap-align: center;
 }
 
+.carousel-slide {
+	border-radius: var(--border-radius);
+	overflow: clip;
+}
+
 .carousel img,
 .carousel video {
+	display: block;
 	width: 100%;
 	filter: brightness(85%);
 }
