@@ -1,172 +1,92 @@
 # pretz.dev
 
+My personal portfolio site. It's built with [Eleventy](https://www.11ty.dev/) using plain Nunjucks templates and hand-written CSS and JS, and it's deployed as static assets on Cloudflare Workers.
+
+## Development
+
+```sh
+npm install
+npm run dev     # build and serve with live reload
+npm run build   # production build to _site/
+```
+
+Deploy with `npx wrangler deploy` (config in `wrangler.jsonc`).
+
+JavaScript is only ever an *enhancement*. Someone with JavaScript disabled will still get a fully working site, just missing a few niceties that aren't possible or aren't worth building in plain HTML and CSS.
+
 ## Todo
 
-- [x] Figure out basic tech stack
-- [x] Get ideas on layout and looks
-- [x] Robots.txt
-- [x] Sitemap.xml
-- [x] favicon.ico
-- [x] Make basic main page (HTML only)
-- [x] Skip navigation link
-- [x] Accessibility aria labels
-- [x] Make basic CSS for main page
-- [x] Set up Cloudflare Workers
-- [x] Finalize main page content
-- [x] About page basic format
-- [x] About page content
-- [x] Projects page basic format
-- [x] Projects page content
-- [x] Contact page basic format
-- [x] Contact page content
-- [x] Add the missing page header (with an h1) to the projects page
-- [x] Targets and rel attributes on links
-- [x] Re-add the Content-Security-Policy to index and projects now that we're using some JS
-- [ ] [Finalize designs](#finalize-design-steps)
-- [ ] [Large screen sizes](#large-screen-size-improvements)
-- [ ] [Small screen sizes](#small-screen-size-improvements)
-- [ ] [About page improvements](#about-page-improvements)
-- [x] [Projects page improvements](#projects-page-improvements)
-- [ ] [Contact page improvements](#contact-page-improvements)
-- [x] [JS site enhancements](#js-site-enhancements)
-- [x] Custom 404 Page
-- [x] Add modern formats (webp/avif) to images with more-standard fallbacks (jpg/png)
+- [ ] [Design](#design)
+- [ ] [Small screens](#small-screens)
+- [ ] [Large screens](#large-screens)
+- [ ] [About page](#about-page)
+- [ ] [Projects to add](#projects-to-add)
+- [ ] [Contact page](#contact-page)
+- [ ] [Code cleanup](#code-cleanup)
 - [ ] Assess how big the carousel images really need to be
-- [ ] Note about techlogos not being my trademark (footer? They're on every page but contact. Ignoring that, contact makes the most sense to put this note on.)
+- [ ] Add a note that the techlogos aren't my trademarks (footer? They're on every page but contact. Ignoring that, contact makes the most sense for it.)
 - [ ] Site audit with Lighthouse
 - [ ] Lighthouse follow-up
-- [ ] [Code cleanup](#code-cleanup-steps)
-- [x] loading lazy and missing fetchpriority on LCP images
-- [ ] other pages to add
-- [ ] articles to write?
+- [ ] Other pages to add
+- [ ] Articles to write?
+  - [ ] Conference talks I've given
+  - [ ] Training documentation I wrote
+  - [ ] Software I use, why that software, deploy steps
+  - [ ] Hardware/Server Philosophy
 
-### Finalize Design Steps
+### Design
 
-- [x] Fix button text contrast
-- [x] Fix button text size
-- [x] Set up light-mode colors
-- [x] Make a logo
-- [x] Turn logo into an actual favicon.ico
-- [x] Make "On This Page" links scroll slightly less far down the page, ideally keeping the margin like nav does
-- [x] Project-preview projects initial design
-- [x] techlogo images size consistency
-- [x] techlogo images caption instead of image with words (and contrast issues)
-- [x] techlogo images zoom in and display alt text in little popup bubble on hover
-- [x] Stylize scrollbar
-- [x] Change text highlight color
-- [x] Change strong tag color
-- [x] Fix the skip to content link (and rename the class)
-- [x] Fix gap to the right-side of the techlogos
-- [x] Make an image carousel so I can have multiple images on projects. This will also fix the gap on the side of the current single image.
-- [x] I feel like the project images are too distracting, possibly due to how bright and colorful they are. Desaturate and/or darken the carousel images slightly?
-- [x] Preload font to fix the brief flash of default sans-serif
-- [x] Center the h1 and h2? It definitely looks better on mobile
-- [x] mark current page and section on page in nav, not just section on page
-- [x] traefik logo has no contrast
-- [x] Logo on footer
-- [ ] Fix carousel's bottom line not having the round corners (due to the scrollbar being beneath it)
-- [ ] Fix carousel's bottom line having a scrollbar when there's only one slide
+- [ ] Fix the carousel's bottom edge not having round corners (the scrollbar sits beneath it)
+- [ ] Fix the carousel showing a scrollbar when there's only one slide
+- [ ] Use `overflow-clip-margin` to fix the corners not matching
 - [ ] h4 and strong look bad in Firefox's render of Nunito
-- [ ] h1s of Nunito are also not looking too good with the new font size changes
-- [ ] Use overflow-clip-margin to fix the corners not matching
-- [ ] p text gets too long and looks bad.
+- [ ] h1s in Nunito also don't look great after the font size changes
+- [ ] p text gets too long and looks bad
   - [ ] Max at 75ch? 100ch? Time to research typography
-  - [ ] p line height
-- [ ] fix links being one size - tie to font-size of attached element
-- [ ] after header links look funny. too small and misaligned?
-- [x] anchor schnanigans for tooltips
-- [ ] goscouting video with rising bars (sunset) or just the clouds moving as a gif looping
-- [ ] use mobile video for goscouting and remove carousel.js entirely?
+  - [ ] also check line height
+- [ ] Links are all one size. Tie them to the font size of their parent element
+- [ ] After header anchor links look off (too small and misaligned?)
+- [ ] Decide between the current GoScouting video with rising bars (sunset), or just the clouds moving as a looping gif
+- [ ] Use a mobile video for GoScouting and remove carousel.js entirely?
 
-### Small Screen Size Improvements
+### Small Screens
 
-- [x] Move the sidebar to an expandable menu at the top below 667 px width
-- [x] Add a border to the navbar?
-- [x] tooltip's position:relative is somehow covering up the navbar's content
-- [x] Do something to make the list of a links feel more like a proper menu. Display as table? Make links take the full width?
-- [x] While the changes made to fix the above issue look and feel better, they also cause overflow at 550-ish px in width
-- [x] On this page section takes up too much space.
-- [x] Header sizes are too big at small sizes
-- [x] mobile website images are too wide
-- [ ] Adjust techlogo image size to fill the space when in single-column layout
-- [ ] Images are very small at small sizes, consider adjusting margins?
-- [ ] Fix text run-on in small sizes
-  - [ ] decrease header size?
-- [ ] At zoom levels >200%, the small-screen header takes up too much space. Flow to 1 row with margin-blocks?
-- [ ] getting tooltips on mobile kinda sucks (press and hold on each logo). Do I need the links or should a click simply open the tooltip?
+- [ ] Adjust techlogo image size to fill the space in the single-column layout
+- [ ] Images are very small at small sizes. Adjust margins?
+- [ ] Fix text running on at small sizes
+  - [ ] Decrease header size?
+- [ ] At zoom levels >200%, the small-screen header takes up too much space. Flow to 1 row with margin-block?
+- [ ] Getting tooltips on mobile kinda sucks (press and hold on each logo). Do I need the links or should a click simply open the tooltip?
 
-### Large Screen Size Improvements
+### Large Screens
 
-- [x] Make nav headers and links bigger
 - [ ] Above a certain width, move the image to the side (2-column layout)
-- [ ] Above a certain width, move the project blocks be all in one row (3-column layout)
-- [ ] Add max-width to the sidebar?
+- [ ] Above a certain width, put the project blocks in one row (3-column layout)
+- [ ] Add a max-width to the sidebar?
 - [ ] Carousel buttons will scroll until the image is 1.5 rem from the top of the screen. On larger screens, this may scroll the buttons off of the screen, resulting in a jittery process
 
-### About Page Improvements
+### About Page
 
-- [x] .NET and DNN are breaking out of their box
-- [x] White looks bad
-- [x] Fix colors in light mode
-- [x] Cloudflare refuses to be vertically centered
-- [x] Hover over for an explanation of what it is/is used for
-- [x] Click to go to that tech's website (such as click on the DNN logo to go to [DotNetNuke](https://www.dnnsoftware.com/))
-- [x] Google Analytics is deciding not to be a square with round corners again
-- [x] Hover/Focus border has a gap at the bottom
-- [x] Assess the accessibility of tooltips
-- [x] tooltips can go off-screen when content is high on the screen
-- [x] Wider tooltips that do not go off the screen
-- [ ] pic of laptop?
+- [ ] Add picture of my laptop?
 
-### Projects Page Improvements
+### Projects to Add
 
-- [x] Google Analytics is breaking out of its box
-- [x] Add GitHub links to the projects' repos
-- [x] Add other relevant links to the projects, such as the website link, ESOUI link, etc.
-- [x] Split the "on this page" section to websites, desktop apps, mobile apps, AddOns/mods, hardware, etc.
-- [x] Add the rest of my projects. There's more, but this is good enough to mark this as good.
-  - [x] docker server on debian for work (n8n, nocodb, traefik, etc.)
-    - [x] screenies for nocodb, n8n dashboard, dozzle with logs, traefik dashboard
-    - [x] screenshots leave funny gap due to inconsistent height
-  - [x] NAS for work
-    - [x] screenshots of company portal listing, file share, truenas dashboard
-    - [x] screenshots leave funny gap due to inconsistent height
-  - [x] short mention of tiny sites? preparedfor, preparedforlearning?
-  - [ ] torn scripts
-  - [ ] sqlite -> postgres script for n8n?
-- [x] Visual Studio is smaller than the rest of the techlogos.
-- [x] Techlogos are taking the focus away from the project. Are they too big? Wrong color?
-- [x] What about if we made the post color for projects the same as projects are on the front page? That would simplify the color for the problem above. Perhaps splitting the projects into the buckets from above could be the "base", then the projects would stack on top like on the homepage
+- [ ] TORN scripts
+- [ ] n8n SQLite -> Postgres migration script? It kinda sucks, but it work(s/ed)
 
-### Contact Page Improvements
+### Contact Page
 
 - [ ] Links look bad in a straight list. Box them up into a grid?
-- [ ] Add a form to contact
-- [ ] Clarify that I am available for contract work
+- [ ] Add a contact form
+- [ ] Clarify that I'm available for contract work
 
-### JS Site Enhancements
+### Code Cleanup
 
-Note: *enhancements*. Someone with JavaScript disabled should still get a perfectly functioning site, just missing a few niceties that are either not possible or not worth making in plain HTML + CSS.
-
-- [x] Add buttons to navigate between the slides of the carousel
-- [x] Change the sidebar to indicate what part of the page they are on
-- [x] Add the "active-tab" class on the li's in the "On this page" section
-
-### Code Cleanup Steps
-
-- [x] Make HTML and general layout consistent between pages
-- [ ] Review comments in eleventy.config.js, as some are not applicable to this site but instead the site I wrote most of that for
-- [ ] Remove ununsed classes
-- [ ] Simplify the classes and class selections
+- [ ] Review comments in eleventy.config.js (some apply to the site I originally wrote it for, not this one)
+- [ ] Remove unused classes
+- [ ] Simplify classes and selectors
 - [ ] Clean up and organize CSS
-- [ ] Split page-specific CSS into their own stylesheets
-- [ ] Combine duplicate code (CSS, primarily)
+- [ ] Split page-specific CSS into its own stylesheets
+- [ ] Combine duplicate code (mostly CSS)
 - [ ] Minify CSS during build
-- [ ] Remove empty lines in HTML during build (leftover from comments, my njk files, etc.)
-
-### Long-Term Enhancements
-
-- [x] It could be a fun project to execute the carousel button script before shipping the HTML to visitors, eliminating the need for the script entirely
-- feed's visit website link takes you to <www.pretz.dev>, not straight pretz.dev.
-  - [x] fix the feed's link
-  - [ ] set up a permanent redirect from www to non-www
+- [ ] Remove empty lines from the HTML output (leftovers from comments, njk files, etc.)
