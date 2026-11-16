@@ -524,20 +524,20 @@ footer .only-image {
 	filter: brightness(85%);
 }
 
+/* Flex + gap (rather than inline-block + margin-left) so that when there are too many buttons
+   for one row, they wrap with even spacing between rows and every row stays centered */
 .carousel-button-holder {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.75em;
 	margin: 1em auto;
-	text-align: center;
 }
 
 .carousel-button {
 	background-color: var(--primary-background-color);
 	width: 2.75em;
 	height: 2.75em;
-	margin-left: 1em;
-}
-
-.carousel-button:first-of-type {
-	margin-left: 0;
 }
 
 .carousel::-webkit-scrollbar {
